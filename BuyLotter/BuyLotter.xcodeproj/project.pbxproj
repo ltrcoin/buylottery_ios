@@ -84,6 +84,8 @@
 		18BDEEEF2142364200386EA7 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BDEEEE2142364200386EA7 /* assets.xcassets */; };
 		18BDEF0121427ADF00386EA7 /* Localize.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18BDEF0321427ADF00386EA7 /* Localize.strings */; };
 		18BDEF0821427B0A00386EA7 /* ButtonTitle.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18BDEF0A21427B0A00386EA7 /* ButtonTitle.strings */; };
+		18C483B52158CFDA00AA2274 /* BuyTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C483B32158CFDA00AA2274 /* BuyTicketViewController.swift */; };
+		18C483B62158CFDA00AA2274 /* BuyTicketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C483B42158CFDA00AA2274 /* BuyTicketViewController.xib */; };
 		18E21C0B215383D6006BF9DD /* TwoFactorAuthenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E21C09215383D6006BF9DD /* TwoFactorAuthenViewController.swift */; };
 		18E21C0C215383D6006BF9DD /* TwoFactorAuthenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E21C0A215383D6006BF9DD /* TwoFactorAuthenViewController.xib */; };
 		18E21C1421539403006BF9DD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E21C1221539403006BF9DD /* HomeViewController.swift */; };
@@ -179,6 +181,8 @@
 		18BDEF0421427AE400386EA7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localize.strings; sourceTree = "<group>"; };
 		18BDEF0921427B0A00386EA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ButtonTitle.strings; sourceTree = "<group>"; };
 		18BDEF0B21427B0B00386EA7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/ButtonTitle.strings; sourceTree = "<group>"; };
+		18C483B32158CFDA00AA2274 /* BuyTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTicketViewController.swift; sourceTree = "<group>"; };
+		18C483B42158CFDA00AA2274 /* BuyTicketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyTicketViewController.xib; sourceTree = "<group>"; };
 		18E21C09215383D6006BF9DD /* TwoFactorAuthenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoFactorAuthenViewController.swift; sourceTree = "<group>"; };
 		18E21C0A215383D6006BF9DD /* TwoFactorAuthenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoFactorAuthenViewController.xib; sourceTree = "<group>"; };
 		18E21C1221539403006BF9DD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -598,9 +602,43 @@
 			path = "Multi language";
 			sourceTree = "<group>";
 		};
+		18C483AF2158A65F00AA2274 /* Buy tickets */ = {
+			isa = PBXGroup;
+			children = (
+				18C483B22158BDBF00AA2274 /* Presentation */,
+				18C483B12158BDBA00AA2274 /* Control */,
+				18C483B02158B8E900AA2274 /* Abstraction */,
+			);
+			path = "Buy tickets";
+			sourceTree = "<group>";
+		};
+		18C483B02158B8E900AA2274 /* Abstraction */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Abstraction;
+			sourceTree = "<group>";
+		};
+		18C483B12158BDBA00AA2274 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				18C483B32158CFDA00AA2274 /* BuyTicketViewController.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		18C483B22158BDBF00AA2274 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				18C483B42158CFDA00AA2274 /* BuyTicketViewController.xib */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		18E21C042153835F006BF9DD /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				18C483AF2158A65F00AA2274 /* Buy tickets */,
 				18E21C162153A13E006BF9DD /* Play */,
 				18E21C0E2153920A006BF9DD /* Home */,
 				18E21C052153838F006BF9DD /* Two-factor-authen */,
@@ -787,6 +825,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C483B62158CFDA00AA2274 /* BuyTicketViewController.xib in Resources */,
 				18BDEE9521422D9700386EA7 /* LaunchScreen.storyboard in Resources */,
 				18BDEEB621422FE000386EA7 /* Image.xcassets in Resources */,
 				18BDEE9221422D9700386EA7 /* Assets.xcassets in Resources */,
@@ -901,6 +940,7 @@
 				184B1833214A171A0054736D /* String+Extensions.swift in Sources */,
 				188A9F29214BB1D6001FF793 /* RegisterService.swift in Sources */,
 				18E21C1421539403006BF9DD /* HomeViewController.swift in Sources */,
+				18C483B52158CFDA00AA2274 /* BuyTicketViewController.swift in Sources */,
 				18BDEEB921422FE000386EA7 /* Extention LoginVC event textfield.swift in Sources */,
 				184B182F214A171A0054736D /* Array+Extensions.swift in Sources */,
 				184B1816214A0F7E0054736D /* Utils.swift in Sources */,

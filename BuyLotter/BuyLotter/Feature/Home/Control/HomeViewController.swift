@@ -42,6 +42,9 @@ class HomeViewController: UIViewController {
                 }
             }
         }
+        
+        let buyticketVC = BuyTicketViewController.init()
+        self.present(buyticketVC, animated: true, completion: nil)
     }
     
 }
