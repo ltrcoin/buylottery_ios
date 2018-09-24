@@ -1,0 +1,6 @@
+framework module Pods_BuyLotter {
+  umbrella header "Pods-BuyLotter-umbrella.h"
+
+  export *
+  module * { export * }
+}
