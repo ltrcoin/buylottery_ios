@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GuideSystematicViewController" customModule="BuyLotter" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="42n-H3-D99">
+                    <rect key="frame" x="0.0" y="20" width="375" height="41"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Systematic Forms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtG-Rw-g3c">
+                            <rect key="frame" x="113.5" y="10" width="148" height="21"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="x-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Fnf-jA-XQB">
+                            <rect key="frame" x="350" y="12.5" width="17" height="16.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Fnf-jA-XQB" secondAttribute="height" multiplier="1:1" id="z3H-z0-gIl"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sb7-ir-1PL">
+                            <rect key="frame" x="330" y="0.0" width="45" height="41"/>
+                            <connections>
+                                <action selector="quitBtnTapped:" destination="-1" eventType="touchUpInside" id="VRa-V8-Naa"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Fnf-jA-XQB" firstAttribute="height" secondItem="42n-H3-D99" secondAttribute="height" multiplier="0.4" id="I8d-2J-3wo"/>
+                        <constraint firstItem="Sb7-ir-1PL" firstAttribute="leading" secondItem="Fnf-jA-XQB" secondAttribute="leading" constant="-20" id="MSO-F1-q8Q"/>
+                        <constraint firstItem="Sb7-ir-1PL" firstAttribute="top" secondItem="42n-H3-D99" secondAttribute="top" id="UaY-US-DLE"/>
+                        <constraint firstItem="gtG-Rw-g3c" firstAttribute="centerY" secondItem="42n-H3-D99" secondAttribute="centerY" id="VI9-i2-Qkl"/>
+                        <constraint firstItem="gtG-Rw-g3c" firstAttribute="centerX" secondItem="42n-H3-D99" secondAttribute="centerX" id="YCf-Jw-DVn"/>
+                        <constraint firstAttribute="trailing" secondItem="Fnf-jA-XQB" secondAttribute="trailing" constant="8" id="i2r-2y-wCL"/>
+                        <constraint firstAttribute="height" constant="41" id="lYE-77-owI"/>
+                        <constraint firstAttribute="trailing" secondItem="Sb7-ir-1PL" secondAttribute="trailing" id="mWF-go-b6h"/>
+                        <constraint firstAttribute="bottom" secondItem="Sb7-ir-1PL" secondAttribute="bottom" id="rOD-EN-0kV"/>
+                        <constraint firstItem="Fnf-jA-XQB" firstAttribute="centerY" secondItem="42n-H3-D99" secondAttribute="centerY" id="rSh-eX-biz"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is a Systematic Form?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXC-gW-JNR">
+                    <rect key="frame" x="15" y="99" width="212" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.26274509800000001" green="0.46274509800000002" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="k6b-XY-F5m">
+                    <rect key="frame" x="11" y="120" width="302" height="92.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <string key="text">A systematic form takes your selected numbers and creates every unique combination possible, increasing your chances of hitting the jackpot!</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why Play a Systematic Form?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgF-rb-WDk">
+                    <rect key="frame" x="15" y="237.5" width="226" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.26274509800000001" green="0.46274509800000002" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="v2f-Ng-jdj">
+                    <rect key="frame" x="11" y="258.5" width="348" height="111.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <string key="text">A systematic form increase your odds of winning the jackpot and also the total of wins! Any winning comvination will appear multiple times in the combinations generated for you, upping your total win amount!</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="42n-H3-D99" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5tJ-I1-dmG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="k6b-XY-F5m" secondAttribute="trailing" constant="62" id="BwU-K3-hmF"/>
+                <constraint firstItem="iXC-gW-JNR" firstAttribute="top" secondItem="42n-H3-D99" secondAttribute="bottom" constant="38" id="C4P-vF-0Sg"/>
+                <constraint firstItem="k6b-XY-F5m" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="11" id="EtQ-r7-7Zb"/>
+                <constraint firstItem="v2f-Ng-jdj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="11" id="FSG-6u-0Zg"/>
+                <constraint firstItem="jgF-rb-WDk" firstAttribute="top" secondItem="k6b-XY-F5m" secondAttribute="bottom" constant="25" id="IQx-fW-dCo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="v2f-Ng-jdj" secondAttribute="trailing" constant="16" id="Kgg-RC-L97"/>
+                <constraint firstItem="v2f-Ng-jdj" firstAttribute="top" secondItem="jgF-rb-WDk" secondAttribute="bottom" id="Kv1-8k-r4s"/>
+                <constraint firstItem="jgF-rb-WDk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="V4E-6q-glC"/>
+                <constraint firstItem="k6b-XY-F5m" firstAttribute="top" secondItem="iXC-gW-JNR" secondAttribute="bottom" id="YiX-Fa-3d1"/>
+                <constraint firstItem="42n-H3-D99" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="cgN-3h-at5"/>
+                <constraint firstItem="iXC-gW-JNR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="hcC-st-pOR"/>
+                <constraint firstItem="42n-H3-D99" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="kkN-Fq-kA1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="x-icon" width="46" height="45"/>
+    </resources>
+</document>

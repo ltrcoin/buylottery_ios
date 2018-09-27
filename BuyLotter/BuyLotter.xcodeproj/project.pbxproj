@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1832E1472159DD330078A672 /* TicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832E1452159DD330078A672 /* TicketViewController.swift */; };
+		1832E1482159DD330078A672 /* TicketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1832E1462159DD330078A672 /* TicketViewController.xib */; };
+		1832E14B2159E2790078A672 /* TicketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832E1492159E2790078A672 /* TicketCollectionViewCell.swift */; };
+		1832E14C2159E2790078A672 /* TicketCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1832E14A2159E2790078A672 /* TicketCollectionViewCell.xib */; };
+		1832E14F215A1DDE0078A672 /* SystematicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832E14D215A1DDE0078A672 /* SystematicCollectionViewCell.swift */; };
+		1832E150215A1DDE0078A672 /* SystematicCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1832E14E215A1DDE0078A672 /* SystematicCollectionViewCell.xib */; };
+		1840A01B215B6DF9009FA815 /* GuideSystematicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840A019215B6DF9009FA815 /* GuideSystematicViewController.swift */; };
+		1840A01C215B6DF9009FA815 /* GuideSystematicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1840A01A215B6DF9009FA815 /* GuideSystematicViewController.xib */; };
+		1840A022215B7608009FA815 /* HandPickNumberTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840A020215B7608009FA815 /* HandPickNumberTicketViewController.swift */; };
+		1840A023215B7608009FA815 /* HandPickNumberTicketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1840A021215B7608009FA815 /* HandPickNumberTicketViewController.xib */; };
+		1840A026215B7EF4009FA815 /* HandPickTicketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840A024215B7EF4009FA815 /* HandPickTicketCollectionViewCell.swift */; };
+		1840A027215B7EF4009FA815 /* HandPickTicketCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1840A025215B7EF4009FA815 /* HandPickTicketCollectionViewCell.xib */; };
 		18457086214F849200BC6F78 /* RegisterPageOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18457085214F849200BC6F78 /* RegisterPageOneViewController.swift */; };
 		18457088214F91E900BC6F78 /* RegisterPageTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18457087214F91E900BC6F78 /* RegisterPageTwoViewController.swift */; };
 		1845708A214F928C00BC6F78 /* RegisterPageThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18457089214F928C00BC6F78 /* RegisterPageThreeViewController.swift */; };
@@ -49,6 +61,13 @@
 		188A9F22214B590C001FF793 /* Extension MyGalleryVC delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A9F21214B590C001FF793 /* Extension MyGalleryVC delegate.swift */; };
 		188A9F27214BA5BC001FF793 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A9F26214BA5BC001FF793 /* Config.swift */; };
 		188A9F29214BB1D6001FF793 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A9F28214BB1D6001FF793 /* RegisterService.swift */; };
+		1895B876215B249500E6C182 /* TicketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1895B875215B249500E6C182 /* TicketModel.swift */; };
+		1895B878215B27B600E6C182 /* TicketRuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1895B877215B27B600E6C182 /* TicketRuleModel.swift */; };
+		1895B87C215B2A6B00E6C182 /* RandomTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1895B87B215B2A6B00E6C182 /* RandomTicket.swift */; };
+		1895B883215B38C800E6C182 /* ViewYourNumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1895B881215B38C800E6C182 /* ViewYourNumbersViewController.swift */; };
+		1895B884215B38C800E6C182 /* ViewYourNumbersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1895B882215B38C800E6C182 /* ViewYourNumbersViewController.xib */; };
+		1895B887215B39D700E6C182 /* ViewYourNumbersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1895B885215B39D700E6C182 /* ViewYourNumbersTableViewCell.swift */; };
+		1895B888215B39D700E6C182 /* ViewYourNumbersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1895B886215B39D700E6C182 /* ViewYourNumbersTableViewCell.xib */; };
 		18BDEE8B21422D9500386EA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BDEE8A21422D9500386EA7 /* AppDelegate.swift */; };
 		18BDEE8D21422D9500386EA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BDEE8C21422D9500386EA7 /* ViewController.swift */; };
 		18BDEE9021422D9500386EA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BDEE8E21422D9500386EA7 /* Main.storyboard */; };
@@ -84,6 +103,8 @@
 		18BDEEEF2142364200386EA7 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BDEEEE2142364200386EA7 /* assets.xcassets */; };
 		18BDEF0121427ADF00386EA7 /* Localize.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18BDEF0321427ADF00386EA7 /* Localize.strings */; };
 		18BDEF0821427B0A00386EA7 /* ButtonTitle.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18BDEF0A21427B0A00386EA7 /* ButtonTitle.strings */; };
+		18C483B52158CFDA00AA2274 /* BuyTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C483B32158CFDA00AA2274 /* BuyTicketViewController.swift */; };
+		18C483B62158CFDA00AA2274 /* BuyTicketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C483B42158CFDA00AA2274 /* BuyTicketViewController.xib */; };
 		18E21C0B215383D6006BF9DD /* TwoFactorAuthenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E21C09215383D6006BF9DD /* TwoFactorAuthenViewController.swift */; };
 		18E21C0C215383D6006BF9DD /* TwoFactorAuthenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E21C0A215383D6006BF9DD /* TwoFactorAuthenViewController.xib */; };
 		18E21C1421539403006BF9DD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E21C1221539403006BF9DD /* HomeViewController.swift */; };
@@ -96,6 +117,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1832E1452159DD330078A672 /* TicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewController.swift; sourceTree = "<group>"; };
+		1832E1462159DD330078A672 /* TicketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketViewController.xib; sourceTree = "<group>"; };
+		1832E1492159E2790078A672 /* TicketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCollectionViewCell.swift; sourceTree = "<group>"; };
+		1832E14A2159E2790078A672 /* TicketCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketCollectionViewCell.xib; sourceTree = "<group>"; };
+		1832E14D215A1DDE0078A672 /* SystematicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystematicCollectionViewCell.swift; sourceTree = "<group>"; };
+		1832E14E215A1DDE0078A672 /* SystematicCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SystematicCollectionViewCell.xib; sourceTree = "<group>"; };
+		1840A019215B6DF9009FA815 /* GuideSystematicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideSystematicViewController.swift; sourceTree = "<group>"; };
+		1840A01A215B6DF9009FA815 /* GuideSystematicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuideSystematicViewController.xib; sourceTree = "<group>"; };
+		1840A020215B7608009FA815 /* HandPickNumberTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandPickNumberTicketViewController.swift; sourceTree = "<group>"; };
+		1840A021215B7608009FA815 /* HandPickNumberTicketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HandPickNumberTicketViewController.xib; sourceTree = "<group>"; };
+		1840A024215B7EF4009FA815 /* HandPickTicketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandPickTicketCollectionViewCell.swift; sourceTree = "<group>"; };
+		1840A025215B7EF4009FA815 /* HandPickTicketCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HandPickTicketCollectionViewCell.xib; sourceTree = "<group>"; };
 		18457085214F849200BC6F78 /* RegisterPageOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageOneViewController.swift; sourceTree = "<group>"; };
 		18457087214F91E900BC6F78 /* RegisterPageTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageTwoViewController.swift; sourceTree = "<group>"; };
 		18457089214F928C00BC6F78 /* RegisterPageThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageThreeViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +173,13 @@
 		188A9F21214B590C001FF793 /* Extension MyGalleryVC delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension MyGalleryVC delegate.swift"; sourceTree = "<group>"; };
 		188A9F26214BA5BC001FF793 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		188A9F28214BB1D6001FF793 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
+		1895B875215B249500E6C182 /* TicketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketModel.swift; sourceTree = "<group>"; };
+		1895B877215B27B600E6C182 /* TicketRuleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketRuleModel.swift; sourceTree = "<group>"; };
+		1895B87B215B2A6B00E6C182 /* RandomTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomTicket.swift; sourceTree = "<group>"; };
+		1895B881215B38C800E6C182 /* ViewYourNumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewYourNumbersViewController.swift; sourceTree = "<group>"; };
+		1895B882215B38C800E6C182 /* ViewYourNumbersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewYourNumbersViewController.xib; sourceTree = "<group>"; };
+		1895B885215B39D700E6C182 /* ViewYourNumbersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewYourNumbersTableViewCell.swift; sourceTree = "<group>"; };
+		1895B886215B39D700E6C182 /* ViewYourNumbersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewYourNumbersTableViewCell.xib; sourceTree = "<group>"; };
 		18BDEE8721422D9500386EA7 /* BuyLotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuyLotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BDEE8A21422D9500386EA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18BDEE8C21422D9500386EA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +219,8 @@
 		18BDEF0421427AE400386EA7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localize.strings; sourceTree = "<group>"; };
 		18BDEF0921427B0A00386EA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ButtonTitle.strings; sourceTree = "<group>"; };
 		18BDEF0B21427B0B00386EA7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/ButtonTitle.strings; sourceTree = "<group>"; };
+		18C483B32158CFDA00AA2274 /* BuyTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTicketViewController.swift; sourceTree = "<group>"; };
+		18C483B42158CFDA00AA2274 /* BuyTicketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyTicketViewController.xib; sourceTree = "<group>"; };
 		18E21C09215383D6006BF9DD /* TwoFactorAuthenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoFactorAuthenViewController.swift; sourceTree = "<group>"; };
 		18E21C0A215383D6006BF9DD /* TwoFactorAuthenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoFactorAuthenViewController.xib; sourceTree = "<group>"; };
 		18E21C1221539403006BF9DD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -239,6 +281,71 @@
 			isa = PBXGroup;
 			children = (
 				1879CC84214F57A40055DEAD /* Register.storyboard */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		1832E1422159D93A0078A672 /* Collection view */ = {
+			isa = PBXGroup;
+			children = (
+				1832E1452159DD330078A672 /* TicketViewController.swift */,
+				1832E1462159DD330078A672 /* TicketViewController.xib */,
+				1832E1492159E2790078A672 /* TicketCollectionViewCell.swift */,
+				1832E14A2159E2790078A672 /* TicketCollectionViewCell.xib */,
+				1832E14D215A1DDE0078A672 /* SystematicCollectionViewCell.swift */,
+				1832E14E215A1DDE0078A672 /* SystematicCollectionViewCell.xib */,
+			);
+			path = "Collection view";
+			sourceTree = "<group>";
+		};
+		1840A016215B6D60009FA815 /* Guide Systematic */ = {
+			isa = PBXGroup;
+			children = (
+				1840A018215B6DD9009FA815 /* Presentation */,
+				1840A017215B6DCD009FA815 /* Control */,
+			);
+			path = "Guide Systematic";
+			sourceTree = "<group>";
+		};
+		1840A017215B6DCD009FA815 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		1840A018215B6DD9009FA815 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				1840A019215B6DF9009FA815 /* GuideSystematicViewController.swift */,
+				1840A01A215B6DF9009FA815 /* GuideSystematicViewController.xib */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		1840A01D215B75AA009FA815 /* Hand Pick Number For Ticket */ = {
+			isa = PBXGroup;
+			children = (
+				1840A01F215B75DC009FA815 /* Presentation */,
+				1840A01E215B75D2009FA815 /* Control */,
+			);
+			path = "Hand Pick Number For Ticket";
+			sourceTree = "<group>";
+		};
+		1840A01E215B75D2009FA815 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				1840A020215B7608009FA815 /* HandPickNumberTicketViewController.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		1840A01F215B75DC009FA815 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				1840A021215B7608009FA815 /* HandPickNumberTicketViewController.xib */,
+				1840A024215B7EF4009FA815 /* HandPickTicketCollectionViewCell.swift */,
+				1840A025215B7EF4009FA815 /* HandPickTicketCollectionViewCell.xib */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -428,6 +535,41 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		1895B87A215B29FC00E6C182 /* Random */ = {
+			isa = PBXGroup;
+			children = (
+				1895B87B215B2A6B00E6C182 /* RandomTicket.swift */,
+			);
+			path = Random;
+			sourceTree = "<group>";
+		};
+		1895B87D215B388700E6C182 /* View your numbers */ = {
+			isa = PBXGroup;
+			children = (
+				1895B880215B38AB00E6C182 /* Presentation */,
+				1895B87F215B38A400E6C182 /* Control */,
+			);
+			path = "View your numbers";
+			sourceTree = "<group>";
+		};
+		1895B87F215B38A400E6C182 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				1895B881215B38C800E6C182 /* ViewYourNumbersViewController.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		1895B880215B38AB00E6C182 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				1895B882215B38C800E6C182 /* ViewYourNumbersViewController.xib */,
+				1895B885215B39D700E6C182 /* ViewYourNumbersTableViewCell.swift */,
+				1895B886215B39D700E6C182 /* ViewYourNumbersTableViewCell.xib */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		18BDEE7E21422D9500386EA7 = {
 			isa = PBXGroup;
 			children = (
@@ -449,11 +591,10 @@
 		18BDEE8921422D9500386EA7 /* BuyLotter */ = {
 			isa = PBXGroup;
 			children = (
-				1857443F2150FF3600F3953B /* Validate */,
 				188A9F25214BA5A9001FF793 /* Config */,
 				184B1804214A092E0054736D /* GalleryUI */,
 				18802B232147AC6D00F476BC /* Lib */,
-				18BDEEBD214231E200386EA7 /* Extension */,
+				18BDEEBD214231E200386EA7 /* Utility */,
 				18E21C042153835F006BF9DD /* Feature */,
 				18BDEEED2142362B00386EA7 /* Resource */,
 				18BDEE8A21422D9500386EA7 /* AppDelegate.swift */,
@@ -512,14 +653,16 @@
 			path = Control;
 			sourceTree = "<group>";
 		};
-		18BDEEBD214231E200386EA7 /* Extension */ = {
+		18BDEEBD214231E200386EA7 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				1895B87A215B29FC00E6C182 /* Random */,
+				1857443F2150FF3600F3953B /* Validate */,
 				18BDEEBE214231E200386EA7 /* UI */,
 				18BDEECB214231E200386EA7 /* Popup */,
 				18BDEED1214231E200386EA7 /* VC */,
 			);
-			path = Extension;
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		18BDEEBE214231E200386EA7 /* UI */ = {
@@ -598,9 +741,49 @@
 			path = "Multi language";
 			sourceTree = "<group>";
 		};
+		18C483AF2158A65F00AA2274 /* Buy tickets */ = {
+			isa = PBXGroup;
+			children = (
+				18C483B22158BDBF00AA2274 /* Presentation */,
+				18C483B12158BDBA00AA2274 /* Control */,
+				18C483B02158B8E900AA2274 /* Abstraction */,
+			);
+			path = "Buy tickets";
+			sourceTree = "<group>";
+		};
+		18C483B02158B8E900AA2274 /* Abstraction */ = {
+			isa = PBXGroup;
+			children = (
+				1895B875215B249500E6C182 /* TicketModel.swift */,
+				1895B877215B27B600E6C182 /* TicketRuleModel.swift */,
+			);
+			path = Abstraction;
+			sourceTree = "<group>";
+		};
+		18C483B12158BDBA00AA2274 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				18C483B32158CFDA00AA2274 /* BuyTicketViewController.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		18C483B22158BDBF00AA2274 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				18C483B42158CFDA00AA2274 /* BuyTicketViewController.xib */,
+				1832E1422159D93A0078A672 /* Collection view */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		18E21C042153835F006BF9DD /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				1840A01D215B75AA009FA815 /* Hand Pick Number For Ticket */,
+				1840A016215B6D60009FA815 /* Guide Systematic */,
+				1895B87D215B388700E6C182 /* View your numbers */,
+				18C483AF2158A65F00AA2274 /* Buy tickets */,
 				18E21C162153A13E006BF9DD /* Play */,
 				18E21C0E2153920A006BF9DD /* Home */,
 				18E21C052153838F006BF9DD /* Two-factor-authen */,
@@ -787,10 +970,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C483B62158CFDA00AA2274 /* BuyTicketViewController.xib in Resources */,
 				18BDEE9521422D9700386EA7 /* LaunchScreen.storyboard in Resources */,
 				18BDEEB621422FE000386EA7 /* Image.xcassets in Resources */,
 				18BDEE9221422D9700386EA7 /* Assets.xcassets in Resources */,
+				1832E14C2159E2790078A672 /* TicketCollectionViewCell.xib in Resources */,
+				1840A023215B7608009FA815 /* HandPickNumberTicketViewController.xib in Resources */,
 				18BDEEE4214231E200386EA7 /* PopupViewController.xib in Resources */,
+				1895B888215B39D700E6C182 /* ViewYourNumbersTableViewCell.xib in Resources */,
 				18BDEED8214231E200386EA7 /* resource.xcassets in Resources */,
 				18E21C0C215383D6006BF9DD /* TwoFactorAuthenViewController.xib in Resources */,
 				18BDEE9021422D9500386EA7 /* Main.storyboard in Resources */,
@@ -800,16 +987,21 @@
 				187B9E46214A686400E17130 /* AlbumsViewController.xib in Resources */,
 				187B9E3E214A51D900E17130 /* GalleryCamCollectionViewCell.xib in Resources */,
 				18802B202147AB8400F476BC /* country.plist in Resources */,
+				1840A01C215B6DF9009FA815 /* GuideSystematicViewController.xib in Resources */,
 				184B1849214A233F0054736D /* MyGalleryViewController.xib in Resources */,
+				1832E150215A1DDE0078A672 /* SystematicCollectionViewCell.xib in Resources */,
 				184B184F214A243D0054736D /* MyGalleryCollectionViewCell.xib in Resources */,
 				18BDEEEF2142364200386EA7 /* assets.xcassets in Resources */,
 				18E21C1521539403006BF9DD /* HomeViewController.xib in Resources */,
 				18802B1B2147A88A00F476BC /* ViTriCell.xib in Resources */,
+				1840A027215B7EF4009FA815 /* HandPickTicketCollectionViewCell.xib in Resources */,
 				1879CC85214F57A40055DEAD /* Register.storyboard in Resources */,
+				1895B884215B38C800E6C182 /* ViewYourNumbersViewController.xib in Resources */,
 				18BDEF0821427B0A00386EA7 /* ButtonTitle.strings in Resources */,
 				18E21C1D2153A16F006BF9DD /* PlayViewController.xib in Resources */,
 				184B1810214A0DBE0054736D /* GallleryAsset.xcassets in Resources */,
 				18BDEEB721422FE000386EA7 /* Login.storyboard in Resources */,
+				1832E1482159DD330078A672 /* TicketViewController.xib in Resources */,
 				18BDEF0121427ADF00386EA7 /* Localize.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -826,12 +1018,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-BuyLotter/Pods-BuyLotter-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/KTCenterFlowLayout/KTCenterFlowLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KTCenterFlowLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -865,9 +1059,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				18BDEEDE214231E200386EA7 /* Extension UIImageView imge social timeline.swift in Sources */,
+				1840A026215B7EF4009FA815 /* HandPickTicketCollectionViewCell.swift in Sources */,
+				1840A022215B7608009FA815 /* HandPickNumberTicketViewController.swift in Sources */,
 				18E21C0B215383D6006BF9DD /* TwoFactorAuthenViewController.swift in Sources */,
+				1840A01B215B6DF9009FA815 /* GuideSystematicViewController.swift in Sources */,
 				184B1822214A16A10054736D /* Constraints.swift in Sources */,
 				18BDEEDA214231E200386EA7 /* Extension UIViewController alert template.swift in Sources */,
+				1832E14B2159E2790078A672 /* TicketCollectionViewCell.swift in Sources */,
 				18802B2B2147ADED00F476BC /* PickCountryViewController.swift in Sources */,
 				18802B262147AC6D00F476BC /* ConvertString.m in Sources */,
 				18BDEEE7214231E200386EA7 /* Extension UIImageView show full image.swift in Sources */,
@@ -880,12 +1078,14 @@
 				18BDEED9214231E200386EA7 /* Extension UIView loading.swift in Sources */,
 				184B1812214A0E370054736D /* Image.swift in Sources */,
 				184B1807214A095D0054736D /* ImagesLibrary.swift in Sources */,
+				1895B878215B27B600E6C182 /* TicketRuleModel.swift in Sources */,
 				18BDEEE5214231E200386EA7 /* PopupViewController.swift in Sources */,
 				18BDEEE6214231E200386EA7 /* Extension PopupVC textview delegate.swift in Sources */,
 				18BDEEE8214231E200386EA7 /* ImageFullScreenPageVC.swift in Sources */,
 				184B1831214A171A0054736D /* UIViewController+Extensions.swift in Sources */,
 				18E21C1C2153A16F006BF9DD /* PlayViewController.swift in Sources */,
 				18BDEEE1214231E200386EA7 /* Extension UIViewcontroller dismiss keyboard.swift in Sources */,
+				1832E14F215A1DDE0078A672 /* SystematicCollectionViewCell.swift in Sources */,
 				18BDEEBA21422FE000386EA7 /* LoginViewController.swift in Sources */,
 				1845708A214F928C00BC6F78 /* RegisterPageThreeViewController.swift in Sources */,
 				18BDEE8D21422D9500386EA7 /* ViewController.swift in Sources */,
@@ -895,12 +1095,14 @@
 				184B1832214A171A0054736D /* UIView+Extensions.swift in Sources */,
 				187B9E3D214A51D900E17130 /* GalleryCamCollectionViewCell.swift in Sources */,
 				18BDEEDF214231E200386EA7 /* Extension TabbarVC.swift in Sources */,
+				1895B87C215B2A6B00E6C182 /* RandomTicket.swift in Sources */,
 				18BDEEE0214231E200386EA7 /* Extension Date.swift in Sources */,
 				184B1835214A171A0054736D /* UIScrollView+Extensions.swift in Sources */,
 				18BDEEDD214231E200386EA7 /* Extension UIView add tap gesture.swift in Sources */,
 				184B1833214A171A0054736D /* String+Extensions.swift in Sources */,
 				188A9F29214BB1D6001FF793 /* RegisterService.swift in Sources */,
 				18E21C1421539403006BF9DD /* HomeViewController.swift in Sources */,
+				18C483B52158CFDA00AA2274 /* BuyTicketViewController.swift in Sources */,
 				18BDEEB921422FE000386EA7 /* Extention LoginVC event textfield.swift in Sources */,
 				184B182F214A171A0054736D /* Array+Extensions.swift in Sources */,
 				184B1816214A0F7E0054736D /* Utils.swift in Sources */,
@@ -914,16 +1116,20 @@
 				18802B1A2147A88A00F476BC /* ViTriCell.swift in Sources */,
 				18802B322147C83C00F476BC /* CountryConfig.swift in Sources */,
 				18BDEEEA214231E200386EA7 /* Extension UIVC show full image.swift in Sources */,
+				1895B876215B249500E6C182 /* TicketModel.swift in Sources */,
 				184B1830214A171A0054736D /* UIImageView+Extensions.swift in Sources */,
 				1883C14F2148B8D000F4B82D /* PickGenderViewController.swift in Sources */,
+				1832E1472159DD330078A672 /* TicketViewController.swift in Sources */,
 				18BDEEEB214231E200386EA7 /* ImageScrollView.swift in Sources */,
 				187B9E3A214A43E600E17130 /* Once.swift in Sources */,
+				1895B883215B38C800E6C182 /* ViewYourNumbersViewController.swift in Sources */,
 				188A9F27214BA5BC001FF793 /* Config.swift in Sources */,
 				187B9E38214A3CB600E17130 /* Extension MyGalleryVC collection view.swift in Sources */,
 				18E66B922151F2C5007732CB /* Validate.swift in Sources */,
 				18BDEEE9214231E200386EA7 /* Extension UIView get view controller.swift in Sources */,
 				18457086214F849200BC6F78 /* RegisterPageOneViewController.swift in Sources */,
 				18BDEEE2214231E200386EA7 /* Extension UITextView placeholder.swift in Sources */,
+				1895B887215B39D700E6C182 /* ViewYourNumbersTableViewCell.swift in Sources */,
 				184B184E214A243D0054736D /* MyGalleryCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

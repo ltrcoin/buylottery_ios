@@ -65,7 +65,7 @@ class TwoFactorAuthenViewController: UIViewController {
     }
     
     @IBAction func authenticateBtnTapped(_ sender: Any) {
-        if testCount >= 2 {
+        if testCount >= 1 {
             let homeVC = HomeViewController.init()
             self.present(homeVC, animated: true, completion: nil)
         }
