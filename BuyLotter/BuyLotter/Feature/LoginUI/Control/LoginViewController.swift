@@ -87,9 +87,9 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func loginDidTouch(_ sender: Any) {
-//        let authenVC = TwoFactorAuthenViewController.init()
-//        self.present(authenVC, animated: true, completion: nil)
-//        return
+        let authenVC = TwoFactorAuthenViewController.init()
+        self.present(authenVC, animated: true, completion: nil)
+        return
         if accountTxt.text ==  "" || !self.loginBtn.isUserInteractionEnabled{
             return
         }

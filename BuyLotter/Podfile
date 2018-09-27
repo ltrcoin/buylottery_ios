@@ -9,4 +9,5 @@ target 'BuyLotter' do
 	pod 'Alamofire'
     pod 'AlamofireImage'
     pod 'Localize-Swift'
+    pod 'KTCenterFlowLayout'
 end
