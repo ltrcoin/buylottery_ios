@@ -78,9 +78,9 @@ extension HandPickNumberTicketViewController: UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(" selected: \(indexPath.row)")
-        let cell = collectionView.cellForItem(at: indexPath) as! HandPickTicketCollectionViewCell
+        
         if normalCollectionViews.contains(collectionView) {
-            if !data[currentIndex].normal.contains(indexPath.item + 1) {
+            if !data[currentIndex].normal.contains(indexPath.item + 1) && data[currentIndex].normal.count < ticketRule.numberNormal {
                 if !data[currentIndex].isFull {
                     data[currentIndex].normal.append(indexPath.item + 1)
                     data[currentIndex].normal.sort()
@@ -101,7 +101,7 @@ extension HandPickNumberTicketViewController: UICollectionViewDelegate, UICollec
             
         }
         if specialCollectionViews.contains(collectionView) {
-            if !data[currentIndex].special.contains(indexPath.item + 1) {
+            if !data[currentIndex].special.contains(indexPath.item + 1) && data[currentIndex].special.count < ticketRule.numberSpecial {
                 if !data[currentIndex].isFull {
                     data[currentIndex].special.append(indexPath.item + 1)
                     data[currentIndex].special.sort()
@@ -134,10 +134,17 @@ extension HandPickNumberTicketViewController: UICollectionViewDelegate, UICollec
             backgroundTicketViews[i].backgroundColor = colorFullBackground
             contentAreaTicketViews[i].backgroundColor = colorFullContent
             quitImgs[i].tintColor = .white
+            countDownNormalLbls[i].isHidden = true
+            countDownSpecialLbls[i].isHidden = true
         } else {
             backgroundTicketViews[i].backgroundColor = colorNotFullBackground
             contentAreaTicketViews[i].backgroundColor = colorNotFullContent
             quitImgs[i].tintColor = UIColor.darkGray
+            countDownNormalLbls[i].isHidden = false
+            countDownSpecialLbls[i].isHidden = false
+            
+            countDownNormalLbls[i].text = "+ Choose \(ticketRule.numberNormal - data[index].normal.count)"
+            countDownSpecialLbls[i].text = "+ Choose \(ticketRule.numberSpecial - data[index].special.count)"
         }
         noTicketLbls[i].text = "Line: \(index + 1)/\(numberTicket)"
         for j in 0...(ticketRule.maxNormal - ticketRule.minNormal) {

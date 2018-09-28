@@ -18,7 +18,6 @@ class HandPickNumberTicketViewController: UIViewController {
     var ticketRule:TicketRuleModel!
     var numberTicket = 10
     var isSystematic = false
-    var maxNumberNormal = 0
     
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -46,6 +45,11 @@ class HandPickNumberTicketViewController: UIViewController {
     
     var beginDragPoint:CGPoint = CGPoint.zero
     var endDragPoint:CGPoint = CGPoint.zero
+    
+    
+    @IBOutlet var countDownNormalLbls: [UILabel]!
+    
+    @IBOutlet var countDownSpecialLbls: [UILabel]!
     
     @IBOutlet var backgroundTicketViews: [UIView]!
     

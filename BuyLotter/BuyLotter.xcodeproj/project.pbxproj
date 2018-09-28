@@ -70,6 +70,10 @@
 		1895B884215B38C800E6C182 /* ViewYourNumbersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1895B882215B38C800E6C182 /* ViewYourNumbersViewController.xib */; };
 		1895B887215B39D700E6C182 /* ViewYourNumbersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1895B885215B39D700E6C182 /* ViewYourNumbersTableViewCell.swift */; };
 		1895B888215B39D700E6C182 /* ViewYourNumbersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1895B886215B39D700E6C182 /* ViewYourNumbersTableViewCell.xib */; };
+		18A06332215DD0F9004CBD55 /* TicketHandPickView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A06331215DD0F9004CBD55 /* TicketHandPickView.xib */; };
+		18A06334215DE424004CBD55 /* TicketHandPickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A06333215DE424004CBD55 /* TicketHandPickView.swift */; };
+		18A06336215DE6C8004CBD55 /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A06335215DE6C8004CBD55 /* test.storyboard */; };
+		18A06338215DE99D004CBD55 /* Extension TicketHandPickView collectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A06337215DE99D004CBD55 /* Extension TicketHandPickView collectionView.swift */; };
 		18BDEE8B21422D9500386EA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BDEE8A21422D9500386EA7 /* AppDelegate.swift */; };
 		18BDEE8D21422D9500386EA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BDEE8C21422D9500386EA7 /* ViewController.swift */; };
 		18BDEE9021422D9500386EA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BDEE8E21422D9500386EA7 /* Main.storyboard */; };
@@ -184,6 +188,10 @@
 		1895B882215B38C800E6C182 /* ViewYourNumbersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewYourNumbersViewController.xib; sourceTree = "<group>"; };
 		1895B885215B39D700E6C182 /* ViewYourNumbersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewYourNumbersTableViewCell.swift; sourceTree = "<group>"; };
 		1895B886215B39D700E6C182 /* ViewYourNumbersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewYourNumbersTableViewCell.xib; sourceTree = "<group>"; };
+		18A06331215DD0F9004CBD55 /* TicketHandPickView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketHandPickView.xib; sourceTree = "<group>"; };
+		18A06333215DE424004CBD55 /* TicketHandPickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketHandPickView.swift; sourceTree = "<group>"; };
+		18A06335215DE6C8004CBD55 /* test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = test.storyboard; sourceTree = "<group>"; };
+		18A06337215DE99D004CBD55 /* Extension TicketHandPickView collectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension TicketHandPickView collectionView.swift"; sourceTree = "<group>"; };
 		18BDEE8721422D9500386EA7 /* BuyLotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuyLotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BDEE8A21422D9500386EA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18BDEE8C21422D9500386EA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -352,6 +360,10 @@
 				1840A021215B7608009FA815 /* HandPickNumberTicketViewController.xib */,
 				1840A024215B7EF4009FA815 /* HandPickTicketCollectionViewCell.swift */,
 				1840A025215B7EF4009FA815 /* HandPickTicketCollectionViewCell.xib */,
+				18A06331215DD0F9004CBD55 /* TicketHandPickView.xib */,
+				18A06333215DE424004CBD55 /* TicketHandPickView.swift */,
+				18A06337215DE99D004CBD55 /* Extension TicketHandPickView collectionView.swift */,
+				18A06335215DE6C8004CBD55 /* test.storyboard */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -986,8 +998,10 @@
 				1895B888215B39D700E6C182 /* ViewYourNumbersTableViewCell.xib in Resources */,
 				18BDEED8214231E200386EA7 /* resource.xcassets in Resources */,
 				18E21C0C215383D6006BF9DD /* TwoFactorAuthenViewController.xib in Resources */,
+				18A06332215DD0F9004CBD55 /* TicketHandPickView.xib in Resources */,
 				18BDEE9021422D9500386EA7 /* Main.storyboard in Resources */,
 				18802B212147AB8400F476BC /* Image.xcassets in Resources */,
+				18A06336215DE6C8004CBD55 /* test.storyboard in Resources */,
 				1883C1502148B8D000F4B82D /* PickGenderViewController.xib in Resources */,
 				18802B2C2147ADED00F476BC /* PickCountryViewController.xib in Resources */,
 				187B9E46214A686400E17130 /* AlbumsViewController.xib in Resources */,
@@ -1108,12 +1122,14 @@
 				184B1833214A171A0054736D /* String+Extensions.swift in Sources */,
 				188A9F29214BB1D6001FF793 /* RegisterService.swift in Sources */,
 				18E21C1421539403006BF9DD /* HomeViewController.swift in Sources */,
+				18A06334215DE424004CBD55 /* TicketHandPickView.swift in Sources */,
 				18C483B52158CFDA00AA2274 /* BuyTicketViewController.swift in Sources */,
 				18BDEEB921422FE000386EA7 /* Extention LoginVC event textfield.swift in Sources */,
 				184B182F214A171A0054736D /* Array+Extensions.swift in Sources */,
 				184B1816214A0F7E0054736D /* Utils.swift in Sources */,
 				18BDEE8B21422D9500386EA7 /* AppDelegate.swift in Sources */,
 				184CFA7E215CC604003B2FEE /* Extension HandPickNumberTicketVC collectionView.swift in Sources */,
+				18A06338215DE99D004CBD55 /* Extension TicketHandPickView collectionView.swift in Sources */,
 				184CFA7C215CC5C4003B2FEE /* Extension HandPickNumberTicketVC paging.swift in Sources */,
 				187B9E45214A686400E17130 /* AlbumsViewController.swift in Sources */,
 				18BDEEDC214231E200386EA7 /* Extension UIViewController childview.swift in Sources */,

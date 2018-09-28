@@ -53,6 +53,12 @@
                 <outletCollection property="quitImgs" destination="bbM-H3-No4" collectionClass="NSMutableArray" id="pNv-2Z-4i8"/>
                 <outletCollection property="quitImgs" destination="jfC-RO-ldb" collectionClass="NSMutableArray" id="b5d-uQ-fVP"/>
                 <outletCollection property="quitImgs" destination="azE-HH-ldK" collectionClass="NSMutableArray" id="VxB-2A-DxT"/>
+                <outletCollection property="countDownNormalLbls" destination="AaH-o4-KKb" collectionClass="NSMutableArray" id="fGs-wx-FhG"/>
+                <outletCollection property="countDownSpecialLbls" destination="mBm-bE-9z5" collectionClass="NSMutableArray" id="tKF-9G-TUM"/>
+                <outletCollection property="countDownNormalLbls" destination="jSM-lx-760" collectionClass="NSMutableArray" id="V56-Ea-yMK"/>
+                <outletCollection property="countDownSpecialLbls" destination="AW2-Ip-817" collectionClass="NSMutableArray" id="Mv8-1s-Yso"/>
+                <outletCollection property="countDownNormalLbls" destination="TFH-um-uDz" collectionClass="NSMutableArray" id="vUL-zc-faf"/>
+                <outletCollection property="countDownSpecialLbls" destination="fHC-JK-HaB" collectionClass="NSMutableArray" id="HZw-tQ-qa2"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
