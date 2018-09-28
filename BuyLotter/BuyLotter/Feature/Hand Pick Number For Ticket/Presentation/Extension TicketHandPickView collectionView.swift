@@ -14,6 +14,7 @@ extension TicketHandPickView : UICollectionViewDelegate, UICollectionViewDataSou
     func setupCollectionViews(){
         self.view.layoutIfNeeded()
         let w = (self.frame.width - 25 - 30 - CGFloat(numberColumn - 1) * 2) / CGFloat(numberColumn)
+        
         cellSize = CGSize.init(width: w, height: w)
         
         print("cell size:\(cellSize)")
@@ -64,7 +65,7 @@ extension TicketHandPickView : UICollectionViewDelegate, UICollectionViewDataSou
         print(" selected: \(indexPath.row)")
         
         if collectionView == normalCollectionView {
-            if !data.normal.contains(indexPath.item + 1) && data.normal.count < ticketRule.numberNormal {
+            if !data.normal.contains(indexPath.item + 1) {
                 if !data.isFull {
                     data.normal.append(indexPath.item + 1)
                     data.normal.sort()
@@ -85,7 +86,7 @@ extension TicketHandPickView : UICollectionViewDelegate, UICollectionViewDataSou
             
         }
         if collectionView == specialCollectionView {
-            if !data.special.contains(indexPath.item + 1) && data.special.count < ticketRule.numberSpecial {
+            if !data.special.contains(indexPath.item + 1){
                 if !data.isFull {
                     data.special.append(indexPath.item + 1)
                     data.special.sort()
@@ -101,8 +102,11 @@ extension TicketHandPickView : UICollectionViewDelegate, UICollectionViewDataSou
                     data.special.remove(at: i)
                 }
                 updateDataView()
+                
             }
         }
+        
+        delegate?.ticketHandPickView(self, toggleNumberAt: index)
         
     }
     
@@ -156,7 +160,7 @@ extension TicketHandPickView : UICollectionViewDelegate, UICollectionViewDataSou
         
         func done(){
             print("🤩done anime")
-            
+            delegate?.ticketHandPickView(self, animationEndAt: index)
         }
         
         func runAnime(){

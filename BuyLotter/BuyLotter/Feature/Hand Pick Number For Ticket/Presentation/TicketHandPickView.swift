@@ -7,14 +7,17 @@
 //
 
 import UIKit
-protocol TicketHandPickViewDelegate :class {
-    func ticketHandPickView(_ ticket: TicketHandPickView, animationBegin index:Int)
+
+protocol TicketHandPickViewDelegate: class {
+    func ticketHandPickView(_ ticket: TicketHandPickView, animationBeginAt index:Int)
     
-    func ticketHandPickView(_ ticket: TicketHandPickView, animationEnd index:Int)
+    func ticketHandPickView(_ ticket: TicketHandPickView, animationEndAt index:Int)
     
-    func ticketHandPickView(_ ticket: TicketHandPickView, reset index:Int)
+    func ticketHandPickView(_ ticket: TicketHandPickView, resetAt index:Int)
     
-    func ticketHandPickView(_ ticket: TicketHandPickView, toggleNumber index:Int)
+    func ticketHandPickView(_ ticket: TicketHandPickView, toggleNumberAt index:Int)
+    
+    func ticketHandPickView(_ ticket: TicketHandPickView, exitAt index:Int)
 }
 
 class TicketHandPickView: UIView {
@@ -24,6 +27,7 @@ class TicketHandPickView: UIView {
             updateDataView()
         }
     }
+    var index = 0
     
     weak var delegate:TicketHandPickViewDelegate?
     
@@ -57,6 +61,10 @@ class TicketHandPickView: UIView {
     var colorNotFullBackground = UIColor.init(red: 247/255, green: 205/255, blue: 95/255, alpha: 1)
     
     var colorNotFullContent = UIColor.init(red: 249/255, green: 219/255, blue: 139/255, alpha: 1)
+    
+    deinit {
+        print("🤬 TicketHandPickView deinit")
+    }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -94,19 +102,24 @@ class TicketHandPickView: UIView {
     
     func setupView(){
         quickPickBtn.layer.cornerRadius = 5
+        heightNormalCT.constant = CGFloat((ticketRule.maxNormal - 1) / 8 + 1) * (cellSize.height + 2)
+        heightSpecialCT.constant = CGFloat((ticketRule.maxSpecial - 1) / 8 + 1) * (cellSize.height + 2)
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = 5
     }
     
     
     @IBAction func resetTicket(_ sender: Any) {
-        
+        delegate?.ticketHandPickView(self, resetAt: index)
     }
     
     @IBAction func quickPickBtnTapped(_ sender: Any) {
+        delegate?.ticketHandPickView(self, animationBeginAt: index)
         randomTicketAnimation()
     }
     
     @IBAction func quitBtnTapped(_ sender: Any) {
-        
+        delegate?.ticketHandPickView(self, exitAt: index)
     }
     
 }

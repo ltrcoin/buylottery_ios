@@ -40,7 +40,6 @@
 		184B184E214A243D0054736D /* MyGalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B184C214A243D0054736D /* MyGalleryCollectionViewCell.swift */; };
 		184B184F214A243D0054736D /* MyGalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184B184D214A243D0054736D /* MyGalleryCollectionViewCell.xib */; };
 		184CFA7C215CC5C4003B2FEE /* Extension HandPickNumberTicketVC paging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184CFA7B215CC5C4003B2FEE /* Extension HandPickNumberTicketVC paging.swift */; };
-		184CFA7E215CC604003B2FEE /* Extension HandPickNumberTicketVC collectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184CFA7D215CC604003B2FEE /* Extension HandPickNumberTicketVC collectionView.swift */; };
 		1879CC85214F57A40055DEAD /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1879CC84214F57A40055DEAD /* Register.storyboard */; };
 		187B9E38214A3CB600E17130 /* Extension MyGalleryVC collection view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9E37214A3CB600E17130 /* Extension MyGalleryVC collection view.swift */; };
 		187B9E3A214A43E600E17130 /* Once.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9E39214A43E600E17130 /* Once.swift */; };
@@ -74,6 +73,7 @@
 		18A06334215DE424004CBD55 /* TicketHandPickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A06333215DE424004CBD55 /* TicketHandPickView.swift */; };
 		18A06336215DE6C8004CBD55 /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A06335215DE6C8004CBD55 /* test.storyboard */; };
 		18A06338215DE99D004CBD55 /* Extension TicketHandPickView collectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A06337215DE99D004CBD55 /* Extension TicketHandPickView collectionView.swift */; };
+		18A0633A215E163F004CBD55 /* Extension HandPickNumberTicketVC ticket delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A06339215E163F004CBD55 /* Extension HandPickNumberTicketVC ticket delegate.swift */; };
 		18BDEE8B21422D9500386EA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BDEE8A21422D9500386EA7 /* AppDelegate.swift */; };
 		18BDEE8D21422D9500386EA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BDEE8C21422D9500386EA7 /* ViewController.swift */; };
 		18BDEE9021422D9500386EA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BDEE8E21422D9500386EA7 /* Main.storyboard */; };
@@ -156,7 +156,6 @@
 		184B184C214A243D0054736D /* MyGalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		184B184D214A243D0054736D /* MyGalleryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyGalleryCollectionViewCell.xib; sourceTree = "<group>"; };
 		184CFA7B215CC5C4003B2FEE /* Extension HandPickNumberTicketVC paging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension HandPickNumberTicketVC paging.swift"; sourceTree = "<group>"; };
-		184CFA7D215CC604003B2FEE /* Extension HandPickNumberTicketVC collectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension HandPickNumberTicketVC collectionView.swift"; sourceTree = "<group>"; };
 		1879CC84214F57A40055DEAD /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		187B9E37214A3CB600E17130 /* Extension MyGalleryVC collection view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension MyGalleryVC collection view.swift"; sourceTree = "<group>"; };
 		187B9E39214A43E600E17130 /* Once.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Once.swift; sourceTree = "<group>"; };
@@ -192,6 +191,7 @@
 		18A06333215DE424004CBD55 /* TicketHandPickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketHandPickView.swift; sourceTree = "<group>"; };
 		18A06335215DE6C8004CBD55 /* test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = test.storyboard; sourceTree = "<group>"; };
 		18A06337215DE99D004CBD55 /* Extension TicketHandPickView collectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension TicketHandPickView collectionView.swift"; sourceTree = "<group>"; };
+		18A06339215E163F004CBD55 /* Extension HandPickNumberTicketVC ticket delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension HandPickNumberTicketVC ticket delegate.swift"; sourceTree = "<group>"; };
 		18BDEE8721422D9500386EA7 /* BuyLotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuyLotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BDEE8A21422D9500386EA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18BDEE8C21422D9500386EA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -349,7 +349,7 @@
 			children = (
 				1840A020215B7608009FA815 /* HandPickNumberTicketViewController.swift */,
 				184CFA7B215CC5C4003B2FEE /* Extension HandPickNumberTicketVC paging.swift */,
-				184CFA7D215CC604003B2FEE /* Extension HandPickNumberTicketVC collectionView.swift */,
+				18A06339215E163F004CBD55 /* Extension HandPickNumberTicketVC ticket delegate.swift */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -1128,7 +1128,6 @@
 				184B182F214A171A0054736D /* Array+Extensions.swift in Sources */,
 				184B1816214A0F7E0054736D /* Utils.swift in Sources */,
 				18BDEE8B21422D9500386EA7 /* AppDelegate.swift in Sources */,
-				184CFA7E215CC604003B2FEE /* Extension HandPickNumberTicketVC collectionView.swift in Sources */,
 				18A06338215DE99D004CBD55 /* Extension TicketHandPickView collectionView.swift in Sources */,
 				184CFA7C215CC5C4003B2FEE /* Extension HandPickNumberTicketVC paging.swift in Sources */,
 				187B9E45214A686400E17130 /* AlbumsViewController.swift in Sources */,
@@ -1151,6 +1150,7 @@
 				187B9E38214A3CB600E17130 /* Extension MyGalleryVC collection view.swift in Sources */,
 				18E66B922151F2C5007732CB /* Validate.swift in Sources */,
 				18BDEEE9214231E200386EA7 /* Extension UIView get view controller.swift in Sources */,
+				18A0633A215E163F004CBD55 /* Extension HandPickNumberTicketVC ticket delegate.swift in Sources */,
 				18457086214F849200BC6F78 /* RegisterPageOneViewController.swift in Sources */,
 				18BDEEE2214231E200386EA7 /* Extension UITextView placeholder.swift in Sources */,
 				1895B887215B39D700E6C182 /* ViewYourNumbersTableViewCell.swift in Sources */,
