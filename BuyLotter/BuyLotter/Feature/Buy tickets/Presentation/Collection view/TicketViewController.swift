@@ -139,7 +139,7 @@ class TicketViewController: UIViewController, UICollectionViewDelegate, UICollec
             
         }
         print("select ticket:\(indexPath.item)")
-        let handPickVC = HandPickNumberTicketViewController.init()
+        let handPickVC = HandPickNumberTicketViewController.init(index: indexPath.item, ticketVC: self)
         self.present(handPickVC, animated: true, completion: nil)
         
     }

@@ -58,4 +58,27 @@ struct RandomTicket {
         return data
     }
     
+    func randOneTicket(rule:TicketRuleModel, data:[TicketModel]) -> TicketModel {
+        var result = TicketModel()
+        
+        var isDuplicate = false
+
+        repeat {
+            
+            result.normal = rand(min: rule.minNormal, max: rule.maxNormal, number: rule.numberNormal)
+            result.special = rand(min: rule.minSpecial, max: rule.maxSpecial, number: rule.numberSpecial)
+            
+            for j in 0..<data.count {
+                if result.special == data[j].special && result.normal == data[j].normal {
+                    isDuplicate = true
+                    break
+                }
+            }
+        } while isDuplicate
+        
+        result.isFull = true
+        
+        return result
+    }
+    
 }

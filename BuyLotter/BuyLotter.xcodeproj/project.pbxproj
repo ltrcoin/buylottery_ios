@@ -39,6 +39,8 @@
 		184B1849214A233F0054736D /* MyGalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184B1847214A233F0054736D /* MyGalleryViewController.xib */; };
 		184B184E214A243D0054736D /* MyGalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B184C214A243D0054736D /* MyGalleryCollectionViewCell.swift */; };
 		184B184F214A243D0054736D /* MyGalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184B184D214A243D0054736D /* MyGalleryCollectionViewCell.xib */; };
+		184CFA7C215CC5C4003B2FEE /* Extension HandPickNumberTicketVC paging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184CFA7B215CC5C4003B2FEE /* Extension HandPickNumberTicketVC paging.swift */; };
+		184CFA7E215CC604003B2FEE /* Extension HandPickNumberTicketVC collectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184CFA7D215CC604003B2FEE /* Extension HandPickNumberTicketVC collectionView.swift */; };
 		1879CC85214F57A40055DEAD /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1879CC84214F57A40055DEAD /* Register.storyboard */; };
 		187B9E38214A3CB600E17130 /* Extension MyGalleryVC collection view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9E37214A3CB600E17130 /* Extension MyGalleryVC collection view.swift */; };
 		187B9E3A214A43E600E17130 /* Once.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9E39214A43E600E17130 /* Once.swift */; };
@@ -149,6 +151,8 @@
 		184B1847214A233F0054736D /* MyGalleryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyGalleryViewController.xib; sourceTree = "<group>"; };
 		184B184C214A243D0054736D /* MyGalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		184B184D214A243D0054736D /* MyGalleryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyGalleryCollectionViewCell.xib; sourceTree = "<group>"; };
+		184CFA7B215CC5C4003B2FEE /* Extension HandPickNumberTicketVC paging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension HandPickNumberTicketVC paging.swift"; sourceTree = "<group>"; };
+		184CFA7D215CC604003B2FEE /* Extension HandPickNumberTicketVC collectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension HandPickNumberTicketVC collectionView.swift"; sourceTree = "<group>"; };
 		1879CC84214F57A40055DEAD /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		187B9E37214A3CB600E17130 /* Extension MyGalleryVC collection view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension MyGalleryVC collection view.swift"; sourceTree = "<group>"; };
 		187B9E39214A43E600E17130 /* Once.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Once.swift; sourceTree = "<group>"; };
@@ -336,6 +340,8 @@
 			isa = PBXGroup;
 			children = (
 				1840A020215B7608009FA815 /* HandPickNumberTicketViewController.swift */,
+				184CFA7B215CC5C4003B2FEE /* Extension HandPickNumberTicketVC paging.swift */,
+				184CFA7D215CC604003B2FEE /* Extension HandPickNumberTicketVC collectionView.swift */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -1107,6 +1113,8 @@
 				184B182F214A171A0054736D /* Array+Extensions.swift in Sources */,
 				184B1816214A0F7E0054736D /* Utils.swift in Sources */,
 				18BDEE8B21422D9500386EA7 /* AppDelegate.swift in Sources */,
+				184CFA7E215CC604003B2FEE /* Extension HandPickNumberTicketVC collectionView.swift in Sources */,
+				184CFA7C215CC5C4003B2FEE /* Extension HandPickNumberTicketVC paging.swift in Sources */,
 				187B9E45214A686400E17130 /* AlbumsViewController.swift in Sources */,
 				18BDEEDC214231E200386EA7 /* Extension UIViewController childview.swift in Sources */,
 				18BDEEB821422FE000386EA7 /* Extention LoginVC event keyboard.swift in Sources */,
