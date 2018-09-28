@@ -83,6 +83,27 @@ class BuyTicketViewController: UIViewController {
         ticketVC.collectionView.reloadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        var isShowNumber = false
+        var isShowBuy = false
+        for ticket in ticketVC.data {
+            if ticket.normal.count > 0 || ticket.special.count > 0 {
+                isShowNumber = true
+            }
+            if ticket.isFull {
+                isShowBuy = true
+            }
+        }
+        
+        if isShowNumber {
+            showViewNumber()
+        }
+        if isShowBuy {
+            showBuyBtn()
+        }
+    }
+    
     @IBAction func backBtnTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -237,12 +258,19 @@ class BuyTicketViewController: UIViewController {
         ticketVC.startRandom()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
             self.showViewNumber()
+            self.showBuyBtn()
         }
     }
     
     func showViewNumber(){
         self.heightViewNumberCT.constant = self.oldHeightViewNumberCT
         
+        UIView.animate(withDuration: 0.2, animations: {
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    func showBuyBtn(){
         heightBuyBtnCT.constant = oldHeightBuyBtnCT
         UIView.animate(withDuration: 0.2, animations: {
             self.view.layoutIfNeeded()

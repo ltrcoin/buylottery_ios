@@ -78,7 +78,6 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="loginDidTouch:" destination="1g4-iI-nAo" eventType="touchUpInside" id="g9x-C5-B4X"/>
                                                     <action selector="registerBtnTapped:" destination="1g4-iI-nAo" eventType="touchUpInside" id="gCU-yj-3kd"/>
                                                 </connections>
                                             </button>
