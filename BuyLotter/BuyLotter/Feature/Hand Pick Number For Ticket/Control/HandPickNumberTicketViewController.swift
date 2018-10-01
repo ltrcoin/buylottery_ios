@@ -18,7 +18,6 @@ class HandPickNumberTicketViewController: UIViewController {
     var ticketRule:TicketRuleModel!
     var numberTicket = 10
     var isSystematic = false
-    var maxNumberNormal = 0
     
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -29,6 +28,10 @@ class HandPickNumberTicketViewController: UIViewController {
     @IBOutlet var LeftTicketViewCTs: [NSLayoutConstraint]!
 
     @IBOutlet var RightTicketViewCTs: [NSLayoutConstraint]!
+    
+    @IBOutlet var ticketHandPickViews: [TicketHandPickView]!
+    
+    
     
     var totalWidthContent:CGFloat = 0
     var space:CGFloat = 30
@@ -46,41 +49,6 @@ class HandPickNumberTicketViewController: UIViewController {
     
     var beginDragPoint:CGPoint = CGPoint.zero
     var endDragPoint:CGPoint = CGPoint.zero
-    
-    @IBOutlet var backgroundTicketViews: [UIView]!
-    
-    @IBOutlet var contentAreaTicketViews: [UIView]!
-    
-    @IBOutlet var quickPickBtns: [UIButton]!
-    
-    @IBOutlet var noTicketLbls: [UILabel]!
-    
-    @IBOutlet var quitImgs: [UIImageView]!
-    
-    
-    @IBOutlet var normalCollectionViews: [UICollectionView]!
-    
-    @IBOutlet var heightNormalCTs: [NSLayoutConstraint]!
-    
-    @IBOutlet var specialCollectionViews: [UICollectionView]!
-    
-    @IBOutlet var heightSpecialCTs: [NSLayoutConstraint]!
-    
-    
-    let cellId = "HandPickTicketCollectionViewCell"
-    
-    var cellSize:CGSize = CGSize.zero
-    var numberColumn = 8
-    
-    var colorFullBackground = UIColor.init(red: 132/255, green: 192/255, blue: 242/255, alpha: 1)
-    
-    var colorFullContent = UIColor.init(red: 188/255, green: 219/255, blue: 244/255, alpha: 1)
-    
-    var colorNotFullBackground = UIColor.init(red: 247/255, green: 205/255, blue: 95/255, alpha: 1)
-    
-    var colorNotFullContent = UIColor.init(red: 249/255, green: 219/255, blue: 139/255, alpha: 1)
-    
-    
     
     init(index:Int,ticketVC:TicketViewController) {
         self.ticketVC = ticketVC
@@ -106,6 +74,10 @@ class HandPickNumberTicketViewController: UIViewController {
         super.init(nibName: "HandPickNumberTicketViewController", bundle: nil)
     }
     
+    deinit {
+        print("🤬 HandPickNumberTicketViewController deinit")
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -113,8 +85,7 @@ class HandPickNumberTicketViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        setupCollectionView()
-        
+        setupTicketView()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -130,6 +101,8 @@ class HandPickNumberTicketViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         updateDataViews()
     }
+    
+   
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -176,32 +149,19 @@ class HandPickNumberTicketViewController: UIViewController {
         self.view.layoutIfNeeded()
         
         scrollView.contentOffset.x = CGFloat(currentIndex) * width
-        
-        for i in 0..<quickPickBtns.count {
-            quickPickBtns[i].layer.cornerRadius = 5
-            
-            backgroundTicketViews[i].layer.cornerRadius = 5
+    }
+    
+    func updateDataViews(){
+        for i in 0..<ticketViews.count {
+            updateDataView(i)
         }
     }
     
-    @IBAction func quitBtnTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+    func updateDataView(_ i:Int) {
+        let index = Int(ticketViews[i].frame.minX) / Int(width)
+        ticketHandPickViews[i].index = index
+        ticketHandPickViews[i].data = data[index]
+        ticketHandPickViews[i].noLbl.text = "Line \(index + 1)/\(numberTicket)"
     }
-    
-    @IBAction func quickPickBtnTapped(_ sender: Any) {
-        print("quick pick tapped")
-        
-        randomTicketAnimation()
-        
-        
-    }
-    
-    @IBAction func deleteBtn(_ sender: Any) {
-        print("delete or reset number")
-        data[currentIndex] = TicketModel()
-        updateDataView(currentView)
-    }
-    
-    
 
 }
