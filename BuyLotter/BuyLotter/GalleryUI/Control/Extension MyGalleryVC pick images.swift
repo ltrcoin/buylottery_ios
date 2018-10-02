@@ -15,7 +15,7 @@ extension MyGalleryViewController :UIImagePickerControllerDelegate, UINavigation
         print("Choose photo")
         let imgPicker = UIImagePickerController()
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
-            imgPicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+            imgPicker.sourceType = UIImagePickerController.SourceType.photoLibrary
             
             imgPicker.delegate = self
             imgPicker.allowsEditing = false
@@ -23,8 +23,8 @@ extension MyGalleryViewController :UIImagePickerControllerDelegate, UINavigation
         }
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-         let chooseImg = info[UIImagePickerControllerOriginalImage] as! UIImage
+    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+         let chooseImg = info["UIImagePickerControllerOriginalImage"] as! UIImage
 //         let asset = info[UIImagePickerControllerPHAsset] as! PHAsset
         //imageSelected = Image.init(asset: asset)
         
@@ -58,7 +58,7 @@ extension MyGalleryViewController :UIImagePickerControllerDelegate, UINavigation
         
         let imgPicker = UIImagePickerController()
         if UIImagePickerController.isSourceTypeAvailable(.camera){
-            imgPicker.sourceType = UIImagePickerControllerSourceType.camera
+            imgPicker.sourceType = UIImagePickerController.SourceType.camera
             
             imgPicker.delegate = self
             imgPicker.allowsEditing = false

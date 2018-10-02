@@ -11,7 +11,7 @@ import UIKit
 extension UIViewController {
     func showImageFullScreen(images: [UIImage], imageUrls: [String], currentIndex: Int, originFrame: [CGRect]) {
         print("show full all image")
-        let imageFullScreenPageVC = ImageFullScreenPageVC(transitionStyle: .scroll, navigationOrientation: .horizontal, options: [UIPageViewControllerOptionInterPageSpacingKey : 50.0])
+        let imageFullScreenPageVC = ImageFullScreenPageVC(transitionStyle: .scroll, navigationOrientation: .horizontal, options: [UIPageViewController.OptionsKey.interPageSpacing : 50.0])
 
         imageFullScreenPageVC.folderLink = ""
         imageFullScreenPageVC.images = images
@@ -19,10 +19,10 @@ extension UIViewController {
         imageFullScreenPageVC.currentIndex = currentIndex
         imageFullScreenPageVC.originFrame = originFrame
 
-        self.addChildViewController(imageFullScreenPageVC)
+        self.addChild(imageFullScreenPageVC)
         self.view.addSubview(imageFullScreenPageVC.view)
         imageFullScreenPageVC.view.isHidden = true
         imageFullScreenPageVC.showViewAnimation()
-        self.didMove(toParentViewController: self)
+        self.didMove(toParent: self)
     }
 }

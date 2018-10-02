@@ -23,6 +23,14 @@ class RegisterPageOneViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nextBtn: UIButton!
     
+    @IBOutlet weak var emailValidLbl: UILabel!
+    
+    @IBOutlet weak var pwdValidLbl: UILabel!
+    
+    @IBOutlet weak var re_pwdValidLbl: UILabel!
+    
+    @IBOutlet weak var phoneValidLbl: UILabel!
+    
     @IBOutlet weak var spaceBottomCT: NSLayoutConstraint!
     var oldConstraint:CGFloat = 0
     
@@ -34,7 +42,7 @@ class RegisterPageOneViewController: UIViewController, UITextFieldDelegate {
         setupView()
         setupDelegate()
         
-        
+        hidenAllNotify()
         
     }
     
@@ -51,9 +59,83 @@ class RegisterPageOneViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
+    private func hidenAllNotify(){
+        emailValidLbl.isHidden = true
+        pwdValidLbl.isHidden = true
+        re_pwdValidLbl.isHidden = true
+        phoneValidLbl.isHidden = true
+    }
+    
 
     @IBAction func nextBtn(_ sender: Any) {
-        performSegue(withIdentifier: "next", sender: nil)
+        hidenAllNotify()
+        let validation = Validate()
+        
+        if emailTxt.text == nil || emailTxt.text! == "" {
+            emailValidLbl.text = "Email is required."
+            emailValidLbl.isHidden = false
+            return
+        }
+        
+        if !validation.isValidEmail(testStr: emailTxt.text!) {
+            emailValidLbl.text = "Email is invalided."
+            emailValidLbl.isHidden = false
+            return
+        }
+        
+        if pwdTxt.text == nil || pwdTxt.text! == "" {
+            pwdValidLbl.text = "Password is required."
+            pwdValidLbl.isHidden = false
+            return
+        }
+        
+        if re_pwdTxt.text == nil || re_pwdTxt.text! == "" {
+            re_pwdValidLbl.text = "Re-enter password is required."
+            re_pwdValidLbl.isHidden = false
+            return
+        }
+        
+        if re_pwdTxt.text! != pwdTxt.text! {
+            re_pwdValidLbl.text = "Re-enter password must equal password."
+            re_pwdValidLbl.isHidden = false
+            return
+        }
+        
+        
+        if phoneTxt.text == nil || phoneTxt.text! == "" {
+            phoneValidLbl.text = "Phone is required."
+            phoneValidLbl.isHidden = false
+            return
+        }
+
+//        if !validation.isValidPhone(value: phoneTxt.text!) {
+//            phoneValidLbl.text = "Phone is invalided."
+//            phoneValidLbl.isHidden = false
+//            return
+//        }
+        
+        nextBtn.showLoadingRight(style: .white)
+        nextBtn.isUserInteractionEnabled = false
+        
+        RegisterService.init().validate(email: emailTxt.text!, pwd: pwdTxt.text!, phone: phoneTxt.text!) { [weak self] (done, msg) in
+            
+            self?.nextBtn.isUserInteractionEnabled = true
+            self?.nextBtn.hideLoading()
+            
+            if done {
+                self?.performSegue(withIdentifier: "next", sender: nil)
+            } else {
+                if let en = msg!["email"] as? String {
+                    self?.emailValidLbl.isHidden = false
+                    self?.emailValidLbl.text = en
+                }
+                if let tn = msg!["tel"] as? String {
+                    self?.phoneValidLbl.isHidden = false
+                    self?.phoneValidLbl.text = tn
+                }
+            }
+        }
+        
     }
     
     @IBAction func quitBtnTapped(_ sender: Any) {
@@ -78,6 +160,18 @@ class RegisterPageOneViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         print("\(textField.frame.maxY)")
         viewFocus = textField
+        return true
+    }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == emailTxt {
+            pwdTxt.becomeFirstResponder()
+        } else if textField == pwdTxt {
+            re_pwdTxt.becomeFirstResponder()
+        } else if textField == re_pwdTxt {
+            phoneTxt.becomeFirstResponder()
+        }
         return true
     }
     
