@@ -32,7 +32,7 @@ extension UIViewController {
             oldPha = _oldAlpha
         }
         
-        addChildViewController(child)
+        addChild(child)
         
         if parentView != nil {
             parentView?.addSubview(child.view)
@@ -74,7 +74,7 @@ extension UIViewController {
                     child.view.backgroundColor = child.view.backgroundColor?.withAlphaComponent(oldPha)
                 })
             }
-            child.didMove(toParentViewController: self)
+            child.didMove(toParent: self)
         }
     }
 
@@ -84,7 +84,7 @@ extension UIViewController {
         }
 
         // Notify the child that it's about to be moved away from its parent
-        willMove(toParentViewController: nil)
+        willMove(toParent: nil)
 
 
         var parentView = _parentView != nil ? _parentView : self.parent?.view
@@ -139,7 +139,7 @@ extension UIViewController {
         }
 
         // Remove the child
-        removeFromParentViewController()
+        removeFromParent()
 
     }
 }

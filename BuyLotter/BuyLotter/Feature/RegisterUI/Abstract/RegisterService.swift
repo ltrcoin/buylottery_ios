@@ -94,7 +94,7 @@ struct RegisterService {
             }
             
             if portraitImg != nil {
-                guard let imageData = UIImageJPEGRepresentation(portraitImg!, 1) else {
+                guard let imageData = portraitImg?.jpegData(compressionQuality: 1)  else {
                     print("Could not get JPEG representation of UIImage")
                     return
                 }
@@ -105,7 +105,7 @@ struct RegisterService {
             }
             
             if passportImg != nil {
-                guard let imageData = UIImageJPEGRepresentation(passportImg!, 1) else {
+                guard let imageData = passportImg?.jpegData(compressionQuality: 1) else {
                     print("Could not get JPEG representation of UIImage")
                     return
                 }
@@ -136,6 +136,46 @@ struct RegisterService {
                 
             }
         })
+    }
+    
+    
+    func validate(email:String, pwd:String, phone:String, completion: @escaping (Bool, Dictionary<String,Any>?) -> Void ){
+        let urlString = Config.SERVER_LINK + "validateregister"
+        
+        let headers: HTTPHeaders = [:]
+        
+        
+        var parameters: Parameters = [
+            "email" : email,
+            "password": pwd,
+            "tel": phone,
+            "apikey" : Config.API_KEY
+            ] as [String : String]
+
+        Alamofire.request(urlString, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
+            .downloadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
+                print("Progress: \(progress.fractionCompleted)")
+            }
+            .validate { request, response, data in
+                // Custom evaluation closure now includes data (allows you to parse data to dig out error messages if necessary)
+                return .success
+            }.responseJSON { (response) in
+                print("\(response.result.value)")
+                if let dataResponse = response.result.value as? Dictionary<String,Any> {
+                    guard let status = dataResponse["status"] as? Int
+                    
+                        else {
+                            return
+                                completion(false,nil)
+                    }
+                    if status == 200 {
+                        completion(true,nil)
+                    } else if let msg = dataResponse["msg"] as? Dictionary<String, Any> {
+                        print("msg:\(msg)")
+                        completion(false,msg)
+                    }
+                }
+        }
     }
     
 }

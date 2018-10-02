@@ -52,14 +52,14 @@ extension HandPickNumberTicketViewController: UIScrollViewDelegate {
         if next {
             
             let n = (index + 1) % numberView
-            self.scrollView.bringSubview(toFront: ticketViews[n])
+            self.scrollView.bringSubviewToFront(ticketViews[n])
         } else {
             let p = index - 1 >= 0 ? index - 1 : numberView - 1
             
-            self.scrollView.bringSubview(toFront: ticketViews[p])
+            self.scrollView.bringSubviewToFront(ticketViews[p])
         }
         
-        self.scrollView.bringSubview(toFront: ticketViews[index])
+        self.scrollView.bringSubviewToFront(ticketViews[index])
         
     }
     

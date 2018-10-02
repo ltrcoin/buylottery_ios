@@ -9,9 +9,9 @@
 import UIKit
 
 extension UIView {
-    func showLoading(style: UIActivityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray){
+    func showLoading(style: UIActivityIndicatorView.Style = UIActivityIndicatorView.Style.gray){
         let loadingView = self.getLoadingView()
-        loadingView.activityIndicatorViewStyle = style
+        loadingView.style = style
         loadingView.startAnimating()
     }
 
@@ -21,7 +21,7 @@ extension UIView {
         loadingView.startAnimating()
     }
 
-    func showLoadingRight(style: UIActivityIndicatorViewStyle = UIActivityIndicatorViewStyle.white){
+    func showLoadingRight(style: UIActivityIndicatorView.Style = UIActivityIndicatorView.Style.white){
         let rect = CGRect(x: self.frame.width - self.frame.height, y: 0, width: self.frame.height, height: self.frame.height)
         self.showLoading(rect:rect)
     }
@@ -40,7 +40,7 @@ extension UIView {
             loadingIndicator.frame = CGRect(x: 0.0, y: 0.0, width: self.frame.height, height: self.frame.height)
             loadingIndicator.tag = 88
             loadingIndicator.hidesWhenStopped = true
-            loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+            loadingIndicator.style = UIActivityIndicatorView.Style.gray
             return loadingIndicator
         }
     }

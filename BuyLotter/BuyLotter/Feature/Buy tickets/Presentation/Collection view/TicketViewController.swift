@@ -159,9 +159,9 @@ class TicketViewController: UIViewController, UICollectionViewDelegate, UICollec
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         if maxCol < numberTicket && numberTicket < maxCol * 2{
             let firstRow = numberTicket / 2 + numberTicket % 2
-            return UIEdgeInsetsMake(0, sizeCell.width / 2 * CGFloat(maxCol - firstRow), 0, 0)
+            return UIEdgeInsets(top: 0, left: sizeCell.width / 2 * CGFloat(maxCol - firstRow), bottom: 0, right: 0)
         }
-        return UIEdgeInsetsMake(0, 0, 0, 0)
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
 
 }

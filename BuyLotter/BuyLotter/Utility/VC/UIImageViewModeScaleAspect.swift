@@ -116,7 +116,7 @@ open class UIImageViewModeScaleAspect: UIView {
             newTransitionImageFrame = initialeTransitionImageFrame(newScaleAspect, ratio: ratio, newFrame: newFrame)
         } else {
             transitionImage.frame = initialeTransitionImageFrame(newScaleAspect, ratio: ratio, newFrame: frame)
-            transitionImage.contentMode = UIViewContentMode.scaleAspectFit;
+            transitionImage.contentMode = UIView.ContentMode.scaleAspectFit;
             newTransitionImageFrame = CGRect(x: 0, y: 0, width: newFrame.size.width, height: newFrame.size.height);
         }
 
@@ -160,7 +160,7 @@ open class UIImageViewModeScaleAspect: UIView {
         }
     }
     
-    override open var contentMode: UIViewContentMode {
+    override open var contentMode: UIView.ContentMode {
         get {
             return transitionImage.contentMode
         }
@@ -171,12 +171,12 @@ open class UIImageViewModeScaleAspect: UIView {
     
     //MARK: Private
     
-    fileprivate static func contentMode(_ scaleAspect: ScaleAspect) -> UIViewContentMode {
+    fileprivate static func contentMode(_ scaleAspect: ScaleAspect) -> UIView.ContentMode {
         switch scaleAspect {
         case .fit:
-            return UIViewContentMode.scaleAspectFit
+            return UIView.ContentMode.scaleAspectFit
         case .fill:
-            return UIViewContentMode.scaleAspectFill
+            return UIView.ContentMode.scaleAspectFill
         }
     }
     
