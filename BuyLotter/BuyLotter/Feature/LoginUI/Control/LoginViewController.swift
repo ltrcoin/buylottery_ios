@@ -29,6 +29,8 @@ class LoginViewController: UIViewController {
     var data:Dictionary<String,Any> = [:]
 
     var delegate: UILoginDelegate?
+    
+    var menuSide:MenuSideInterface!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,11 +86,14 @@ class LoginViewController: UIViewController {
         self.present(registerVC, animated: true, completion: nil)
         
     }
+    @IBAction func menuSideBtnTapped(_ sender: Any) {
+        menuSide.toggleMenuSide()
+    }
     
 
     @IBAction func loginDidTouch(_ sender: Any) {
-        let authenVC = TwoFactorAuthenViewController.init()
-        self.present(authenVC, animated: true, completion: nil)
+        let menuSideVC = MenuSideViewController.init()
+        self.present(menuSideVC, animated: true, completion: nil)
         return
         if accountTxt.text ==  "" || !self.loginBtn.isUserInteractionEnabled{
             return
@@ -112,8 +117,11 @@ class LoginViewController: UIViewController {
             } else {
                 self?.notifyLbl.isHidden = true
                 print(data)
-                let authenVC = TwoFactorAuthenViewController.init()
-                self?.present(authenVC, animated: true, completion: nil)
+//                let authenVC = TwoFactorAuthenViewController.init()
+//                self?.present(authenVC, animated: true, completion: nil)
+                
+                let menuSideVC = MenuSideViewController.init()
+                self?.present(menuSideVC, animated: true, completion: nil)
             }
             self?.loginBtn.isUserInteractionEnabled = true
             self?.registerBtn.isUserInteractionEnabled = true
