@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1g4-iI-nAo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1g4-iI-nAo">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,32 +13,32 @@
         <!--Login View Controller-->
         <scene sceneID="lHX-ZW-hjM">
             <objects>
-                <viewController storyboardIdentifier="EducationMySchoolLogin" id="1g4-iI-nAo" customClass="LoginViewController" customModule="BuyLotter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="1g4-iI-nAo" customClass="LoginViewController" customModule="BuyLotter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fs6-aO-uY9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" image="logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AHE-aY-psG">
-                                <rect key="frame" x="27" y="99.666666666666686" width="360" height="123.33333333333331"/>
+                                <rect key="frame" x="27" y="99" width="360" height="123.66666666666669"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="AHE-aY-psG" secondAttribute="height" multiplier="277:95" id="VHU-8K-NcF"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QsO-4z-MV5">
-                                <rect key="frame" x="206.66666666666666" y="161.33333333333334" width="1" height="1"/>
+                                <rect key="frame" x="206.66666666666666" y="160.33333333333334" width="1" height="1"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1" id="k08-OK-GdI"/>
                                     <constraint firstAttribute="height" constant="1" id="tBk-Go-2Zh"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login to your Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQG-Bu-MWK">
-                                <rect key="frame" x="203" y="187.33333333333334" width="124" height="14"/>
+                                <rect key="frame" x="203" y="186.33333333333334" width="124" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8im-ym-t9w">
-                                <rect key="frame" x="57" y="257" width="300" height="243"/>
+                                <rect key="frame" x="57" y="256.66666666666669" width="300" height="243"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3cr-MP-jfT">
                                         <rect key="frame" x="20" y="43" width="260" height="30"/>
@@ -147,11 +145,21 @@
                                             <constraint firstAttribute="width" constant="25" id="Vtn-pG-uu6"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WxC-Dy-tGq">
+                                        <rect key="frame" x="0.0" y="0.0" width="53" height="41"/>
+                                        <connections>
+                                            <action selector="menuSideBtnTapped:" destination="1g4-iI-nAo" eventType="touchUpInside" id="7Cf-7V-K9k"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="WxC-Dy-tGq" secondAttribute="bottom" id="2Qh-JB-ukl"/>
+                                    <constraint firstItem="WxC-Dy-tGq" firstAttribute="leading" secondItem="Pdx-Ey-nvJ" secondAttribute="leading" id="5kA-sj-uBO"/>
                                     <constraint firstItem="N0O-Zn-0IM" firstAttribute="centerX" secondItem="Pdx-Ey-nvJ" secondAttribute="centerX" id="DVk-XC-Zag"/>
+                                    <constraint firstItem="WxC-Dy-tGq" firstAttribute="top" secondItem="Pdx-Ey-nvJ" secondAttribute="top" id="FEV-AN-Tmo"/>
                                     <constraint firstItem="BZW-qG-Jdq" firstAttribute="leading" secondItem="Pdx-Ey-nvJ" secondAttribute="leading" constant="8" id="Hcs-zE-EhB"/>
+                                    <constraint firstItem="WxC-Dy-tGq" firstAttribute="trailing" secondItem="BZW-qG-Jdq" secondAttribute="trailing" constant="20" id="Mnr-Yy-PcL"/>
                                     <constraint firstAttribute="height" constant="41" id="Po1-WA-xEW"/>
                                     <constraint firstItem="BZW-qG-Jdq" firstAttribute="centerY" secondItem="Pdx-Ey-nvJ" secondAttribute="centerY" id="lS6-R4-pon"/>
                                     <constraint firstItem="N0O-Zn-0IM" firstAttribute="centerY" secondItem="Pdx-Ey-nvJ" secondAttribute="centerY" id="saH-tS-1k9"/>
@@ -189,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hwa-aU-obz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="120.8" y="39.130434782608695"/>
+            <point key="canvasLocation" x="120.28985507246378" y="39.130434782608695"/>
         </scene>
     </scenes>
     <resources>

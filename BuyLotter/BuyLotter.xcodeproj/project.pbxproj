@@ -74,6 +74,8 @@
 		18A06336215DE6C8004CBD55 /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A06335215DE6C8004CBD55 /* test.storyboard */; };
 		18A06338215DE99D004CBD55 /* Extension TicketHandPickView collectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A06337215DE99D004CBD55 /* Extension TicketHandPickView collectionView.swift */; };
 		18A0633A215E163F004CBD55 /* Extension HandPickNumberTicketVC ticket delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A06339215E163F004CBD55 /* Extension HandPickNumberTicketVC ticket delegate.swift */; };
+		18A18C7921634DA200F01838 /* MenuSideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A18C5B21634DA200F01838 /* MenuSideViewController.xib */; };
+		18A18C7A21634DA200F01838 /* MenuSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A18C5D21634DA200F01838 /* MenuSideViewController.swift */; };
 		18BDEE8B21422D9500386EA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BDEE8A21422D9500386EA7 /* AppDelegate.swift */; };
 		18BDEE8D21422D9500386EA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BDEE8C21422D9500386EA7 /* ViewController.swift */; };
 		18BDEE9021422D9500386EA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BDEE8E21422D9500386EA7 /* Main.storyboard */; };
@@ -192,6 +194,8 @@
 		18A06335215DE6C8004CBD55 /* test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = test.storyboard; sourceTree = "<group>"; };
 		18A06337215DE99D004CBD55 /* Extension TicketHandPickView collectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension TicketHandPickView collectionView.swift"; sourceTree = "<group>"; };
 		18A06339215E163F004CBD55 /* Extension HandPickNumberTicketVC ticket delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension HandPickNumberTicketVC ticket delegate.swift"; sourceTree = "<group>"; };
+		18A18C5B21634DA200F01838 /* MenuSideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuSideViewController.xib; sourceTree = "<group>"; };
+		18A18C5D21634DA200F01838 /* MenuSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuSideViewController.swift; sourceTree = "<group>"; };
 		18BDEE8721422D9500386EA7 /* BuyLotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuyLotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BDEE8A21422D9500386EA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18BDEE8C21422D9500386EA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -553,6 +557,13 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		18938E7B2166005E0039F2E4 /* Result detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Result detail";
+			sourceTree = "<group>";
+		};
 		1895B87A215B29FC00E6C182 /* Random */ = {
 			isa = PBXGroup;
 			children = (
@@ -586,6 +597,31 @@
 				1895B886215B39D700E6C182 /* ViewYourNumbersTableViewCell.xib */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		18A18C3721634DA200F01838 /* MenuSide */ = {
+			isa = PBXGroup;
+			children = (
+				18A18C5A21634DA200F01838 /* Presentation */,
+				18A18C5C21634DA200F01838 /* Control */,
+			);
+			path = MenuSide;
+			sourceTree = "<group>";
+		};
+		18A18C5A21634DA200F01838 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				18A18C5B21634DA200F01838 /* MenuSideViewController.xib */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		18A18C5C21634DA200F01838 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				18A18C5D21634DA200F01838 /* MenuSideViewController.swift */,
+			);
+			path = Control;
 			sourceTree = "<group>";
 		};
 		18BDEE7E21422D9500386EA7 = {
@@ -798,6 +834,8 @@
 		18E21C042153835F006BF9DD /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				18938E7B2166005E0039F2E4 /* Result detail */,
+				18A18C3721634DA200F01838 /* MenuSide */,
 				1840A01D215B75AA009FA815 /* Hand Pick Number For Ticket */,
 				1840A016215B6D60009FA815 /* Guide Systematic */,
 				1895B87D215B388700E6C182 /* View your numbers */,
@@ -1006,6 +1044,7 @@
 				18802B2C2147ADED00F476BC /* PickCountryViewController.xib in Resources */,
 				187B9E46214A686400E17130 /* AlbumsViewController.xib in Resources */,
 				187B9E3E214A51D900E17130 /* GalleryCamCollectionViewCell.xib in Resources */,
+				18A18C7921634DA200F01838 /* MenuSideViewController.xib in Resources */,
 				18802B202147AB8400F476BC /* country.plist in Resources */,
 				1840A01C215B6DF9009FA815 /* GuideSystematicViewController.xib in Resources */,
 				184B1849214A233F0054736D /* MyGalleryViewController.xib in Resources */,
@@ -1107,6 +1146,7 @@
 				18BDEEE1214231E200386EA7 /* Extension UIViewcontroller dismiss keyboard.swift in Sources */,
 				1832E14F215A1DDE0078A672 /* SystematicCollectionViewCell.swift in Sources */,
 				18BDEEBA21422FE000386EA7 /* LoginViewController.swift in Sources */,
+				18A18C7A21634DA200F01838 /* MenuSideViewController.swift in Sources */,
 				1845708A214F928C00BC6F78 /* RegisterPageThreeViewController.swift in Sources */,
 				18BDEE8D21422D9500386EA7 /* ViewController.swift in Sources */,
 				184B1848214A233F0054736D /* MyGalleryViewController.swift in Sources */,

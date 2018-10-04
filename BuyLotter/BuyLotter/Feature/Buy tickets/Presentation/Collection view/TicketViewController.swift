@@ -60,7 +60,7 @@ class TicketViewController: UIViewController, UICollectionViewDelegate, UICollec
     lazy var sizeCell:CGSize = CGSize.init(width: (self.view.frame.width - cellSpace *  CGFloat(maxCol) - 1) / (CGFloat(maxCol)), height: (self.view.frame.width - cellSpace *  CGFloat(maxCol) - 1) / (CGFloat(maxCol)) * ratioTicket)
     
     deinit {
-        print("🤬 TicketViewController")
+        print("🤬 deinit TicketViewController")
     }
     init() {
         super.init(nibName: "TicketViewController", bundle: nil)
