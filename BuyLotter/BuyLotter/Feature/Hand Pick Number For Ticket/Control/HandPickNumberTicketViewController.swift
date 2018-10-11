@@ -130,6 +130,7 @@ class HandPickNumberTicketViewController: UIViewController {
                 ticketViews.removeLast()
                 LeftTicketViewCTs.removeLast()
                 RightTicketViewCTs.removeLast()
+                ticketHandPickViews.removeLast()
             }
             numberView = numberTicket
         }

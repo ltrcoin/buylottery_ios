@@ -14,10 +14,13 @@ extension HandPickNumberTicketViewController : TicketHandPickViewDelegate {
             ticketHandPickViews[i].delegate = self
             let index = Int(ticketViews[i].frame.minX) / Int(width)
             ticketHandPickViews[i].ticketRule = ticketRule
-            ticketHandPickViews[i].data = data[index]
+            
+            
             ticketHandPickViews[i].index = index
+            ticketHandPickViews[i].data = data[index]
             
             ticketHandPickViews[i].setupView()
+            
         }
     }
     

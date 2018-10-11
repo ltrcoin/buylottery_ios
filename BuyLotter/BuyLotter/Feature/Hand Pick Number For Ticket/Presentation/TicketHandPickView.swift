@@ -101,11 +101,17 @@ class TicketHandPickView: UIView {
     
     
     func setupView(){
+        
+        
         quickPickBtn.layer.cornerRadius = 5
         heightNormalCT.constant = CGFloat((ticketRule.maxNormal - 1) / 8 + 1) * (cellSize.height + 2)
         heightSpecialCT.constant = CGFloat((ticketRule.maxSpecial - 1) / 8 + 1) * (cellSize.height + 2)
+        
         self.layer.masksToBounds = true
         self.layer.cornerRadius = 5
+        
+        normalCollectionView.reloadData()
+        specialCollectionView.reloadData()
     }
     
     

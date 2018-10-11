@@ -92,10 +92,8 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func loginDidTouch(_ sender: Any) {
-        let menuSideVC = MenuSideViewController.init()
-        self.present(menuSideVC, animated: true, completion: nil)
-        return
-        if accountTxt.text ==  "" || !self.loginBtn.isUserInteractionEnabled{
+        self.view.endEditing(true)
+        if accountTxt.text ==  "" || !self.loginBtn.isUserInteractionEnabled {
             return
         }
         self.loginBtn.isUserInteractionEnabled = false
@@ -119,9 +117,7 @@ class LoginViewController: UIViewController {
                 print(data)
 //                let authenVC = TwoFactorAuthenViewController.init()
 //                self?.present(authenVC, animated: true, completion: nil)
-                
-                let menuSideVC = MenuSideViewController.init()
-                self?.present(menuSideVC, animated: true, completion: nil)
+                self?.menuSide.logined!(data: data!)
             }
             self?.loginBtn.isUserInteractionEnabled = true
             self?.registerBtn.isUserInteractionEnabled = true
@@ -129,7 +125,6 @@ class LoginViewController: UIViewController {
         }
         
     }
-
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

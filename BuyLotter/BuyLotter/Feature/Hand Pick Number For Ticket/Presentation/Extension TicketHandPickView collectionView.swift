@@ -37,13 +37,15 @@ extension TicketHandPickView : UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if ticketRule != nil {
+            if collectionView == normalCollectionView {
+                return ticketRule.maxNormal
+            }
+            if collectionView == specialCollectionView {
+                return ticketRule.maxSpecial
+            }
+        }
         
-        if collectionView == normalCollectionView {
-            return 70
-        }
-        if collectionView == specialCollectionView {
-            return 26
-        }
         return 0
     }
     
@@ -66,7 +68,7 @@ extension TicketHandPickView : UICollectionViewDelegate, UICollectionViewDataSou
         
         if collectionView == normalCollectionView {
             if !data.normal.contains(indexPath.item + 1) {
-                if !data.isFull {
+                if data.normal.count < ticketRule.numberNormal {
                     data.normal.append(indexPath.item + 1)
                     data.normal.sort()
                     if data.normal.count == ticketRule.numberNormal && data.special.count == ticketRule.numberSpecial {
@@ -81,13 +83,11 @@ extension TicketHandPickView : UICollectionViewDelegate, UICollectionViewDataSou
                     data.normal.remove(at: i)
                 }
                 updateDataView()
-            }
-            
-            
+            }  
         }
         if collectionView == specialCollectionView {
-            if !data.special.contains(indexPath.item + 1){
-                if !data.isFull {
+            if !data.special.contains(indexPath.item + 1)  {
+                if data.special.count < ticketRule.numberSpecial {
                     data.special.append(indexPath.item + 1)
                     data.special.sort()
                     if data.normal.count == ticketRule.numberNormal && data.special.count == ticketRule.numberSpecial {

@@ -12,11 +12,8 @@ class HomeViewController: UIViewController {
 
     @IBOutlet var playsBtn: [UIButton]!
     
-    @IBOutlet weak var euroTime: UILabel!
+    @IBOutlet weak var timeDrawLbl: UILabel!
     
-    @IBOutlet weak var megaTime: UILabel!
-    
-    @IBOutlet weak var euroJackpotView: UIView!
     var et = 1000
     var mt = 2134
     
@@ -59,11 +56,11 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        startTimeDown()
+        //startTimeDown()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        timer.invalidate()
+        //timer.invalidate()
     }
     
     
@@ -76,9 +73,8 @@ class HomeViewController: UIViewController {
     
     @objc func updateTimer() {
         et -= 1
-        mt -= 1
-        euroTime.text = timeString(time: TimeInterval(et))
-        megaTime.text = timeString(time: TimeInterval(mt))
+//        euroTime.text = timeString(time: TimeInterval(et))
+        timeDrawLbl.text = timeString(time: TimeInterval(et))
         print("🤬 update time \(et)")
     }
     
@@ -112,10 +108,6 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func resultBtnTapped(_ sender: Any) {
-        UIView.transition(with: euroJackpotView, duration: 0.9, options: .transitionFlipFromBottom, animations: {
-            
-        }) { (done) in
-            
-        }
+        
     }
 }
