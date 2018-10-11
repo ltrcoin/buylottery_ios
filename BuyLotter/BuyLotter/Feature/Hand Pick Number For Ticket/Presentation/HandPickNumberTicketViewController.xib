@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,16 +35,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="42l-er-nfD">
-                    <rect key="frame" x="5" y="20" width="370" height="642"/>
+                    <rect key="frame" x="5" y="0.0" width="370" height="662"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WhP-bc-fmN">
-                            <rect key="frame" x="0.0" y="0.0" width="1125" height="642"/>
+                            <rect key="frame" x="0.0" y="0.0" width="1125" height="662"/>
                             <subviews>
                                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8z-W0-TCe">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="642"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="662"/>
                                     <subviews>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n0r-dv-new" customClass="TicketHandPickView" customModule="BuyLotter" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="642"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="662"/>
                                             <color key="backgroundColor" red="0.93333333333333335" green="0.77647058823529413" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </view>
                                     </subviews>
@@ -58,10 +58,10 @@
                                     </constraints>
                                 </scrollView>
                                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywU-g9-qPN">
-                                    <rect key="frame" x="375" y="0.0" width="375" height="642"/>
+                                    <rect key="frame" x="375" y="0.0" width="375" height="662"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zML-4H-Xf2" customClass="TicketHandPickView" customModule="BuyLotter" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="642"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="662"/>
                                             <color key="backgroundColor" red="0.93333333330000001" green="0.77647058820000003" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </view>
                                     </subviews>
@@ -75,10 +75,10 @@
                                     </constraints>
                                 </scrollView>
                                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wte-za-vSc">
-                                    <rect key="frame" x="750" y="0.0" width="375" height="642"/>
+                                    <rect key="frame" x="750" y="0.0" width="375" height="662"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBD-l6-eux" customClass="TicketHandPickView" customModule="BuyLotter" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="642"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="662"/>
                                             <color key="backgroundColor" red="0.93333333330000001" green="0.77647058820000003" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </view>
                                     </subviews>
@@ -120,12 +120,12 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="42l-er-nfD" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Ddv-K4-lVh"/>
-                <constraint firstItem="42l-er-nfD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="Eee-4U-YFM"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="42l-er-nfD" secondAttribute="bottom" constant="5" id="c3b-k8-T4W"/>
-                <constraint firstItem="42l-er-nfD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="gKP-DK-VjZ"/>
+                <constraint firstItem="42l-er-nfD" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="Ddv-K4-lVh"/>
+                <constraint firstItem="42l-er-nfD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="Eee-4U-YFM"/>
+                <constraint firstAttribute="bottom" secondItem="42l-er-nfD" secondAttribute="bottom" constant="5" id="c3b-k8-T4W"/>
+                <constraint firstItem="42l-er-nfD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gKP-DK-VjZ"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <viewLayoutGuide key="safeArea" id="8uh-hI-NmO"/>
             <point key="canvasLocation" x="918" y="88"/>
         </view>
     </objects>

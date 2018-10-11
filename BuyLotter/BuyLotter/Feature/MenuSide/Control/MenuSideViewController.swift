@@ -7,28 +7,41 @@
 //
 
 import UIKit
-
+@objc
 protocol MenuSideInterface {
     func showMenuSide()
     func hideMenuSide()
     func toggleMenuSide()
+    @objc optional func updateBalance(ltr:Double, eth:Double)
+    
+    @objc optional func logined(data:Dictionary<String,Any>)
 }
 
 class MenuSideViewController: UIViewController, MenuSideInterface {
+    
+    var ltrCoin:Double = 0
+    var ethCoin:Double = 0
+    var isLogin = false
 
-    @IBOutlet weak var expandBtn: UIButton!
     @IBOutlet weak var heighSubViewCT: NSLayoutConstraint!
     
+    @IBOutlet weak var signInLbl: UILabel!
+    @IBOutlet weak var signUpView: UIView!
     @IBOutlet weak var leftCT: NSLayoutConstraint!
     
     @IBOutlet weak var contentAreaView: UIView!
+    @IBOutlet weak var ltrLbl: UILabel!
+    @IBOutlet weak var ethLbl: UILabel!
+    
     
     var spaceExpandValue:CGFloat = 0
-    var isExpand = true
+    var expandAccountValue:CGFloat = 0
+    var isExpand = false
     var isShowMenuSide = false
     
     var homeVC:HomeViewController!
     var signInVC:LoginViewController!
+    var resultVC:ResultDetailViewController!
     
     var rectContent = CGRect.zero
     
@@ -43,15 +56,23 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.layoutIfNeeded()
+        expandAccountValue = heighSubViewCT.constant
+        heighSubViewCT.constant = 0
+        
         spaceExpandValue = self.view.frame.width * 0.6
         
         homeVC = HomeViewController.init(self)
         signInVC = UIStoryboard.init(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         
+        resultVC = ResultDetailViewController.init()
+        
         homeVC.menuSide = self
         signInVC.menuSide = self
+        resultVC.menuSide = self
+        
         rectContent.size = contentAreaView.frame.size
         
+        self.add(resultVC, anime: .None, rect: rectContent, parentView: contentAreaView)
         self.add(signInVC, anime: .None, rect: rectContent, parentView: contentAreaView)
         self.add(homeVC, anime: .None, rect: rectContent, parentView: contentAreaView)
         
@@ -63,19 +84,6 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
     }
     
     
-    @IBAction func expandBtnTapped(_ sender: Any) {
-        
-        isExpand = !isExpand
-        if isExpand {
-            heighSubViewCT.constant = spaceExpandValue
-        } else {
-            heighSubViewCT.constant = 0
-        }
-        print("\(heighSubViewCT.constant)")
-        UIView.animate(withDuration: 0.2) {
-            self.view.layoutIfNeeded()
-        }
-    }
     func toggleMenuSide() {
         isShowMenuSide = !isShowMenuSide
         if isShowMenuSide {
@@ -101,6 +109,33 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
         }
     }
     
+    func updateBalance(ltr: Double, eth: Double) {
+        ltrCoin = ltr
+        ethCoin = eth
+        
+        ltrLbl.text = "LTR: \(Double(Int(ltr * 1000000)) / 1000000)"
+        ethLbl.text = "ETH: \(Double(Int(eth * 1000000)) / 1000000)"
+    }
+    
+    func logined(data: Dictionary<String, Any>) {
+        self.add(homeVC, anime: .None, rect: rectContent, parentView: contentAreaView)
+        isLogin = true
+        signUpView.isHidden = true
+        signInLbl.text = "MY ACCOUNT"
+        
+        if let username = UserDefaults.standard.string(forKey: "user-email"), let pwd = UserDefaults.standard.string(forKey: "user-pwd") {
+            AccountService().getBalance(username: username, pwd: pwd) { [weak self] (done, msg, data) in
+                if done {
+                    if let ethB = data!["ETHBalance"] as? Double, let ltrB = data!["LTRBalance"] as? Double {
+                        self?.updateBalance(ltr: ltrB, eth: ethB)
+                    }
+                }
+            }
+        }
+        
+        
+    }
+    
     @IBAction func quitBtnTapped(_ sender: Any) {
         print("quit tapped")
         hideMenuSide()
@@ -114,6 +149,8 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
     
     @IBAction func resultBtnTapped(_ sender: Any) {
         print("result tapped")
+        self.add(resultVC, anime: .None, rect: rectContent, parentView: contentAreaView)
+        hideMenuSide()
     }
     
     @IBAction func winnersBtnTapped(_ sender: Any) {
@@ -122,8 +159,21 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
     
     @IBAction func signInBtnTapped(_ sender: Any) {
         print("sign in tapped")
-        self.add(signInVC, anime: .None, rect: rectContent, parentView: contentAreaView)
-        hideMenuSide()
+        if !isLogin {
+            self.add(signInVC, anime: .None, rect: rectContent, parentView: contentAreaView)
+            hideMenuSide()
+        } else {
+            isExpand = !isExpand
+            if isExpand {
+                heighSubViewCT.constant = expandAccountValue
+            } else {
+                heighSubViewCT.constant = 0
+            }
+            print("\(heighSubViewCT.constant)")
+            UIView.animate(withDuration: 0.2) {
+                self.view.layoutIfNeeded()
+            }
+        }
     }
     
     @IBAction func signUpBtnTapped(_ sender: Any) {
