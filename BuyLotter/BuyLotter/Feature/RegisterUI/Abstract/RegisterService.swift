@@ -12,8 +12,6 @@ struct RegisterService {
     func register(email:String, pwd:String, fullname:String?, phone:String, walletBtc:String?, dob:String?, sex:Int, country:Int, address:String?, portraitImg:UIImage?, passportImg:UIImage?, completion: @escaping (Bool, String, Dictionary<String,Any>?) -> Void ){
         let urlString = Config.SERVER_LINK + "register"
         
-        let headers: HTTPHeaders = [:]
-        
         
         var parameters: Parameters = [
             "email" : email,
@@ -49,19 +47,13 @@ struct RegisterService {
         print("parameters:\(parameters)")
         
         if portraitImg != nil || passportImg != nil {
-            registerWithImages(parameters: parameters as! [String : String] , headers: headers, portraitImg: portraitImg, passportImg: passportImg) { (done, msg, data) in
+            registerWithImages(parameters: parameters as! [String : String] ,portraitImg: portraitImg, passportImg: passportImg) { (done, msg, data) in
                 completion(done, msg, data)
             }
         } else {
             
-            Alamofire.request(urlString, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
-                .downloadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
-                    print("Progress: \(progress.fractionCompleted)")
-                }
-                .validate { request, response, data in
-                    // Custom evaluation closure now includes data (allows you to parse data to dig out error messages if necessary)
-                    return .success
-                }.responseJSON { (response) in
+            Alamofire.request(urlString, method: .post, parameters: parameters, encoding: JSONEncoding.default)
+                .responseJSON { (response) in
                     print("\(response.result.value)")
                     if let dataResponse = response.result.value as? Dictionary<String,Any> {
                         guard let status = dataResponse["status"] as? Int,
@@ -84,11 +76,10 @@ struct RegisterService {
         
     }
     
-    private func registerWithImages(parameters: [String: String], headers: HTTPHeaders, portraitImg:UIImage?, passportImg:UIImage?, completion: @escaping (Bool, String, Dictionary<String,Any>?) -> Void) {
+    private func registerWithImages(parameters: [String: String], portraitImg:UIImage?, passportImg:UIImage?, completion: @escaping (Bool, String, Dictionary<String,Any>?) -> Void) {
         let url = Config.SERVER_LINK + "register"
         
         Alamofire.upload(multipartFormData: { (multipartFormData) in
-            
             for (key, value) in parameters {
                 multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: key)
             }
@@ -115,7 +106,7 @@ struct RegisterService {
                     mimeType: "image/jpeg")
             }
             
-        }, to: url, headers: headers, encodingCompletion: { encodingResult in
+        }, to: url, encodingCompletion: { encodingResult in
             
             switch encodingResult {
             case .success(let upload, _, _):
@@ -133,7 +124,6 @@ struct RegisterService {
                 }
             case .failure(let encodingError):
                 print(encodingError)
-                
             }
         })
     }
@@ -141,32 +131,22 @@ struct RegisterService {
     
     func validate(email:String, pwd:String, phone:String, completion: @escaping (Bool, Dictionary<String,Any>?) -> Void ){
         let urlString = Config.SERVER_LINK + "validateregister"
-        
-        let headers: HTTPHeaders = [:]
-        
-        
-        var parameters: Parameters = [
+
+        let parameters: Parameters = [
             "email" : email,
             "password": pwd,
             "tel": phone,
             "apikey" : Config.API_KEY
             ] as [String : String]
 
-        Alamofire.request(urlString, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
-            .downloadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
-                print("Progress: \(progress.fractionCompleted)")
-            }
-            .validate { request, response, data in
-                // Custom evaluation closure now includes data (allows you to parse data to dig out error messages if necessary)
-                return .success
-            }.responseJSON { (response) in
+        Alamofire.request(urlString, method: .post, parameters: parameters, encoding: JSONEncoding.default)
+            .responseJSON { (response) in
                 print("\(response.result.value)")
                 if let dataResponse = response.result.value as? Dictionary<String,Any> {
                     guard let status = dataResponse["status"] as? Int
-                    
                         else {
+                            completion(false,nil)
                             return
-                                completion(false,nil)
                     }
                     if status == 200 {
                         completion(true,nil)

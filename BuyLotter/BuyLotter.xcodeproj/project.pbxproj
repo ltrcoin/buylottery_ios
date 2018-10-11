@@ -964,9 +964,9 @@
 		18E21C042153835F006BF9DD /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				18A18C3721634DA200F01838 /* MenuSide */,
 				185D6AA421675C94001B1412 /* List games */,
 				18938E7B2166005E0039F2E4 /* Result detail */,
-				18A18C3721634DA200F01838 /* MenuSide */,
 				1840A01D215B75AA009FA815 /* Hand Pick Number For Ticket */,
 				1840A016215B6D60009FA815 /* Guide Systematic */,
 				1895B87D215B388700E6C182 /* View your numbers */,

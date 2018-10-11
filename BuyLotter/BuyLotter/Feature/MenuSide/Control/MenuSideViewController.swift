@@ -72,10 +72,10 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
         
         rectContent.size = contentAreaView.frame.size
         
-        self.add(resultVC, anime: .None, rect: rectContent, parentView: contentAreaView)
+        
         self.add(signInVC, anime: .None, rect: rectContent, parentView: contentAreaView)
         self.add(homeVC, anime: .None, rect: rectContent, parentView: contentAreaView)
-        
+        self.add(resultVC, anime: .None, rect: rectContent, parentView: contentAreaView)
     }
     
     override func viewWillAppear(_ animated: Bool) {
