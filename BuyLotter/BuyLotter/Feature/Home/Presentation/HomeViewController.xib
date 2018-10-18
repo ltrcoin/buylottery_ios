@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="BuyLotter" customModuleProvider="target">
             <connections>
+                <outlet property="menuImg" destination="1BZ-DD-Eou" id="1fc-WH-adC"/>
                 <outlet property="timeDrawLbl" destination="Eg2-nL-B3o" id="vlX-Vd-usF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="playsBtn" destination="U1C-c0-Mtd" collectionClass="NSMutableArray" id="K1Z-O2-3ug"/>

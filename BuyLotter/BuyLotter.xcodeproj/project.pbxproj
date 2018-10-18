@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18277A972178209100ED972A /* TransactionHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18277A952178209100ED972A /* TransactionHistoryViewController.swift */; };
+		18277A982178209100ED972A /* TransactionHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18277A962178209100ED972A /* TransactionHistoryViewController.xib */; };
+		18277A9B2178212700ED972A /* TransactionHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18277A992178212700ED972A /* TransactionHistoryTableViewCell.swift */; };
+		18277A9C2178212700ED972A /* TransactionHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18277A9A2178212700ED972A /* TransactionHistoryTableViewCell.xib */; };
+		18277A9E217841C400ED972A /* TransactionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18277A9D217841C400ED972A /* TransactionService.swift */; };
+		18277AA0217843F100ED972A /* TransactionHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18277A9F217843F100ED972A /* TransactionHistoryModel.swift */; };
 		1832E1472159DD330078A672 /* TicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832E1452159DD330078A672 /* TicketViewController.swift */; };
 		1832E1482159DD330078A672 /* TicketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1832E1462159DD330078A672 /* TicketViewController.xib */; };
 		1832E14B2159E2790078A672 /* TicketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832E1492159E2790078A672 /* TicketCollectionViewCell.swift */; };
@@ -151,6 +157,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18277A952178209100ED972A /* TransactionHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryViewController.swift; sourceTree = "<group>"; };
+		18277A962178209100ED972A /* TransactionHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionHistoryViewController.xib; sourceTree = "<group>"; };
+		18277A992178212700ED972A /* TransactionHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		18277A9A2178212700ED972A /* TransactionHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionHistoryTableViewCell.xib; sourceTree = "<group>"; };
+		18277A9D217841C400ED972A /* TransactionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionService.swift; sourceTree = "<group>"; };
+		18277A9F217843F100ED972A /* TransactionHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryModel.swift; sourceTree = "<group>"; };
 		1832E1452159DD330078A672 /* TicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewController.swift; sourceTree = "<group>"; };
 		1832E1462159DD330078A672 /* TicketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketViewController.xib; sourceTree = "<group>"; };
 		1832E1492159E2790078A672 /* TicketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -314,6 +326,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18277A912178204B00ED972A /* Transaction history */ = {
+			isa = PBXGroup;
+			children = (
+				18277A942178207100ED972A /* Presentation */,
+				18277A922178205C00ED972A /* Control */,
+				18277A932178206500ED972A /* Abstraction */,
+			);
+			path = "Transaction history";
+			sourceTree = "<group>";
+		};
+		18277A922178205C00ED972A /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				18277A952178209100ED972A /* TransactionHistoryViewController.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		18277A932178206500ED972A /* Abstraction */ = {
+			isa = PBXGroup;
+			children = (
+				18277A9D217841C400ED972A /* TransactionService.swift */,
+				18277A9F217843F100ED972A /* TransactionHistoryModel.swift */,
+			);
+			path = Abstraction;
+			sourceTree = "<group>";
+		};
+		18277A942178207100ED972A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				18277A962178209100ED972A /* TransactionHistoryViewController.xib */,
+				18277A992178212700ED972A /* TransactionHistoryTableViewCell.swift */,
+				18277A9A2178212700ED972A /* TransactionHistoryTableViewCell.xib */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		182E01F721466D78008FAB68 /* RegisterUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -1071,6 +1120,7 @@
 			isa = PBXGroup;
 			children = (
 				18A18C3721634DA200F01838 /* MenuSide */,
+				18277A912178204B00ED972A /* Transaction history */,
 				185D6AA421675C94001B1412 /* List games */,
 				18938E7B2166005E0039F2E4 /* Result detail */,
 				1840A01D215B75AA009FA815 /* Hand Pick Number For Ticket */,
@@ -1271,6 +1321,7 @@
 				18588CD0217479B50034E4ED /* CheckoutFailtPopupViewController.xib in Resources */,
 				1832E14C2159E2790078A672 /* TicketCollectionViewCell.xib in Resources */,
 				1840A023215B7608009FA815 /* HandPickNumberTicketViewController.xib in Resources */,
+				18277A982178209100ED972A /* TransactionHistoryViewController.xib in Resources */,
 				18BDEEE4214231E200386EA7 /* PopupViewController.xib in Resources */,
 				18467887217035A1009A2C98 /* CheckoutViewController.xib in Resources */,
 				18588CCC217455800034E4ED /* TransactionViewController.xib in Resources */,
@@ -1302,6 +1353,7 @@
 				1879CC85214F57A40055DEAD /* Register.storyboard in Resources */,
 				1895B884215B38C800E6C182 /* ViewYourNumbersViewController.xib in Resources */,
 				18BDEF0821427B0A00386EA7 /* ButtonTitle.strings in Resources */,
+				18277A9C2178212700ED972A /* TransactionHistoryTableViewCell.xib in Resources */,
 				18E21C1D2153A16F006BF9DD /* PlayViewController.xib in Resources */,
 				184B1810214A0DBE0054736D /* GallleryAsset.xcassets in Resources */,
 				18938E822166016F0039F2E4 /* ResultDetailViewController.xib in Resources */,
@@ -1371,6 +1423,7 @@
 				18E21C0B215383D6006BF9DD /* TwoFactorAuthenViewController.swift in Sources */,
 				1840A01B215B6DF9009FA815 /* GuideSystematicViewController.swift in Sources */,
 				184B1822214A16A10054736D /* Constraints.swift in Sources */,
+				18277A972178209100ED972A /* TransactionHistoryViewController.swift in Sources */,
 				18BDEEDA214231E200386EA7 /* Extension UIViewController alert template.swift in Sources */,
 				1832E14B2159E2790078A672 /* TicketCollectionViewCell.swift in Sources */,
 				18802B2B2147ADED00F476BC /* PickCountryViewController.swift in Sources */,
@@ -1409,6 +1462,7 @@
 				184B1848214A233F0054736D /* MyGalleryViewController.swift in Sources */,
 				18EB3ED9216F028500B982EF /* ResultService.swift in Sources */,
 				18BDEEB221422FE000386EA7 /* LoginService.swift in Sources */,
+				18277AA0217843F100ED972A /* TransactionHistoryModel.swift in Sources */,
 				18BCF9A1216B13B70015F9FE /* AccountService.swift in Sources */,
 				184B1809214A09BD0054736D /* Album.swift in Sources */,
 				184B1832214A171A0054736D /* UIView+Extensions.swift in Sources */,
@@ -1423,6 +1477,7 @@
 				18E21C1421539403006BF9DD /* HomeViewController.swift in Sources */,
 				18A06334215DE424004CBD55 /* TicketHandPickView.swift in Sources */,
 				18C483B52158CFDA00AA2274 /* BuyTicketViewController.swift in Sources */,
+				18277A9B2178212700ED972A /* TransactionHistoryTableViewCell.swift in Sources */,
 				18773F582167256000389BAC /* SmallPrizeModel.swift in Sources */,
 				18BDEEB921422FE000386EA7 /* Extention LoginVC event textfield.swift in Sources */,
 				184B182F214A171A0054736D /* Array+Extensions.swift in Sources */,
@@ -1434,6 +1489,7 @@
 				18BDEEDC214231E200386EA7 /* Extension UIViewController childview.swift in Sources */,
 				18BDEEB821422FE000386EA7 /* Extention LoginVC event keyboard.swift in Sources */,
 				184B1834214A171A0054736D /* AVAsset+Extensions.swift in Sources */,
+				18277A9E217841C400ED972A /* TransactionService.swift in Sources */,
 				18457088214F91E900BC6F78 /* RegisterPageTwoViewController.swift in Sources */,
 				18588CCF217479B50034E4ED /* CheckoutFailtPopupViewController.swift in Sources */,
 				187B9E49214A6B1700E17130 /* AlbumCell.swift in Sources */,
