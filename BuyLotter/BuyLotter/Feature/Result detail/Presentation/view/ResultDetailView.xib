@@ -40,9 +40,9 @@
                             <rect key="frame" x="0.0" y="0.0" width="355" height="54"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="kLo-hD-u3t">
-                                    <rect key="frame" x="8" y="11" width="76.5" height="32"/>
+                                    <rect key="frame" x="8" y="8" width="135" height="38"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" secondItem="kLo-hD-u3t" secondAttribute="height" multiplier="33:14" id="hi4-SS-j38"/>
+                                        <constraint firstAttribute="width" secondItem="kLo-hD-u3t" secondAttribute="height" multiplier="50:14" id="hi4-SS-j38"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25/09/2018 20:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgS-A0-MGN">
@@ -78,7 +78,7 @@
                                 <constraint firstAttribute="bottom" secondItem="2G4-ZD-nvh" secondAttribute="bottom" id="YXE-in-e8h"/>
                                 <constraint firstAttribute="trailing" secondItem="VnK-Oh-Sqe" secondAttribute="trailing" constant="5" id="aRM-Il-M2r"/>
                                 <constraint firstItem="2G4-ZD-nvh" firstAttribute="top" secondItem="5xI-5X-ler" secondAttribute="top" constant="-15" id="eut-K2-3fH"/>
-                                <constraint firstItem="kLo-hD-u3t" firstAttribute="height" secondItem="Z2B-zH-hNb" secondAttribute="height" multiplier="0.6" id="ml4-A7-Vei"/>
+                                <constraint firstItem="kLo-hD-u3t" firstAttribute="height" secondItem="Z2B-zH-hNb" secondAttribute="height" multiplier="0.7" id="ml4-A7-Vei"/>
                                 <constraint firstAttribute="trailing" secondItem="QgS-A0-MGN" secondAttribute="trailing" constant="8" id="nZT-lR-lhC"/>
                                 <constraint firstItem="2G4-ZD-nvh" firstAttribute="leading" secondItem="5xI-5X-ler" secondAttribute="leading" constant="-20" id="oNO-5f-QqZ"/>
                                 <constraint firstItem="5xI-5X-ler" firstAttribute="centerY" secondItem="Z2B-zH-hNb" secondAttribute="centerY" multiplier="1.35" id="vAt-h4-IKY"/>

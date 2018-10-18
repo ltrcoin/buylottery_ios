@@ -18,6 +18,7 @@ protocol MenuSideInterface {
 }
 
 class MenuSideViewController: UIViewController, MenuSideInterface {
+    static var Instance:MenuSideViewController!
     
     var ltrCoin:Double = 0
     var ethCoin:Double = 0
@@ -55,6 +56,8 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        MenuSideViewController.Instance = self
+        
         self.view.layoutIfNeeded()
         expandAccountValue = heighSubViewCT.constant
         heighSubViewCT.constant = 0
@@ -70,12 +73,12 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
         signInVC.menuSide = self
         resultVC.menuSide = self
         
-        rectContent.size = contentAreaView.frame.size
-        
-        
-        self.add(signInVC, anime: .None, rect: rectContent, parentView: contentAreaView)
+        rectContent = CGRect.init(x: 0, y: 0, width: contentAreaView.frame.width, height: contentAreaView.frame.height)
         self.add(homeVC, anime: .None, rect: rectContent, parentView: contentAreaView)
         self.add(resultVC, anime: .None, rect: rectContent, parentView: contentAreaView)
+        self.add(signInVC, anime: .None, rect: rectContent, parentView: contentAreaView)
+        
+        self.add(homeVC, anime: .None, rect: rectContent, parentView: contentAreaView)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -119,6 +122,10 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
     
     func logined(data: Dictionary<String, Any>) {
         self.add(homeVC, anime: .None, rect: rectContent, parentView: contentAreaView)
+        updateUILogin()
+    }
+    
+    func updateUILogin(){
         isLogin = true
         signUpView.isHidden = true
         signInLbl.text = "MY ACCOUNT"
@@ -132,8 +139,6 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
                 }
             }
         }
-        
-        
     }
     
     @IBAction func quitBtnTapped(_ sender: Any) {
@@ -153,8 +158,8 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
         hideMenuSide()
     }
     
-    @IBAction func winnersBtnTapped(_ sender: Any) {
-        print("winner tapped")
+    @IBAction func transactionBtnTapped(_ sender: Any) {
+        print("transaction tapped")
     }
     
     @IBAction func signInBtnTapped(_ sender: Any) {

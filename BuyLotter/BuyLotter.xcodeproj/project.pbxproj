@@ -22,6 +22,9 @@
 		18457086214F849200BC6F78 /* RegisterPageOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18457085214F849200BC6F78 /* RegisterPageOneViewController.swift */; };
 		18457088214F91E900BC6F78 /* RegisterPageTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18457087214F91E900BC6F78 /* RegisterPageTwoViewController.swift */; };
 		1845708A214F928C00BC6F78 /* RegisterPageThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18457089214F928C00BC6F78 /* RegisterPageThreeViewController.swift */; };
+		18467886217035A1009A2C98 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18467884217035A1009A2C98 /* CheckoutViewController.swift */; };
+		18467887217035A1009A2C98 /* CheckoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18467885217035A1009A2C98 /* CheckoutViewController.xib */; };
+		18467889217058B3009A2C98 /* CheckoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18467888217058B3009A2C98 /* CheckoutService.swift */; };
 		184B1807214A095D0054736D /* ImagesLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B1806214A095D0054736D /* ImagesLibrary.swift */; };
 		184B1809214A09BD0054736D /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B1808214A09BD0054736D /* Album.swift */; };
 		184B1810214A0DBE0054736D /* GallleryAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184B180F214A0DBE0054736D /* GallleryAsset.xcassets */; };
@@ -40,6 +43,12 @@
 		184B184E214A243D0054736D /* MyGalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B184C214A243D0054736D /* MyGalleryCollectionViewCell.swift */; };
 		184B184F214A243D0054736D /* MyGalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184B184D214A243D0054736D /* MyGalleryCollectionViewCell.xib */; };
 		184CFA7C215CC5C4003B2FEE /* Extension HandPickNumberTicketVC paging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184CFA7B215CC5C4003B2FEE /* Extension HandPickNumberTicketVC paging.swift */; };
+		18588CC42174437A0034E4ED /* CheckoutPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18588CC22174437A0034E4ED /* CheckoutPopupViewController.swift */; };
+		18588CC52174437A0034E4ED /* CheckoutPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18588CC32174437A0034E4ED /* CheckoutPopupViewController.xib */; };
+		18588CCB217455800034E4ED /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18588CC9217455800034E4ED /* TransactionViewController.swift */; };
+		18588CCC217455800034E4ED /* TransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18588CCA217455800034E4ED /* TransactionViewController.xib */; };
+		18588CCF217479B50034E4ED /* CheckoutFailtPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18588CCD217479B50034E4ED /* CheckoutFailtPopupViewController.swift */; };
+		18588CD0217479B50034E4ED /* CheckoutFailtPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18588CCE217479B50034E4ED /* CheckoutFailtPopupViewController.xib */; };
 		185D6AAA21675CDF001B1412 /* ListGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185D6AA821675CDF001B1412 /* ListGamesViewController.swift */; };
 		185D6AAB21675CDF001B1412 /* ListGamesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185D6AA921675CDF001B1412 /* ListGamesViewController.xib */; };
 		185D6AAF21675ECA001B1412 /* ListGamesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185D6AAD21675ECA001B1412 /* ListGamesTableViewCell.swift */; };
@@ -157,6 +166,9 @@
 		18457085214F849200BC6F78 /* RegisterPageOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageOneViewController.swift; sourceTree = "<group>"; };
 		18457087214F91E900BC6F78 /* RegisterPageTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageTwoViewController.swift; sourceTree = "<group>"; };
 		18457089214F928C00BC6F78 /* RegisterPageThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageThreeViewController.swift; sourceTree = "<group>"; };
+		18467884217035A1009A2C98 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		18467885217035A1009A2C98 /* CheckoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckoutViewController.xib; sourceTree = "<group>"; };
+		18467888217058B3009A2C98 /* CheckoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutService.swift; sourceTree = "<group>"; };
 		184B1806214A095D0054736D /* ImagesLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesLibrary.swift; sourceTree = "<group>"; };
 		184B1808214A09BD0054736D /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		184B180F214A0DBE0054736D /* GallleryAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = GallleryAsset.xcassets; sourceTree = "<group>"; };
@@ -175,6 +187,12 @@
 		184B184C214A243D0054736D /* MyGalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		184B184D214A243D0054736D /* MyGalleryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyGalleryCollectionViewCell.xib; sourceTree = "<group>"; };
 		184CFA7B215CC5C4003B2FEE /* Extension HandPickNumberTicketVC paging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension HandPickNumberTicketVC paging.swift"; sourceTree = "<group>"; };
+		18588CC22174437A0034E4ED /* CheckoutPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutPopupViewController.swift; sourceTree = "<group>"; };
+		18588CC32174437A0034E4ED /* CheckoutPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckoutPopupViewController.xib; sourceTree = "<group>"; };
+		18588CC9217455800034E4ED /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		18588CCA217455800034E4ED /* TransactionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionViewController.xib; sourceTree = "<group>"; };
+		18588CCD217479B50034E4ED /* CheckoutFailtPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutFailtPopupViewController.swift; sourceTree = "<group>"; };
+		18588CCE217479B50034E4ED /* CheckoutFailtPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckoutFailtPopupViewController.xib; sourceTree = "<group>"; };
 		185D6AA821675CDF001B1412 /* ListGamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGamesViewController.swift; sourceTree = "<group>"; };
 		185D6AA921675CDF001B1412 /* ListGamesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListGamesViewController.xib; sourceTree = "<group>"; };
 		185D6AAD21675ECA001B1412 /* ListGamesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGamesTableViewCell.swift; sourceTree = "<group>"; };
@@ -406,6 +424,42 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		184678802170355A009A2C98 /* Checkout */ = {
+			isa = PBXGroup;
+			children = (
+				18588CC62174554B0034E4ED /* Transaction UI */,
+				18588CBF2174433E0034E4ED /* Popup */,
+				184678832170357C009A2C98 /* Presentation */,
+				1846788221703574009A2C98 /* Control */,
+				184678812170356B009A2C98 /* Abstraction */,
+			);
+			path = Checkout;
+			sourceTree = "<group>";
+		};
+		184678812170356B009A2C98 /* Abstraction */ = {
+			isa = PBXGroup;
+			children = (
+				18467888217058B3009A2C98 /* CheckoutService.swift */,
+			);
+			path = Abstraction;
+			sourceTree = "<group>";
+		};
+		1846788221703574009A2C98 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				18467884217035A1009A2C98 /* CheckoutViewController.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		184678832170357C009A2C98 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				18467885217035A1009A2C98 /* CheckoutViewController.xib */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		184B1804214A092E0054736D /* GalleryUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,6 +546,58 @@
 				18E66B912151F2C5007732CB /* Validate.swift */,
 			);
 			path = Validate;
+			sourceTree = "<group>";
+		};
+		18588CBF2174433E0034E4ED /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				18588CC1217443520034E4ED /* Presentation */,
+				18588CC02174434A0034E4ED /* Control */,
+			);
+			path = Popup;
+			sourceTree = "<group>";
+		};
+		18588CC02174434A0034E4ED /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				18588CCD217479B50034E4ED /* CheckoutFailtPopupViewController.swift */,
+				18588CC22174437A0034E4ED /* CheckoutPopupViewController.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		18588CC1217443520034E4ED /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				18588CC32174437A0034E4ED /* CheckoutPopupViewController.xib */,
+				18588CCE217479B50034E4ED /* CheckoutFailtPopupViewController.xib */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		18588CC62174554B0034E4ED /* Transaction UI */ = {
+			isa = PBXGroup;
+			children = (
+				18588CC82174555E0034E4ED /* Presentation */,
+				18588CC7217455580034E4ED /* Control */,
+			);
+			path = "Transaction UI";
+			sourceTree = "<group>";
+		};
+		18588CC7217455580034E4ED /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				18588CC9217455800034E4ED /* TransactionViewController.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		18588CC82174555E0034E4ED /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				18588CCA217455800034E4ED /* TransactionViewController.xib */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		185D6AA421675C94001B1412 /* List games */ = {
@@ -971,6 +1077,7 @@
 				1840A016215B6D60009FA815 /* Guide Systematic */,
 				1895B87D215B388700E6C182 /* View your numbers */,
 				18C483AF2158A65F00AA2274 /* Buy tickets */,
+				184678802170355A009A2C98 /* Checkout */,
 				18E21C162153A13E006BF9DD /* Play */,
 				18E21C0E2153920A006BF9DD /* Home */,
 				18E21C052153838F006BF9DD /* Two-factor-authen */,
@@ -1161,9 +1268,12 @@
 				18BDEE9521422D9700386EA7 /* LaunchScreen.storyboard in Resources */,
 				18BDEEB621422FE000386EA7 /* Image.xcassets in Resources */,
 				18BDEE9221422D9700386EA7 /* Assets.xcassets in Resources */,
+				18588CD0217479B50034E4ED /* CheckoutFailtPopupViewController.xib in Resources */,
 				1832E14C2159E2790078A672 /* TicketCollectionViewCell.xib in Resources */,
 				1840A023215B7608009FA815 /* HandPickNumberTicketViewController.xib in Resources */,
 				18BDEEE4214231E200386EA7 /* PopupViewController.xib in Resources */,
+				18467887217035A1009A2C98 /* CheckoutViewController.xib in Resources */,
+				18588CCC217455800034E4ED /* TransactionViewController.xib in Resources */,
 				1895B888215B39D700E6C182 /* ViewYourNumbersTableViewCell.xib in Resources */,
 				18BDEED8214231E200386EA7 /* resource.xcassets in Resources */,
 				18E21C0C215383D6006BF9DD /* TwoFactorAuthenViewController.xib in Resources */,
@@ -1197,6 +1307,7 @@
 				18938E822166016F0039F2E4 /* ResultDetailViewController.xib in Resources */,
 				18773F56216720D700389BAC /* PrizeTableViewCell.xib in Resources */,
 				18BDEEB721422FE000386EA7 /* Login.storyboard in Resources */,
+				18588CC52174437A0034E4ED /* CheckoutPopupViewController.xib in Resources */,
 				1832E1482159DD330078A672 /* TicketViewController.xib in Resources */,
 				18BDEF0121427ADF00386EA7 /* Localize.strings in Resources */,
 			);
@@ -1265,6 +1376,7 @@
 				18802B2B2147ADED00F476BC /* PickCountryViewController.swift in Sources */,
 				18802B262147AC6D00F476BC /* ConvertString.m in Sources */,
 				18BDEEE7214231E200386EA7 /* Extension UIImageView show full image.swift in Sources */,
+				18588CC42174437A0034E4ED /* CheckoutPopupViewController.swift in Sources */,
 				188A9F22214B590C001FF793 /* Extension MyGalleryVC delegate.swift in Sources */,
 				1883C1522148FA5400F4B82D /* Extension MyGalleryVC pick images.swift in Sources */,
 				18E9343B2150AD96005EE7C9 /* RegisterModel.swift in Sources */,
@@ -1278,10 +1390,12 @@
 				184B1807214A095D0054736D /* ImagesLibrary.swift in Sources */,
 				1895B878215B27B600E6C182 /* TicketRuleModel.swift in Sources */,
 				18BDEEE5214231E200386EA7 /* PopupViewController.swift in Sources */,
+				18588CCB217455800034E4ED /* TransactionViewController.swift in Sources */,
 				18BDEEE6214231E200386EA7 /* Extension PopupVC textview delegate.swift in Sources */,
 				18BDEEE8214231E200386EA7 /* ImageFullScreenPageVC.swift in Sources */,
 				185D6AAF21675ECA001B1412 /* ListGamesTableViewCell.swift in Sources */,
 				185D6AAA21675CDF001B1412 /* ListGamesViewController.swift in Sources */,
+				18467889217058B3009A2C98 /* CheckoutService.swift in Sources */,
 				184B1831214A171A0054736D /* UIViewController+Extensions.swift in Sources */,
 				18E21C1C2153A16F006BF9DD /* PlayViewController.swift in Sources */,
 				18BDEEE1214231E200386EA7 /* Extension UIViewcontroller dismiss keyboard.swift in Sources */,
@@ -1321,6 +1435,7 @@
 				18BDEEB821422FE000386EA7 /* Extention LoginVC event keyboard.swift in Sources */,
 				184B1834214A171A0054736D /* AVAsset+Extensions.swift in Sources */,
 				18457088214F91E900BC6F78 /* RegisterPageTwoViewController.swift in Sources */,
+				18588CCF217479B50034E4ED /* CheckoutFailtPopupViewController.swift in Sources */,
 				187B9E49214A6B1700E17130 /* AlbumCell.swift in Sources */,
 				18802B1A2147A88A00F476BC /* ViTriCell.swift in Sources */,
 				18802B322147C83C00F476BC /* CountryConfig.swift in Sources */,
@@ -1342,6 +1457,7 @@
 				18457086214F849200BC6F78 /* RegisterPageOneViewController.swift in Sources */,
 				18BDEEE2214231E200386EA7 /* Extension UITextView placeholder.swift in Sources */,
 				1895B887215B39D700E6C182 /* ViewYourNumbersTableViewCell.swift in Sources */,
+				18467886217035A1009A2C98 /* CheckoutViewController.swift in Sources */,
 				184B184E214A243D0054736D /* MyGalleryCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
