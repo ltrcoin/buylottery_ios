@@ -14,6 +14,7 @@ class BuyTicketViewController: UIViewController {
     
     @IBOutlet var systematicNumberBtns: [UIButton]!
     
+    @IBOutlet weak var backImg: UIImageView!
     @IBOutlet weak var stackSystematicView: UIView!
     @IBOutlet weak var systematicBtn: UIButton!
     
@@ -61,6 +62,8 @@ class BuyTicketViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBtnView()
+        backImg.image = UIImage(named: "back-icon")?.withRenderingMode(.alwaysTemplate)
+        backImg.tintColor = .white
         
         view.layoutIfNeeded()
         oldSystematicHeightCT = systematicHeightCT.constant
@@ -104,8 +107,19 @@ class BuyTicketViewController: UIViewController {
         }
     }
     
+    @IBAction func buyTicketTapped(_ sender: Any) {
+        print("buy ticket tapped")
+        if MenuSideViewController.Instance.isLogin {
+            let checkoutVC = CheckoutViewController.init(ticketVC: ticketVC)
+            self.present(checkoutVC, animated: true, completion: nil)
+        } else {
+            MenuSideViewController.Instance.signInBtnTapped(self)
+        }
+        
+    }
+    
     @IBAction func backBtnTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.removeSelf(anime: .Right)
     }
     
     func setupBtnView(){

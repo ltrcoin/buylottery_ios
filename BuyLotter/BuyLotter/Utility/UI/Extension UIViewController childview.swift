@@ -34,8 +34,10 @@ extension UIViewController {
         
         addChild(child)
         
+        
         if parentView != nil {
             parentView?.addSubview(child.view)
+            
         } else {
             view.addSubview(child.view)
         }
@@ -46,6 +48,22 @@ extension UIViewController {
             child.view.frame = rect!
             finalRect = rect!
         }
+        
+        if parentView != nil && finalRect.width == parentView?.frame.width && finalRect.height == parentView?.frame.height {
+            child.view.translatesAutoresizingMaskIntoConstraints = false
+            view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[childView]|",
+                                                          options: [],
+                                                          metrics: nil,
+                                                          views: ["childView": child.view]))
+            view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[childView]|",
+                                                          options: [],
+                                                          metrics: nil,
+                                                          views: ["childView": child.view]))
+        }
+        
+        
+        
+        print("finalRect:\(rect)")
         
         if anime != .None && oldPha != 1 {
             child.view.backgroundColor = child.view.backgroundColor?.withAlphaComponent(0)

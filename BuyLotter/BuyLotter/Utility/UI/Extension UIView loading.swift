@@ -20,10 +20,17 @@ extension UIView {
         loadingView.frame = rect
         loadingView.startAnimating()
     }
+    
+    func showLoading(rect: CGRect,style: UIActivityIndicatorView.Style = UIActivityIndicatorView.Style.white){
+        let loadingView = self.getLoadingView()
+        loadingView.frame = rect
+        loadingView.startAnimating()
+    }
 
     func showLoadingRight(style: UIActivityIndicatorView.Style = UIActivityIndicatorView.Style.white){
+        
         let rect = CGRect(x: self.frame.width - self.frame.height, y: 0, width: self.frame.height, height: self.frame.height)
-        self.showLoading(rect:rect)
+        self.showLoading(rect: rect, style: style)
     }
 
     func hideLoading(){

@@ -56,11 +56,11 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //startTimeDown()
+        startTimeDown()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        //timer.invalidate()
+        timer.invalidate()
     }
     
     
@@ -73,9 +73,7 @@ class HomeViewController: UIViewController {
     
     @objc func updateTimer() {
         et -= 1
-//        euroTime.text = timeString(time: TimeInterval(et))
         timeDrawLbl.text = timeString(time: TimeInterval(et))
-        print("🤬 update time \(et)")
     }
     
     func timeString(time:TimeInterval) -> String {
@@ -104,7 +102,7 @@ class HomeViewController: UIViewController {
         }
         
         let buyticketVC = BuyTicketViewController.init()
-        self.present(buyticketVC, animated: true, completion: nil)
+        self.add(buyticketVC, anime: .Right)
     }
     
     @IBAction func resultBtnTapped(_ sender: Any) {
