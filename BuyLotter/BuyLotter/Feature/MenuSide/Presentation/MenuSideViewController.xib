@@ -482,11 +482,6 @@
                 <constraint firstItem="Lox-Cg-Gxd" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="r9l-3J-5xi"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <variation key="default">
-                <mask key="subviews">
-                    <exclude reference="Lox-Cg-Gxd"/>
-                </mask>
-            </variation>
             <point key="canvasLocation" x="68" y="60.591133004926114"/>
         </view>
     </objects>

@@ -10,6 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var menuImg: UIImageView!
     @IBOutlet var playsBtn: [UIButton]!
     
     @IBOutlet weak var timeDrawLbl: UILabel!
@@ -43,7 +44,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupPlayBtnView()
-        
+        menuImg.image = UIImage.init(named: "menu")?.withRenderingMode(.alwaysTemplate)
+        menuImg.tintColor = .white
         print("🤬 did load")
     }
     

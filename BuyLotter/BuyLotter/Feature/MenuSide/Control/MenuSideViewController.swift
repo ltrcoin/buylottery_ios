@@ -23,6 +23,7 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
     var ltrCoin:Double = 0
     var ethCoin:Double = 0
     var isLogin = false
+    var isTransaction = false
 
     @IBOutlet weak var heighSubViewCT: NSLayoutConstraint!
     
@@ -43,6 +44,7 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
     var homeVC:HomeViewController!
     var signInVC:LoginViewController!
     var resultVC:ResultDetailViewController!
+    var transactionVC:TransactionHistoryViewController!
     
     var rectContent = CGRect.zero
     
@@ -68,21 +70,22 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
         signInVC = UIStoryboard.init(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         
         resultVC = ResultDetailViewController.init()
+        transactionVC = TransactionHistoryViewController.init()
         
         homeVC.menuSide = self
         signInVC.menuSide = self
         resultVC.menuSide = self
+        transactionVC.menuSide = self
         
         rectContent = CGRect.init(x: 0, y: 0, width: contentAreaView.frame.width, height: contentAreaView.frame.height)
-        self.add(homeVC, anime: .None, rect: rectContent, parentView: contentAreaView)
+        
         self.add(resultVC, anime: .None, rect: rectContent, parentView: contentAreaView)
         self.add(signInVC, anime: .None, rect: rectContent, parentView: contentAreaView)
-        
+        self.add(transactionVC, anime: .None, rect: rectContent, parentView: contentAreaView)
         self.add(homeVC, anime: .None, rect: rectContent, parentView: contentAreaView)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         
     }
     
@@ -121,8 +124,14 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
     }
     
     func logined(data: Dictionary<String, Any>) {
-        self.add(homeVC, anime: .None, rect: rectContent, parentView: contentAreaView)
         updateUILogin()
+        
+        if isTransaction {
+            transactionBtnTapped(self)
+        } else {
+            homeBtnTapped(self)
+        }
+        
     }
     
     func updateUILogin(){
@@ -155,11 +164,21 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
     @IBAction func resultBtnTapped(_ sender: Any) {
         print("result tapped")
         self.add(resultVC, anime: .None, rect: rectContent, parentView: contentAreaView)
+        resultVC.viewWillAppear(true)
         hideMenuSide()
     }
     
     @IBAction func transactionBtnTapped(_ sender: Any) {
         print("transaction tapped")
+        isTransaction = true
+        if isLogin {
+            self.add(transactionVC, anime: .None, rect: rectContent, parentView: contentAreaView)
+            isTransaction = false
+            transactionVC.viewWillAppear(true)
+        } else {
+            self.add(signInVC, anime: .None, rect: rectContent, parentView: contentAreaView)
+        }
+        hideMenuSide()
     }
     
     @IBAction func signInBtnTapped(_ sender: Any) {
