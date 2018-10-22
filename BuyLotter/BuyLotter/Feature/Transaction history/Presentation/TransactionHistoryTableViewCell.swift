@@ -18,6 +18,8 @@ class TransactionHistoryTableViewCell: UITableViewCell {
     
     @IBOutlet weak var timeLbl: UILabel!
     
+    @IBOutlet weak var priceLbl: UILabel!
+    
     var data:TransactionHistoryModel! {
         didSet{
             let count = listNumberViews.count
@@ -36,6 +38,7 @@ class TransactionHistoryTableViewCell: UITableViewCell {
             if data.gameId == 3 {
                 titleLbl.text = "LTR jackpot"
             }
+            priceLbl.text = "Price: \(data.price) LTR"
         }
     }
     

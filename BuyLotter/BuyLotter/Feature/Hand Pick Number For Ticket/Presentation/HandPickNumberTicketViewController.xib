@@ -35,16 +35,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="42l-er-nfD">
-                    <rect key="frame" x="5" y="0.0" width="370" height="662"/>
+                    <rect key="frame" x="5" y="40" width="370" height="622"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WhP-bc-fmN">
-                            <rect key="frame" x="0.0" y="0.0" width="1125" height="662"/>
+                            <rect key="frame" x="0.0" y="0.0" width="1125" height="622"/>
                             <subviews>
                                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8z-W0-TCe">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="662"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="622"/>
                                     <subviews>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n0r-dv-new" customClass="TicketHandPickView" customModule="BuyLotter" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="662"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="622"/>
                                             <color key="backgroundColor" red="0.93333333333333335" green="0.77647058823529413" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </view>
                                     </subviews>
@@ -58,10 +58,10 @@
                                     </constraints>
                                 </scrollView>
                                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywU-g9-qPN">
-                                    <rect key="frame" x="375" y="0.0" width="375" height="662"/>
+                                    <rect key="frame" x="375" y="0.0" width="375" height="622"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zML-4H-Xf2" customClass="TicketHandPickView" customModule="BuyLotter" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="662"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="622"/>
                                             <color key="backgroundColor" red="0.93333333330000001" green="0.77647058820000003" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </view>
                                     </subviews>
@@ -75,10 +75,10 @@
                                     </constraints>
                                 </scrollView>
                                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wte-za-vSc">
-                                    <rect key="frame" x="750" y="0.0" width="375" height="662"/>
+                                    <rect key="frame" x="750" y="0.0" width="375" height="622"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBD-l6-eux" customClass="TicketHandPickView" customModule="BuyLotter" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="662"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="622"/>
                                             <color key="backgroundColor" red="0.93333333330000001" green="0.77647058820000003" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </view>
                                     </subviews>
@@ -123,10 +123,10 @@
                 <constraint firstItem="42l-er-nfD" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="Ddv-K4-lVh"/>
                 <constraint firstItem="42l-er-nfD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="Eee-4U-YFM"/>
                 <constraint firstAttribute="bottom" secondItem="42l-er-nfD" secondAttribute="bottom" constant="5" id="c3b-k8-T4W"/>
-                <constraint firstItem="42l-er-nfD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gKP-DK-VjZ"/>
+                <constraint firstItem="42l-er-nfD" firstAttribute="top" secondItem="8uh-hI-NmO" secondAttribute="top" constant="20" id="gKP-DK-VjZ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="8uh-hI-NmO"/>
-            <point key="canvasLocation" x="918" y="88"/>
+            <point key="canvasLocation" x="917.60000000000002" y="87.706146926536732"/>
         </view>
     </objects>
 </document>
