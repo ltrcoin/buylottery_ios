@@ -9,7 +9,7 @@
 import Foundation
 struct TicketRuleModel {
     var numberNormal = 5
-    var numberSpecial = 2
+    var numberSpecial = 1
     var minNormal = 1
     var maxNormal = 69
     var minSpecial = 1

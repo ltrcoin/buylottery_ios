@@ -37,6 +37,7 @@ class TicketViewController: UIViewController, UICollectionViewDelegate, UICollec
     var cellSpace:CGFloat = 5
     var lineSpace:CGFloat = 5
     var ratioTicket:CGFloat = 1.6329113924
+//    var ratioTicket:CGFloat = 1.9329113924
     
     var isSystematic = false
     var numberSystematic = 6 {
@@ -57,7 +58,7 @@ class TicketViewController: UIViewController, UICollectionViewDelegate, UICollec
     var systematicData:TicketModel = TicketModel()
     
     //192 × 278
-    lazy var sizeCell:CGSize = CGSize.init(width: (self.view.frame.width - cellSpace *  CGFloat(maxCol) - 1) / (CGFloat(maxCol)), height: (self.view.frame.width - cellSpace *  CGFloat(maxCol) - 1) / (CGFloat(maxCol)) * ratioTicket)
+    var sizeCell:CGSize = CGSize.zero
     
     deinit {
         print("🤬 deinit TicketViewController")
@@ -72,6 +73,9 @@ class TicketViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.layoutIfNeeded()
+        sizeCell = CGSize.init(width: (self.view.frame.width - cellSpace *  CGFloat(maxCol) - 1) / (CGFloat(maxCol)), height: (self.view.frame.width - cellSpace *  CGFloat(maxCol) - 1) / (CGFloat(maxCol)) * ratioTicket)
+        
         setupCollectionView()
     }
     

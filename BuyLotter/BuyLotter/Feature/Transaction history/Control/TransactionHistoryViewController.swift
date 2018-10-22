@@ -55,7 +55,7 @@ class TransactionHistoryViewController: UIViewController, UITableViewDataSource,
         tableView.separatorStyle = .none
         tableView.register(UINib.init(nibName: cellId, bundle: nil), forCellReuseIdentifier: cellId)
         
-        tableView.rowHeight = 50
+        tableView.rowHeight = 70
     }
 
     

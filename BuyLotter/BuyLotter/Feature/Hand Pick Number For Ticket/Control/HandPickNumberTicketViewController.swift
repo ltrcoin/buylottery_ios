@@ -31,7 +31,9 @@ class HandPickNumberTicketViewController: UIViewController {
     
     @IBOutlet var ticketHandPickViews: [TicketHandPickView]!
     
-    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     var totalWidthContent:CGFloat = 0
     var space:CGFloat = 30

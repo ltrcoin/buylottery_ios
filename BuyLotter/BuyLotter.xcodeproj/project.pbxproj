@@ -13,6 +13,8 @@
 		18277A9C2178212700ED972A /* TransactionHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18277A9A2178212700ED972A /* TransactionHistoryTableViewCell.xib */; };
 		18277A9E217841C400ED972A /* TransactionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18277A9D217841C400ED972A /* TransactionService.swift */; };
 		18277AA0217843F100ED972A /* TransactionHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18277A9F217843F100ED972A /* TransactionHistoryModel.swift */; };
+		18277AA621787EED00ED972A /* MyWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18277AA421787EED00ED972A /* MyWalletViewController.swift */; };
+		18277AA721787EED00ED972A /* MyWalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18277AA521787EED00ED972A /* MyWalletViewController.xib */; };
 		1832E1472159DD330078A672 /* TicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832E1452159DD330078A672 /* TicketViewController.swift */; };
 		1832E1482159DD330078A672 /* TicketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1832E1462159DD330078A672 /* TicketViewController.xib */; };
 		1832E14B2159E2790078A672 /* TicketCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832E1492159E2790078A672 /* TicketCollectionViewCell.swift */; };
@@ -163,6 +165,8 @@
 		18277A9A2178212700ED972A /* TransactionHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionHistoryTableViewCell.xib; sourceTree = "<group>"; };
 		18277A9D217841C400ED972A /* TransactionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionService.swift; sourceTree = "<group>"; };
 		18277A9F217843F100ED972A /* TransactionHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryModel.swift; sourceTree = "<group>"; };
+		18277AA421787EED00ED972A /* MyWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletViewController.swift; sourceTree = "<group>"; };
+		18277AA521787EED00ED972A /* MyWalletViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyWalletViewController.xib; sourceTree = "<group>"; };
 		1832E1452159DD330078A672 /* TicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewController.swift; sourceTree = "<group>"; };
 		1832E1462159DD330078A672 /* TicketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketViewController.xib; sourceTree = "<group>"; };
 		1832E1492159E2790078A672 /* TicketCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -359,6 +363,31 @@
 				18277A962178209100ED972A /* TransactionHistoryViewController.xib */,
 				18277A992178212700ED972A /* TransactionHistoryTableViewCell.swift */,
 				18277A9A2178212700ED972A /* TransactionHistoryTableViewCell.xib */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		18277AA121787DF300ED972A /* My wallet */ = {
+			isa = PBXGroup;
+			children = (
+				18277AA321787E3E00ED972A /* Presentation */,
+				18277AA221787E3200ED972A /* Control */,
+			);
+			path = "My wallet";
+			sourceTree = "<group>";
+		};
+		18277AA221787E3200ED972A /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				18277AA421787EED00ED972A /* MyWalletViewController.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		18277AA321787E3E00ED972A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				18277AA521787EED00ED972A /* MyWalletViewController.xib */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -1119,6 +1148,7 @@
 		18E21C042153835F006BF9DD /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				18277AA121787DF300ED972A /* My wallet */,
 				18A18C3721634DA200F01838 /* MenuSide */,
 				18277A912178204B00ED972A /* Transaction history */,
 				185D6AA421675C94001B1412 /* List games */,
@@ -1351,6 +1381,7 @@
 				1840A027215B7EF4009FA815 /* HandPickTicketCollectionViewCell.xib in Resources */,
 				185D6AB021675ECA001B1412 /* ListGamesTableViewCell.xib in Resources */,
 				1879CC85214F57A40055DEAD /* Register.storyboard in Resources */,
+				18277AA721787EED00ED972A /* MyWalletViewController.xib in Resources */,
 				1895B884215B38C800E6C182 /* ViewYourNumbersViewController.xib in Resources */,
 				18BDEF0821427B0A00386EA7 /* ButtonTitle.strings in Resources */,
 				18277A9C2178212700ED972A /* TransactionHistoryTableViewCell.xib in Resources */,
@@ -1473,6 +1504,7 @@
 				184B1835214A171A0054736D /* UIScrollView+Extensions.swift in Sources */,
 				18BDEEDD214231E200386EA7 /* Extension UIView add tap gesture.swift in Sources */,
 				184B1833214A171A0054736D /* String+Extensions.swift in Sources */,
+				18277AA621787EED00ED972A /* MyWalletViewController.swift in Sources */,
 				188A9F29214BB1D6001FF793 /* RegisterService.swift in Sources */,
 				18E21C1421539403006BF9DD /* HomeViewController.swift in Sources */,
 				18A06334215DE424004CBD55 /* TicketHandPickView.swift in Sources */,

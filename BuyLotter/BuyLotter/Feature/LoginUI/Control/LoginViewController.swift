@@ -16,6 +16,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var inputAreaView: UIView!
     
+    @IBOutlet weak var menuImg: UIImageView!
     @IBOutlet weak var accountTxt: UITextField!
 
     @IBOutlet weak var pwdTxt: UITextField!
@@ -35,7 +36,9 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         Localize.resetCurrentLanguageToDefault()
-        // Do any additional setup after loading the view.
+        
+        menuImg.image = UIImage.init(named: "menu")?.withRenderingMode(.alwaysTemplate)
+        menuImg.tintColor = .white
         
         setText()
     }
@@ -109,6 +112,7 @@ class LoginViewController: UIViewController {
         /*
          */
         LoginService().login(username: accountTxt.text!, pwd: pwdTxt.text!) { [weak self] (error, msg, data) in
+            self?.pwdTxt.text = ""
             if !error {
                 self?.notifyLbl.isHidden = false
                 self?.notifyLbl.text = msg

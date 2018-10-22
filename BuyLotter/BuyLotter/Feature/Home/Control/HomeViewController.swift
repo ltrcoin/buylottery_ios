@@ -75,6 +75,9 @@ class HomeViewController: UIViewController {
     
     @objc func updateTimer() {
         et -= 1
+        if et <= 0 {
+            timer.invalidate()
+        }
         timeDrawLbl.text = timeString(time: TimeInterval(et))
     }
     

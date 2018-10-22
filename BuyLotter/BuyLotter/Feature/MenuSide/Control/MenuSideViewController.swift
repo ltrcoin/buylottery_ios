@@ -20,10 +20,10 @@ protocol MenuSideInterface {
 class MenuSideViewController: UIViewController, MenuSideInterface {
     static var Instance:MenuSideViewController!
     
+    var walletAddress = ""
     var ltrCoin:Double = 0
     var ethCoin:Double = 0
     var isLogin = false
-    var isTransaction = false
 
     @IBOutlet weak var heighSubViewCT: NSLayoutConstraint!
     
@@ -41,10 +41,12 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
     var isExpand = false
     var isShowMenuSide = false
     
+    var targetVC:UIViewController!
     var homeVC:HomeViewController!
     var signInVC:LoginViewController!
     var resultVC:ResultDetailViewController!
     var transactionVC:TransactionHistoryViewController!
+    var myWalletVC:MyWalletViewController!
     
     var rectContent = CGRect.zero
     
@@ -66,29 +68,29 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
         
         spaceExpandValue = self.view.frame.width * 0.6
         
+        // Init vc
         homeVC = HomeViewController.init(self)
         signInVC = UIStoryboard.init(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-        
         resultVC = ResultDetailViewController.init()
         transactionVC = TransactionHistoryViewController.init()
+        myWalletVC = MyWalletViewController.init()
         
         homeVC.menuSide = self
         signInVC.menuSide = self
         resultVC.menuSide = self
         transactionVC.menuSide = self
+        myWalletVC.menuSide = self
         
         rectContent = CGRect.init(x: 0, y: 0, width: contentAreaView.frame.width, height: contentAreaView.frame.height)
         
         self.add(resultVC, anime: .None, rect: rectContent, parentView: contentAreaView)
         self.add(signInVC, anime: .None, rect: rectContent, parentView: contentAreaView)
         self.add(transactionVC, anime: .None, rect: rectContent, parentView: contentAreaView)
-        self.add(homeVC, anime: .None, rect: rectContent, parentView: contentAreaView)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
+        self.add(myWalletVC, anime: .None, rect: rectContent, parentView: contentAreaView)
         
+        self.add(homeVC, anime: .None, rect: rectContent, parentView: contentAreaView)
+        targetVC = homeVC
     }
-    
     
     func toggleMenuSide() {
         isShowMenuSide = !isShowMenuSide
@@ -115,23 +117,26 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
         }
     }
     
-    func updateBalance(ltr: Double, eth: Double) {
+    func updateBalance(addr:String, ltr: Double, eth: Double) {
+        walletAddress = addr
         ltrCoin = ltr
         ethCoin = eth
         
-        ltrLbl.text = "LTR: \(Double(Int(ltr * 1000000)) / 1000000)"
-        ethLbl.text = "ETH: \(Double(Int(eth * 1000000)) / 1000000)"
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.allowsFloats = true
+        numberFormatter.maximumFractionDigits = 6
+        ltrLbl.text = "LTR: \(numberFormatter.string(from: NSNumber.init(value: ltr))!)"
+        ethLbl.text = "ETH: \(numberFormatter.string(from: NSNumber.init(value: eth))!)"
+        
+        myWalletVC.updateLTR(addr:addr, ltr: ltr, eth: eth)
     }
     
     func logined(data: Dictionary<String, Any>) {
         updateUILogin()
         
-        if isTransaction {
-            transactionBtnTapped(self)
-        } else {
-            homeBtnTapped(self)
-        }
-        
+        self.add(targetVC, anime: .None, rect: rectContent, parentView: contentAreaView)
+        hideMenuSide()
     }
     
     func updateUILogin(){
@@ -139,11 +144,15 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
         signUpView.isHidden = true
         signInLbl.text = "MY ACCOUNT"
         
+        updateBalance()
+    }
+    
+    func updateBalance(){
         if let username = UserDefaults.standard.string(forKey: "user-email"), let pwd = UserDefaults.standard.string(forKey: "user-pwd") {
             AccountService().getBalance(username: username, pwd: pwd) { [weak self] (done, msg, data) in
                 if done {
-                    if let ethB = data!["ETHBalance"] as? Double, let ltrB = data!["LTRBalance"] as? Double {
-                        self?.updateBalance(ltr: ltrB, eth: ethB)
+                    if let ethB = data!["ETHBalance"] as? Double, let ltrB = data!["LTRBalance"] as? Double, let address = data!["wallet_address"] as? String {
+                        self?.updateBalance(addr:address, ltr: ltrB, eth: ethB)
                     }
                 }
             }
@@ -170,12 +179,11 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
     
     @IBAction func transactionBtnTapped(_ sender: Any) {
         print("transaction tapped")
-        isTransaction = true
         if isLogin {
             self.add(transactionVC, anime: .None, rect: rectContent, parentView: contentAreaView)
-            isTransaction = false
             transactionVC.viewWillAppear(true)
         } else {
+            targetVC = transactionVC
             self.add(signInVC, anime: .None, rect: rectContent, parentView: contentAreaView)
         }
         hideMenuSide()
@@ -204,9 +212,36 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
         print("sign up tapped")
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func myWalletBtnTapped(_ sender: Any) {
+        print("myWalletBtnTapped")
+        self.add(myWalletVC, anime: .None, rect: rectContent, parentView: contentAreaView)
+        
+        hideMenuSide()
     }
     
+    
+    @IBAction func buyLTRTokenBtnTapped(_ sender: Any) {
+        print("buyLTRTockenBtnTapped")
+        
+    }
+    
+    @IBAction func profileBtnTapped(_ sender: Any) {
+        print("profileBtnTapped")
+    }
+    
+    @IBAction func twoFABtnTapped(_ sender: Any) {
+        print("twoFABtnTapped")
+    }
+    
+    
+    @IBAction func signOutBtnTapped(_ sender: Any) {
+        print("signOutBtnTapped")
+        isLogin = false
+        signInLbl.text = "SIGN IN"
+        signUpView.isHidden = false
+        
+        isExpand = false
+        heighSubViewCT.constant = 0
+        self.view.layoutIfNeeded()
+    }
 }

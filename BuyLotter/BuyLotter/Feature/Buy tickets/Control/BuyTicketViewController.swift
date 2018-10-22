@@ -75,12 +75,15 @@ class BuyTicketViewController: UIViewController {
         oldHeightBuyBtnCT = heightBuyBtnCT.constant
         heightBuyBtnCT.constant = 0
         
-        heightSymbolTicket = (listTicksView.frame.width - ticketVC.cellSpace *  CGFloat(ticketVC.maxCol) - 1) / (CGFloat(ticketVC.maxCol)) * ticketVC.ratioTicket
+        self.add(ticketVC, anime: .None, rect: CGRect.init(x: 0, y: 0, width: listTicksView.frame.width, height: listTicksView.frame.height), parentView: listTicksView)
+        
+        heightSymbolTicket = ticketVC.sizeCell.height
         
         
         heighListTicketViewCT.constant =  heightSymbolTicket * CGFloat((numberTicket - 1) / 5 + 1) +  ticketVC.lineSpace * CGFloat((numberTicket - 1) / 5)
+        
         view.layoutIfNeeded()
-        self.add(ticketVC, anime: .None, rect: CGRect.init(x: 0, y: 0, width: listTicksView.frame.width, height: listTicksView.frame.height), parentView: listTicksView)
+        
         
         ticketVC.numberTicket = numberTicket
         ticketVC.collectionView.reloadData()
