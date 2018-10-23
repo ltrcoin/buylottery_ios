@@ -12,6 +12,9 @@ protocol MenuSideInterface {
     func showMenuSide()
     func hideMenuSide()
     func toggleMenuSide()
+    
+    func updateBalance()
+    
     @objc optional func updateBalance(ltr:Double, eth:Double)
     
     @objc optional func logined(data:Dictionary<String,Any>)
@@ -47,6 +50,7 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
     var resultVC:ResultDetailViewController!
     var transactionVC:TransactionHistoryViewController!
     var myWalletVC:MyWalletViewController!
+    var buyLtrVC:BuyLTRCoinViewController!
     
     var rectContent = CGRect.zero
     
@@ -74,12 +78,15 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
         resultVC = ResultDetailViewController.init()
         transactionVC = TransactionHistoryViewController.init()
         myWalletVC = MyWalletViewController.init()
+        buyLtrVC = BuyLTRCoinViewController.init()
+        
         
         homeVC.menuSide = self
         signInVC.menuSide = self
         resultVC.menuSide = self
         transactionVC.menuSide = self
         myWalletVC.menuSide = self
+        buyLtrVC.menuSide = self
         
         rectContent = CGRect.init(x: 0, y: 0, width: contentAreaView.frame.width, height: contentAreaView.frame.height)
         
@@ -87,9 +94,15 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
         self.add(signInVC, anime: .None, rect: rectContent, parentView: contentAreaView)
         self.add(transactionVC, anime: .None, rect: rectContent, parentView: contentAreaView)
         self.add(myWalletVC, anime: .None, rect: rectContent, parentView: contentAreaView)
+        self.add(buyLtrVC, anime: .None, rect: rectContent, parentView: contentAreaView)
         
         self.add(homeVC, anime: .None, rect: rectContent, parentView: contentAreaView)
         targetVC = homeVC
+        
+        
+        if let username = UserDefaults.standard.string(forKey: "user-email"), let pwd = UserDefaults.standard.string(forKey: "user-pwd") {
+            signInVC.login(email: username, pwd: pwd)
+        }
     }
     
     func toggleMenuSide() {
@@ -130,6 +143,7 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
         ethLbl.text = "ETH: \(numberFormatter.string(from: NSNumber.init(value: eth))!)"
         
         myWalletVC.updateLTR(addr:addr, ltr: ltr, eth: eth)
+        buyLtrVC.updateLTR(addr: addr, ltr: ltr, eth: eth)
     }
     
     func logined(data: Dictionary<String, Any>) {
@@ -215,14 +229,22 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
     @IBAction func myWalletBtnTapped(_ sender: Any) {
         print("myWalletBtnTapped")
         self.add(myWalletVC, anime: .None, rect: rectContent, parentView: contentAreaView)
-        
+        myWalletVC.viewDidAppear(true)
         hideMenuSide()
     }
     
     
     @IBAction func buyLTRTokenBtnTapped(_ sender: Any) {
         print("buyLTRTockenBtnTapped")
-        
+
+        if isLogin {
+            self.add(buyLtrVC, anime: .None, rect: rectContent, parentView: contentAreaView)
+            buyLtrVC.viewDidAppear(true)
+        } else {
+            targetVC = buyLtrVC
+            self.add(signInVC, anime: .None, rect: rectContent, parentView: contentAreaView)
+        }
+        hideMenuSide()
     }
     
     @IBAction func profileBtnTapped(_ sender: Any) {
@@ -236,12 +258,23 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
     
     @IBAction func signOutBtnTapped(_ sender: Any) {
         print("signOutBtnTapped")
+        UserDefaults.standard.removeObject(forKey: "user-pwd")
+        UserDefaults.standard.removeObject(forKey: "user-email")
+        
         isLogin = false
         signInLbl.text = "SIGN IN"
         signUpView.isHidden = false
         
+        ltrCoin = 0
+        ethCoin = 0
+        
+        ltrLbl.text = "LTR: 0"
+        ethLbl.text = "ETH: 0"
+        
         isExpand = false
         heighSubViewCT.constant = 0
         self.view.layoutIfNeeded()
+        
+        
     }
 }

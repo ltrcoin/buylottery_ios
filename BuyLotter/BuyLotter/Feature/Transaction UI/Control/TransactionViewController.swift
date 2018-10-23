@@ -11,6 +11,9 @@ import UIKit
 class TransactionViewController: UIViewController {
     @IBOutlet weak var webView: UIWebView!
     var txhash = ""
+    
+    @IBOutlet weak var backImg: UIImageView!
+    
     init(txhash:String) {
         self.txhash = txhash
         super.init(nibName: "TransactionViewController", bundle: nil)
@@ -24,6 +27,9 @@ class TransactionViewController: UIViewController {
         super.viewDidLoad()
 
         webView.loadRequest(NSURLRequest(url: NSURL(string: "https://ropsten.etherscan.io/tx/\(txhash)")! as URL) as URLRequest)
+        
+        backImg.image = UIImage.init(named: "back-icon")?.withRenderingMode(.alwaysTemplate)
+        backImg.tintColor = .white
     }
 
     @IBAction func backBtnTapped(_ sender: Any) {
