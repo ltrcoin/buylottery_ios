@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1800A7DC217EB62A00F8BACC /* BuyLTRCoinPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1800A7DA217EB62A00F8BACC /* BuyLTRCoinPopupViewController.swift */; };
+		1800A7DD217EB62A00F8BACC /* BuyLTRCoinPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1800A7DB217EB62A00F8BACC /* BuyLTRCoinPopupViewController.xib */; };
 		18277A972178209100ED972A /* TransactionHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18277A952178209100ED972A /* TransactionHistoryViewController.swift */; };
 		18277A982178209100ED972A /* TransactionHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18277A962178209100ED972A /* TransactionHistoryViewController.xib */; };
 		18277A9B2178212700ED972A /* TransactionHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18277A992178212700ED972A /* TransactionHistoryTableViewCell.swift */; };
@@ -145,6 +147,9 @@
 		18BDEF0821427B0A00386EA7 /* ButtonTitle.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18BDEF0A21427B0A00386EA7 /* ButtonTitle.strings */; };
 		18C483B52158CFDA00AA2274 /* BuyTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C483B32158CFDA00AA2274 /* BuyTicketViewController.swift */; };
 		18C483B62158CFDA00AA2274 /* BuyTicketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C483B42158CFDA00AA2274 /* BuyTicketViewController.xib */; };
+		18CB848A217D86F4001E363B /* BuyLTRCoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB8488217D86F4001E363B /* BuyLTRCoinViewController.swift */; };
+		18CB848B217D86F4001E363B /* BuyLTRCoinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CB8489217D86F4001E363B /* BuyLTRCoinViewController.xib */; };
+		18CB848D217DD1DC001E363B /* BuyLTRCoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CB848C217DD1DC001E363B /* BuyLTRCoinService.swift */; };
 		18E21C0B215383D6006BF9DD /* TwoFactorAuthenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E21C09215383D6006BF9DD /* TwoFactorAuthenViewController.swift */; };
 		18E21C0C215383D6006BF9DD /* TwoFactorAuthenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E21C0A215383D6006BF9DD /* TwoFactorAuthenViewController.xib */; };
 		18E21C1421539403006BF9DD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E21C1221539403006BF9DD /* HomeViewController.swift */; };
@@ -159,6 +164,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1800A7DA217EB62A00F8BACC /* BuyLTRCoinPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyLTRCoinPopupViewController.swift; sourceTree = "<group>"; };
+		1800A7DB217EB62A00F8BACC /* BuyLTRCoinPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyLTRCoinPopupViewController.xib; sourceTree = "<group>"; };
 		18277A952178209100ED972A /* TransactionHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryViewController.swift; sourceTree = "<group>"; };
 		18277A962178209100ED972A /* TransactionHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionHistoryViewController.xib; sourceTree = "<group>"; };
 		18277A992178212700ED972A /* TransactionHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -303,6 +310,9 @@
 		18BDEF0B21427B0B00386EA7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/ButtonTitle.strings; sourceTree = "<group>"; };
 		18C483B32158CFDA00AA2274 /* BuyTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTicketViewController.swift; sourceTree = "<group>"; };
 		18C483B42158CFDA00AA2274 /* BuyTicketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyTicketViewController.xib; sourceTree = "<group>"; };
+		18CB8488217D86F4001E363B /* BuyLTRCoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyLTRCoinViewController.swift; sourceTree = "<group>"; };
+		18CB8489217D86F4001E363B /* BuyLTRCoinViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyLTRCoinViewController.xib; sourceTree = "<group>"; };
+		18CB848C217DD1DC001E363B /* BuyLTRCoinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyLTRCoinService.swift; sourceTree = "<group>"; };
 		18E21C09215383D6006BF9DD /* TwoFactorAuthenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoFactorAuthenViewController.swift; sourceTree = "<group>"; };
 		18E21C0A215383D6006BF9DD /* TwoFactorAuthenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoFactorAuthenViewController.xib; sourceTree = "<group>"; };
 		18E21C1221539403006BF9DD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -330,6 +340,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1800A7D9217EB5F000F8BACC /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				1800A7DA217EB62A00F8BACC /* BuyLTRCoinPopupViewController.swift */,
+				1800A7DB217EB62A00F8BACC /* BuyLTRCoinPopupViewController.xib */,
+			);
+			path = Popup;
+			sourceTree = "<group>";
+		};
 		18277A912178204B00ED972A /* Transaction history */ = {
 			isa = PBXGroup;
 			children = (
@@ -505,7 +524,6 @@
 		184678802170355A009A2C98 /* Checkout */ = {
 			isa = PBXGroup;
 			children = (
-				18588CC62174554B0034E4ED /* Transaction UI */,
 				18588CBF2174433E0034E4ED /* Popup */,
 				184678832170357C009A2C98 /* Presentation */,
 				1846788221703574009A2C98 /* Control */,
@@ -1145,11 +1163,48 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		18CB8484217D84D3001E363B /* Buy LTR coin */ = {
+			isa = PBXGroup;
+			children = (
+				1800A7D9217EB5F000F8BACC /* Popup */,
+				18CB8487217D84F3001E363B /* Presentation */,
+				18CB8486217D84E8001E363B /* Control */,
+				18CB8485217D84E2001E363B /* Abstraction */,
+			);
+			path = "Buy LTR coin";
+			sourceTree = "<group>";
+		};
+		18CB8485217D84E2001E363B /* Abstraction */ = {
+			isa = PBXGroup;
+			children = (
+				18CB848C217DD1DC001E363B /* BuyLTRCoinService.swift */,
+			);
+			path = Abstraction;
+			sourceTree = "<group>";
+		};
+		18CB8486217D84E8001E363B /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				18CB8488217D86F4001E363B /* BuyLTRCoinViewController.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		18CB8487217D84F3001E363B /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				18CB8489217D86F4001E363B /* BuyLTRCoinViewController.xib */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		18E21C042153835F006BF9DD /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				18277AA121787DF300ED972A /* My wallet */,
 				18A18C3721634DA200F01838 /* MenuSide */,
+				18588CC62174554B0034E4ED /* Transaction UI */,
+				18CB8484217D84D3001E363B /* Buy LTR coin */,
+				18277AA121787DF300ED972A /* My wallet */,
 				18277A912178204B00ED972A /* Transaction history */,
 				185D6AA421675C94001B1412 /* List games */,
 				18938E7B2166005E0039F2E4 /* Result detail */,
@@ -1372,11 +1427,13 @@
 				18802B202147AB8400F476BC /* country.plist in Resources */,
 				18938E86216610780039F2E4 /* ResultDetailView.xib in Resources */,
 				1840A01C215B6DF9009FA815 /* GuideSystematicViewController.xib in Resources */,
+				1800A7DD217EB62A00F8BACC /* BuyLTRCoinPopupViewController.xib in Resources */,
 				184B1849214A233F0054736D /* MyGalleryViewController.xib in Resources */,
 				1832E150215A1DDE0078A672 /* SystematicCollectionViewCell.xib in Resources */,
 				184B184F214A243D0054736D /* MyGalleryCollectionViewCell.xib in Resources */,
 				18BDEEEF2142364200386EA7 /* assets.xcassets in Resources */,
 				18E21C1521539403006BF9DD /* HomeViewController.xib in Resources */,
+				18CB848B217D86F4001E363B /* BuyLTRCoinViewController.xib in Resources */,
 				18802B1B2147A88A00F476BC /* ViTriCell.xib in Resources */,
 				1840A027215B7EF4009FA815 /* HandPickTicketCollectionViewCell.xib in Resources */,
 				185D6AB021675ECA001B1412 /* ListGamesTableViewCell.xib in Resources */,
@@ -1491,14 +1548,17 @@
 				18773F55216720D700389BAC /* PrizeTableViewCell.swift in Sources */,
 				18BDEE8D21422D9500386EA7 /* ViewController.swift in Sources */,
 				184B1848214A233F0054736D /* MyGalleryViewController.swift in Sources */,
+				18CB848A217D86F4001E363B /* BuyLTRCoinViewController.swift in Sources */,
 				18EB3ED9216F028500B982EF /* ResultService.swift in Sources */,
 				18BDEEB221422FE000386EA7 /* LoginService.swift in Sources */,
 				18277AA0217843F100ED972A /* TransactionHistoryModel.swift in Sources */,
 				18BCF9A1216B13B70015F9FE /* AccountService.swift in Sources */,
 				184B1809214A09BD0054736D /* Album.swift in Sources */,
 				184B1832214A171A0054736D /* UIView+Extensions.swift in Sources */,
+				1800A7DC217EB62A00F8BACC /* BuyLTRCoinPopupViewController.swift in Sources */,
 				187B9E3D214A51D900E17130 /* GalleryCamCollectionViewCell.swift in Sources */,
 				18BDEEDF214231E200386EA7 /* Extension TabbarVC.swift in Sources */,
+				18CB848D217DD1DC001E363B /* BuyLTRCoinService.swift in Sources */,
 				1895B87C215B2A6B00E6C182 /* RandomTicket.swift in Sources */,
 				18BDEEE0214231E200386EA7 /* Extension Date.swift in Sources */,
 				184B1835214A171A0054736D /* UIScrollView+Extensions.swift in Sources */,

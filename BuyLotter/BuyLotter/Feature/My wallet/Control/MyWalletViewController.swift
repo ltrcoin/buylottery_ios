@@ -37,6 +37,10 @@ class MyWalletViewController: UIViewController {
         walletAddressTv.layer.borderColor = UIColor.init(red: 231/255, green: 231/255, blue: 231/255, alpha: 1).cgColor
         copiedLbl.layer.cornerRadius = 5
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        menuSide.updateBalance()
+    }
 
     func updateLTR(addr:String, ltr:Double, eth:Double){
         walletAddressTv.text = addr

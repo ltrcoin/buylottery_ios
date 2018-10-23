@@ -21,7 +21,7 @@ struct CheckoutService {
         
         
         if ticketsData.count > 1 {
-            for i in 0..<ticketsData.count - 2 {
+            for i in 0..<ticketsData.count - 1 {
                 pJson += "{\"game_id\":3,\"numbers\":\"\(ticketsData[i].normalStr(" "))\",\"special_numbers\":\"\(ticketsData[i].specialStr(" "))\",\"price\":2000},"
             }
         }

@@ -108,10 +108,12 @@ class LoginViewController: UIViewController {
         data["username"] = accountTxt.text!
         data["pwd"] = pwdTxt.text!
 
-        // authentication
-        /*
-         */
-        LoginService().login(username: accountTxt.text!, pwd: pwdTxt.text!) { [weak self] (error, msg, data) in
+        login(email: accountTxt.text!, pwd: pwdTxt.text!)
+        
+    }
+    
+    func login(email:String, pwd:String){
+        LoginService().login(username: email, pwd: pwd) { [weak self] (error, msg, data) in
             self?.pwdTxt.text = ""
             if !error {
                 self?.notifyLbl.isHidden = false
@@ -119,15 +121,14 @@ class LoginViewController: UIViewController {
             } else {
                 self?.notifyLbl.isHidden = true
                 print(data)
-//                let authenVC = TwoFactorAuthenViewController.init()
-//                self?.present(authenVC, animated: true, completion: nil)
+                //                let authenVC = TwoFactorAuthenViewController.init()
+                //                self?.present(authenVC, animated: true, completion: nil)
                 self?.menuSide.logined!(data: data!)
             }
             self?.loginBtn.isUserInteractionEnabled = true
             self?.registerBtn.isUserInteractionEnabled = true
             self?.registerBtn.alpha = 1
         }
-        
     }
 
     override func didReceiveMemoryWarning() {
