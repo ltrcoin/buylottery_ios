@@ -16,7 +16,7 @@ class TicketViewController: UIViewController, UICollectionViewDelegate, UICollec
     let cellId = "TicketCollectionViewCell"
     let systematicCellId = "SystematicCollectionViewCell"
     
-    var numberTicket = 8 {
+    var numberTicket = 10 {
         didSet {
             if data.count < numberTicket {
                 for _ in 0..<(numberTicket - data.count) {
@@ -73,10 +73,6 @@ class TicketViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.layoutIfNeeded()
-        sizeCell = CGSize.init(width: (self.view.frame.width - cellSpace *  CGFloat(maxCol) - 1) / (CGFloat(maxCol)), height: (self.view.frame.width - cellSpace *  CGFloat(maxCol) - 1) / (CGFloat(maxCol)) * ratioTicket)
-        
-        setupCollectionView()
     }
     
     func setupCollectionView() {
