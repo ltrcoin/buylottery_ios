@@ -25,9 +25,11 @@ struct CheckoutService {
                 pJson += "{\"game_id\":3,\"numbers\":\"\(ticketsData[i].normalStr(" "))\",\"special_numbers\":\"\(ticketsData[i].specialStr(" "))\",\"price\":2000},"
             }
         }
+        
         if ticketsData.count > 0 {
             pJson += "{\"game_id\":3,\"numbers\":\"\(ticketsData[ticketsData.count - 1].normalStr(" "))\",\"special_numbers\":\"\(ticketsData[ticketsData.count - 1].specialStr(" "))\",\"price\":2000}"
         }
+        
         pJson += "]"
         
         print("json:\(pJson)")

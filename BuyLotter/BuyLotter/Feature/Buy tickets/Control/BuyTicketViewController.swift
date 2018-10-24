@@ -44,7 +44,7 @@ class BuyTicketViewController: UIViewController {
     var systematicTitles = [6,7,8,9,10,11]
     var systematicPSData = [6,21,56,126,252,462]
     
-    let ticketVC = TicketViewController.init()
+    var ticketVC:TicketViewController!
     
     var heightSymbolTicket:CGFloat!
     
@@ -61,6 +61,7 @@ class BuyTicketViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         setupBtnView()
         backImg.image = UIImage(named: "back-icon")?.withRenderingMode(.alwaysTemplate)
         backImg.tintColor = .white
@@ -75,38 +76,59 @@ class BuyTicketViewController: UIViewController {
         oldHeightBuyBtnCT = heightBuyBtnCT.constant
         heightBuyBtnCT.constant = 0
         
-        self.add(ticketVC, anime: .None, rect: CGRect.init(x: 0, y: 0, width: listTicksView.frame.width, height: listTicksView.frame.height), parentView: listTicksView)
-        
-        heightSymbolTicket = ticketVC.sizeCell.height
         
         
-        heighListTicketViewCT.constant =  heightSymbolTicket * CGFloat((numberTicket - 1) / 5 + 1) +  ticketVC.lineSpace * CGFloat((numberTicket - 1) / 5)
-        
-        view.layoutIfNeeded()
         
         
-        ticketVC.numberTicket = numberTicket
-        ticketVC.collectionView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if ticketVC == nil {
+            ticketVC = TicketViewController.init()
+            self.add(ticketVC, anime: .None, rect: CGRect.init(x: 0, y: 0, width: listTicksView.frame.width , height: listTicksView.frame.height), parentView: listTicksView)
+            
+            ticketVC.sizeCell = CGSize.init(width: (self.listTicksView.frame.width - ticketVC.cellSpace *  4) / 5, height: (self.listTicksView.frame.width - ticketVC.cellSpace *  4) / 5 * ticketVC.ratioTicket)
+            print("🤬 ticketVC.sizeCell:\(ticketVC.sizeCell)")
+            ticketVC.setupCollectionView()
+            
+            heightSymbolTicket = ticketVC.sizeCell.height
+            
+            
+            heighListTicketViewCT.constant =  heightSymbolTicket * CGFloat((numberTicket - 1) / 5 + 1) +  ticketVC.lineSpace * CGFloat((numberTicket - 1) / 5)
+            
+            
+            
+            ticketVC.numberTicket = numberTicket
+            ticketVC.collectionView.reloadData()
+            
+            
+        }
+        
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        var isShowNumber = false
-        var isShowBuy = false
-        for ticket in ticketVC.data {
-            if ticket.normal.count > 0 || ticket.special.count > 0 {
-                isShowNumber = true
+        if ticketVC != nil {
+            var isShowNumber = false
+            var isShowBuy = false
+            
+            for ticket in ticketVC.data {
+                if ticket.normal.count > 0 || ticket.special.count > 0 {
+                    isShowNumber = true
+                }
+                if ticket.isFull {
+                    isShowBuy = true
+                }
             }
-            if ticket.isFull {
-                isShowBuy = true
+            
+            if isShowNumber {
+                showViewNumber()
             }
-        }
-        
-        if isShowNumber {
-            showViewNumber()
-        }
-        if isShowBuy {
-            showBuyBtn()
+            if isShowBuy {
+                showBuyBtn()
+            }
         }
     }
     
@@ -299,4 +321,5 @@ class BuyTicketViewController: UIViewController {
         let viewYourNumbersVC = ViewYourNumbersViewController.init(ticketVC: ticketVC)
         self.present(viewYourNumbersVC, animated: true, completion: nil)
     }
+    
 }
