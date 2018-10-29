@@ -10,13 +10,12 @@ import Foundation
 import Alamofire
 
 struct BuyLTRCoinService {
-    func buyLTR(username:String, pwd:String, eth:String, ltr:String, completion: @escaping (Bool, String, String) -> Void ){
+    func buyLTR(username:String, pwd:String, ltr:String, completion: @escaping (Bool, String, String) -> Void ){
         let urlString = Config.SERVER_LINK + "buyltr"
         
         let parameters: Parameters = ["email":username,
                                       "password":pwd,
                                       "apikey" : Config.API_KEY,
-                                      "eth_toexchange": eth,
                                       "ltr_tobuy":ltr
         ]
         

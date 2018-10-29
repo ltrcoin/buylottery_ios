@@ -185,8 +185,10 @@ class BuyLTRCoinViewController: UIViewController, UITextFieldDelegate {
         buyBtn.isUserInteractionEnabled = false
         buyBtn.backgroundColor = UIColor.lightGray
         buyBtn.setTitle("Buying", for: .normal)
+        
         if let email = UserDefaults.standard.string(forKey: "user-email"), let pwd = UserDefaults.standard.string(forKey: "user-pwd") {
-            BuyLTRCoinService.init().buyLTR(username: email, pwd: pwd, eth: ethExchangeTxt.text!, ltr: ltrExchangeTxt.text!) { [weak self] (done, ethTxhash, ltrTxhash) in
+            BuyLTRCoinService.init().buyLTR(username: email, pwd: pwd, ltr: ltrExchangeTxt.text!) { [weak self] (done, ethTxhash, ltrTxhash) in
+                
                 self?.buyBtn.isUserInteractionEnabled = true
                 self?.buyBtn.hideLoading()
                 

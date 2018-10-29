@@ -11,6 +11,7 @@ import UIKit
     func changePickCountry(_ str: String, index: Int)
     @objc optional func exitPopup()
 }
+
 class PickCountryViewController: UIViewController  ,UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
@@ -44,8 +45,6 @@ class PickCountryViewController: UIViewController  ,UISearchBarDelegate,UITableV
         self.tableView.register(UINib.init(nibName: "ViTriCell", bundle: nil), forCellReuseIdentifier: "ViTriCell")
         
         viewPickArea.layer.cornerRadius = 8
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {

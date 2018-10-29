@@ -51,6 +51,7 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
     var transactionVC:TransactionHistoryViewController!
     var myWalletVC:MyWalletViewController!
     var buyLtrVC:BuyLTRCoinViewController!
+    var profileVC:ProfileViewController!
     
     var rectContent = CGRect.zero
     
@@ -79,6 +80,7 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
         transactionVC = TransactionHistoryViewController.init()
         myWalletVC = MyWalletViewController.init()
         buyLtrVC = BuyLTRCoinViewController.init()
+        profileVC = ProfileViewController.init()
         
         
         homeVC.menuSide = self
@@ -87,6 +89,7 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
         transactionVC.menuSide = self
         myWalletVC.menuSide = self
         buyLtrVC.menuSide = self
+        profileVC.menuSide = self
         
         rectContent = CGRect.init(x: 0, y: 0, width: contentAreaView.frame.width, height: contentAreaView.frame.height)
         
@@ -95,6 +98,7 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
         self.add(transactionVC, anime: .None, rect: rectContent, parentView: contentAreaView)
         self.add(myWalletVC, anime: .None, rect: rectContent, parentView: contentAreaView)
         self.add(buyLtrVC, anime: .None, rect: rectContent, parentView: contentAreaView)
+        self.add(profileVC, anime: .None, rect: rectContent, parentView: contentAreaView)
         
         self.add(homeVC, anime: .None, rect: rectContent, parentView: contentAreaView)
         targetVC = homeVC
@@ -147,6 +151,8 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
     }
     
     func logined(data: Dictionary<String, Any>) {
+        USER_DATA = data
+        profileVC.updateViewWithData()
         updateUILogin()
         
         self.add(targetVC, anime: .None, rect: rectContent, parentView: contentAreaView)
@@ -224,6 +230,14 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
     
     @IBAction func signUpBtnTapped(_ sender: Any) {
         print("sign up tapped")
+        
+        
+        let registerVC = UIStoryboard.init(name: "Register", bundle: nil).instantiateViewController(withIdentifier: "RegisterNav")
+        
+        self.present(registerVC, animated: true) {
+            self.add(self.signInVC, anime: .None, rect: self.rectContent, parentView: self.contentAreaView)
+            self.hideMenuSide()
+        }
     }
     
     @IBAction func myWalletBtnTapped(_ sender: Any) {
@@ -249,6 +263,8 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
     
     @IBAction func profileBtnTapped(_ sender: Any) {
         print("profileBtnTapped")
+        self.add(profileVC, anime: .None, rect: rectContent, parentView: contentAreaView)
+        hideMenuSide()
     }
     
     @IBAction func twoFABtnTapped(_ sender: Any) {
@@ -260,7 +276,7 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
         print("signOutBtnTapped")
         UserDefaults.standard.removeObject(forKey: "user-pwd")
         UserDefaults.standard.removeObject(forKey: "user-email")
-        
+        USER_DATA = nil
         isLogin = false
         signInLbl.text = "SIGN IN"
         signUpView.isHidden = false
@@ -274,7 +290,8 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
         isExpand = false
         heighSubViewCT.constant = 0
         self.view.layoutIfNeeded()
-        
-        
+        targetVC = homeVC
+        self.add(signInVC, anime: .None, rect: rectContent, parentView: contentAreaView)
+        hideMenuSide()
     }
 }

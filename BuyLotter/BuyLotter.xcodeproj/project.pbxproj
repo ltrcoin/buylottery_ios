@@ -53,6 +53,7 @@
 		184B184E214A243D0054736D /* MyGalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B184C214A243D0054736D /* MyGalleryCollectionViewCell.swift */; };
 		184B184F214A243D0054736D /* MyGalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184B184D214A243D0054736D /* MyGalleryCollectionViewCell.xib */; };
 		184CFA7C215CC5C4003B2FEE /* Extension HandPickNumberTicketVC paging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184CFA7B215CC5C4003B2FEE /* Extension HandPickNumberTicketVC paging.swift */; };
+		1853A6862181B714009B8AD5 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853A6852181B714009B8AD5 /* ProfileService.swift */; };
 		18588CC42174437A0034E4ED /* CheckoutPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18588CC22174437A0034E4ED /* CheckoutPopupViewController.swift */; };
 		18588CC52174437A0034E4ED /* CheckoutPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18588CC32174437A0034E4ED /* CheckoutPopupViewController.xib */; };
 		18588CCB217455800034E4ED /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18588CC9217455800034E4ED /* TransactionViewController.swift */; };
@@ -75,6 +76,8 @@
 		187B9E45214A686400E17130 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9E43214A686400E17130 /* AlbumsViewController.swift */; };
 		187B9E46214A686400E17130 /* AlbumsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187B9E44214A686400E17130 /* AlbumsViewController.xib */; };
 		187B9E49214A6B1700E17130 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9E48214A6B1700E17130 /* AlbumCell.swift */; };
+		187E4AF521816014005EFCA2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187E4AF321816014005EFCA2 /* ProfileViewController.swift */; };
+		187E4AF621816014005EFCA2 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187E4AF421816014005EFCA2 /* ProfileViewController.xib */; };
 		18802B1A2147A88A00F476BC /* ViTriCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18802B162147A88A00F476BC /* ViTriCell.swift */; };
 		18802B1B2147A88A00F476BC /* ViTriCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18802B172147A88A00F476BC /* ViTriCell.xib */; };
 		18802B202147AB8400F476BC /* country.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18802B1E2147AB8400F476BC /* country.plist */; };
@@ -89,6 +92,7 @@
 		188A9F22214B590C001FF793 /* Extension MyGalleryVC delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A9F21214B590C001FF793 /* Extension MyGalleryVC delegate.swift */; };
 		188A9F27214BA5BC001FF793 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A9F26214BA5BC001FF793 /* Config.swift */; };
 		188A9F29214BB1D6001FF793 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A9F28214BB1D6001FF793 /* RegisterService.swift */; };
+		188B8A6D2186EADB00CB2E5C /* Extension Image compress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B8A6C2186EADB00CB2E5C /* Extension Image compress.swift */; };
 		18938E812166016F0039F2E4 /* ResultDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18938E7F2166016F0039F2E4 /* ResultDetailViewController.swift */; };
 		18938E822166016F0039F2E4 /* ResultDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18938E802166016F0039F2E4 /* ResultDetailViewController.xib */; };
 		18938E86216610780039F2E4 /* ResultDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18938E85216610780039F2E4 /* ResultDetailView.xib */; };
@@ -210,6 +214,7 @@
 		184B184C214A243D0054736D /* MyGalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		184B184D214A243D0054736D /* MyGalleryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyGalleryCollectionViewCell.xib; sourceTree = "<group>"; };
 		184CFA7B215CC5C4003B2FEE /* Extension HandPickNumberTicketVC paging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension HandPickNumberTicketVC paging.swift"; sourceTree = "<group>"; };
+		1853A6852181B714009B8AD5 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
 		18588CC22174437A0034E4ED /* CheckoutPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutPopupViewController.swift; sourceTree = "<group>"; };
 		18588CC32174437A0034E4ED /* CheckoutPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckoutPopupViewController.xib; sourceTree = "<group>"; };
 		18588CC9217455800034E4ED /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
@@ -232,6 +237,8 @@
 		187B9E43214A686400E17130 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		187B9E44214A686400E17130 /* AlbumsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumsViewController.xib; sourceTree = "<group>"; };
 		187B9E48214A6B1700E17130 /* AlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
+		187E4AF321816014005EFCA2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		187E4AF421816014005EFCA2 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		18802B162147A88A00F476BC /* ViTriCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViTriCell.swift; sourceTree = "<group>"; };
 		18802B172147A88A00F476BC /* ViTriCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViTriCell.xib; sourceTree = "<group>"; };
 		18802B1E2147AB8400F476BC /* country.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = country.plist; sourceTree = "<group>"; };
@@ -248,6 +255,7 @@
 		188A9F21214B590C001FF793 /* Extension MyGalleryVC delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension MyGalleryVC delegate.swift"; sourceTree = "<group>"; };
 		188A9F26214BA5BC001FF793 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		188A9F28214BB1D6001FF793 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
+		188B8A6C2186EADB00CB2E5C /* Extension Image compress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension Image compress.swift"; sourceTree = "<group>"; };
 		18938E7F2166016F0039F2E4 /* ResultDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailViewController.swift; sourceTree = "<group>"; };
 		18938E802166016F0039F2E4 /* ResultDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultDetailViewController.xib; sourceTree = "<group>"; };
 		18938E85216610780039F2E4 /* ResultDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultDetailView.xib; sourceTree = "<group>"; };
@@ -764,6 +772,40 @@
 			path = Control;
 			sourceTree = "<group>";
 		};
+		187E4AEF21815F38005EFCA2 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				187E4AF221815FD9005EFCA2 /* Presentation */,
+				187E4AF121815FCF005EFCA2 /* Control */,
+				187E4AF021815FC6005EFCA2 /* Abstraction */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		187E4AF021815FC6005EFCA2 /* Abstraction */ = {
+			isa = PBXGroup;
+			children = (
+				1853A6852181B714009B8AD5 /* ProfileService.swift */,
+			);
+			path = Abstraction;
+			sourceTree = "<group>";
+		};
+		187E4AF121815FCF005EFCA2 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				187E4AF321816014005EFCA2 /* ProfileViewController.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		187E4AF221815FD9005EFCA2 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				187E4AF421816014005EFCA2 /* ProfileViewController.xib */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		18802B122147A80700F476BC /* Plugin choose country */ = {
 			isa = PBXGroup;
 			children = (
@@ -1066,6 +1108,7 @@
 				18BDEEC8214231E200386EA7 /* Extension UIViewcontroller dismiss keyboard.swift */,
 				18BDEEC9214231E200386EA7 /* Extension UITextView placeholder.swift */,
 				18BDEECA214231E200386EA7 /* LoadingViewController.swift */,
+				188B8A6C2186EADB00CB2E5C /* Extension Image compress.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1201,6 +1244,7 @@
 		18E21C042153835F006BF9DD /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				187E4AEF21815F38005EFCA2 /* Profile */,
 				18A18C3721634DA200F01838 /* MenuSide */,
 				18588CC62174554B0034E4ED /* Transaction UI */,
 				18CB8484217D84D3001E363B /* Buy LTR coin */,
@@ -1441,6 +1485,7 @@
 				18277AA721787EED00ED972A /* MyWalletViewController.xib in Resources */,
 				1895B884215B38C800E6C182 /* ViewYourNumbersViewController.xib in Resources */,
 				18BDEF0821427B0A00386EA7 /* ButtonTitle.strings in Resources */,
+				187E4AF621816014005EFCA2 /* ProfileViewController.xib in Resources */,
 				18277A9C2178212700ED972A /* TransactionHistoryTableViewCell.xib in Resources */,
 				18E21C1D2153A16F006BF9DD /* PlayViewController.xib in Resources */,
 				184B1810214A0DBE0054736D /* GallleryAsset.xcassets in Resources */,
@@ -1549,6 +1594,7 @@
 				18BDEE8D21422D9500386EA7 /* ViewController.swift in Sources */,
 				184B1848214A233F0054736D /* MyGalleryViewController.swift in Sources */,
 				18CB848A217D86F4001E363B /* BuyLTRCoinViewController.swift in Sources */,
+				188B8A6D2186EADB00CB2E5C /* Extension Image compress.swift in Sources */,
 				18EB3ED9216F028500B982EF /* ResultService.swift in Sources */,
 				18BDEEB221422FE000386EA7 /* LoginService.swift in Sources */,
 				18277AA0217843F100ED972A /* TransactionHistoryModel.swift in Sources */,
@@ -1562,6 +1608,7 @@
 				1895B87C215B2A6B00E6C182 /* RandomTicket.swift in Sources */,
 				18BDEEE0214231E200386EA7 /* Extension Date.swift in Sources */,
 				184B1835214A171A0054736D /* UIScrollView+Extensions.swift in Sources */,
+				1853A6862181B714009B8AD5 /* ProfileService.swift in Sources */,
 				18BDEEDD214231E200386EA7 /* Extension UIView add tap gesture.swift in Sources */,
 				184B1833214A171A0054736D /* String+Extensions.swift in Sources */,
 				18277AA621787EED00ED972A /* MyWalletViewController.swift in Sources */,
@@ -1586,6 +1633,7 @@
 				18588CCF217479B50034E4ED /* CheckoutFailtPopupViewController.swift in Sources */,
 				187B9E49214A6B1700E17130 /* AlbumCell.swift in Sources */,
 				18802B1A2147A88A00F476BC /* ViTriCell.swift in Sources */,
+				187E4AF521816014005EFCA2 /* ProfileViewController.swift in Sources */,
 				18802B322147C83C00F476BC /* CountryConfig.swift in Sources */,
 				18773F5221670F9100389BAC /* Extesion ResultDetailVC paging.swift in Sources */,
 				18BDEEEA214231E200386EA7 /* Extension UIVC show full image.swift in Sources */,

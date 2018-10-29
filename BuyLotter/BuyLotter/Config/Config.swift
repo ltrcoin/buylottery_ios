@@ -10,4 +10,8 @@ import Foundation
 struct Config {
     static let SERVER_LINK = "https://buylottery.org/api/"
     static let API_KEY = "NzE0MjM4ZGEtODZiMy00MDQ2LTliOTctYzgxN2RhYTU2N2Iw"
+    
+    static let BUCKET_LINK = "https://buylottery.org/"
 }
+
+var USER_DATA: Dictionary<String, Any>!
