@@ -20,7 +20,7 @@ struct LoginService {
         
         Alamofire.request(urlString, method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseJSON { (response) in
-                print("\(response.result.value)")
+                print("😬 \(response.result.value)")
                 if let dataResponse = response.result.value as? Dictionary<String,Any> {
                     guard let status = dataResponse["status"] as? Int,
                     let msg = dataResponse["msg"] as? String
@@ -35,6 +35,8 @@ struct LoginService {
                     } else {
                         completion(false,msg,nil)
                     }
+                } else {
+                    completion(false,"Network has problem!",nil)
                 }
         }
         

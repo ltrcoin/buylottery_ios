@@ -211,7 +211,6 @@ extension RegisterPageTwoViewController: PickCountryDelegate, PickGenderDelegate
         }
     }
     
-    
 }
 
 extension RegisterPageTwoViewController: UITextFieldDelegate {

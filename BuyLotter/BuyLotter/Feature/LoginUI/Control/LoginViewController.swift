@@ -120,7 +120,7 @@ class LoginViewController: UIViewController {
                 self?.notifyLbl.text = msg
             } else {
                 self?.notifyLbl.isHidden = true
-                print(data)
+                print("🤗\(data)")
                 //                let authenVC = TwoFactorAuthenViewController.init()
                 //                self?.present(authenVC, animated: true, completion: nil)
                 self?.menuSide.logined!(data: data!)

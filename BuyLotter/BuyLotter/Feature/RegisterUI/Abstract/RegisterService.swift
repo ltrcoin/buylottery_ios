@@ -85,7 +85,7 @@ struct RegisterService {
             }
             
             if portraitImg != nil {
-                guard let imageData = portraitImg?.jpegData(compressionQuality: 1)  else {
+                guard let imageData = portraitImg?.resizedTo1MB()!.jpegData(compressionQuality: 1)  else {
                     print("Could not get JPEG representation of UIImage")
                     return
                 }
@@ -96,7 +96,7 @@ struct RegisterService {
             }
             
             if passportImg != nil {
-                guard let imageData = passportImg?.jpegData(compressionQuality: 1) else {
+                guard let imageData = passportImg?.resizedTo1MB()!.jpegData(compressionQuality: 1) else {
                     print("Could not get JPEG representation of UIImage")
                     return
                 }
