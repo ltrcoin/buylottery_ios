@@ -18,6 +18,7 @@
                 <outlet property="previousDateLbl" destination="nWT-0b-Eda" id="pUf-ac-KR7"/>
                 <outlet property="previousTimeLbl" destination="DAQ-2u-dOY" id="Bx9-A0-e6g"/>
                 <outlet property="scrollView" destination="RSN-wJ-qg4" id="KJM-oD-kaW"/>
+                <outlet property="titleLbl" destination="DV6-HP-Rh3" id="abe-fd-DwT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="widthContentCT" destination="PeW-HK-DJ6" id="hm6-P9-zLg"/>
                 <outletCollection property="pageViews" destination="XCn-JU-s5t" collectionClass="NSMutableArray" id="Id4-fI-bt8"/>

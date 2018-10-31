@@ -59,6 +59,13 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         startTimeDown()
+        updateUIFollowLanguage()
+    }
+    
+    func updateUIFollowLanguage() {
+        for btn in playsBtn {
+            btn.setTitle("Play".localized(using: "ButtonTitle"), for: .normal)
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {

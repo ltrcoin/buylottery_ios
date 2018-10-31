@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Localize_Swift
+
 @objc
 protocol MenuSideInterface {
     func showMenuSide()
@@ -30,7 +32,20 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
 
     @IBOutlet weak var heighSubViewCT: NSLayoutConstraint!
     
+    @IBOutlet weak var homeLbl: UILabel!
+    @IBOutlet weak var resultLbl: UILabel!
+    @IBOutlet weak var transactionLbl: UILabel!
+    @IBOutlet weak var buyLTRLbl: UILabel!
+    @IBOutlet weak var languageLbl: UILabel!
     @IBOutlet weak var signInLbl: UILabel!
+    @IBOutlet weak var signUpLbl: UILabel!
+    
+    @IBOutlet weak var myWalletLbl: UILabel!
+    @IBOutlet weak var buyLTRSubLbl: UILabel!
+    @IBOutlet weak var profileLbl: UILabel!
+    @IBOutlet weak var verify2FALbl: UILabel!
+    @IBOutlet weak var signOutLbl: UILabel!
+    
     @IBOutlet weak var signUpView: UIView!
     @IBOutlet weak var leftCT: NSLayoutConstraint!
     
@@ -38,6 +53,7 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
     @IBOutlet weak var ltrLbl: UILabel!
     @IBOutlet weak var ethLbl: UILabel!
     
+    @IBOutlet weak var showContentBtn: UIButton!
     
     var spaceExpandValue:CGFloat = 0
     var expandAccountValue:CGFloat = 0
@@ -65,6 +81,9 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        showContentBtn.isUserInteractionEnabled = false
         MenuSideViewController.Instance = self
         
         self.view.layoutIfNeeded()
@@ -109,6 +128,30 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        updateUIFollowLanguage()
+    }
+    
+    func updateUIFollowLanguage() {
+        homeLbl.text = "HOME".localized(using: "LabelTitle")
+        resultLbl.text = "LOTTERY RESULTS".localized(using: "LabelTitle")
+        transactionLbl.text = "TRANSACTION".localized(using: "LabelTitle")
+        buyLTRLbl.text = "Buy LTR token".localized(using: "LabelTitle")
+        buyLTRSubLbl.text = "Buy LTR token".localized(using: "LabelTitle")
+        languageLbl.text = "LANGUAGE".localized(using: "LabelTitle")
+        myWalletLbl.text = "My wallet".localized(using: "LabelTitle")
+        profileLbl.text = "Profile".localized(using: "LabelTitle")
+        signOutLbl.text = "Sign out".localized(using: "LabelTitle")
+        verify2FALbl.text = "2FA Verification".localized(using: "LabelTitle")
+        signUpLbl.text = "SIGN UP".localized(using: "LabelTitle")
+        
+        if isLogin {
+            signInLbl.text = "MY ACCOUNT".localized(using: "LabelTitle")
+        } else {
+            signInLbl.text = "SIGN IN".localized(using: "LabelTitle")
+        }
+    }
+    
     func toggleMenuSide() {
         isShowMenuSide = !isShowMenuSide
         if isShowMenuSide {
@@ -119,6 +162,7 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
     }
     
     func showMenuSide() {
+        showContentBtn.isUserInteractionEnabled = true
         isShowMenuSide = true
         self.leftCT.constant = spaceExpandValue
         UIView.animate(withDuration: 0.2) {
@@ -127,6 +171,7 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
     }
     
     func hideMenuSide() {
+        showContentBtn.isUserInteractionEnabled = false
         isShowMenuSide = false
         self.leftCT.constant = 0
         UIView.animate(withDuration: 0.2) {
@@ -156,13 +201,14 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
         updateUILogin()
         
         self.add(targetVC, anime: .None, rect: rectContent, parentView: contentAreaView)
+        targetVC.viewWillAppear(true)
         hideMenuSide()
     }
     
     func updateUILogin(){
         isLogin = true
         signUpView.isHidden = true
-        signInLbl.text = "MY ACCOUNT"
+        signInLbl.text = "MY ACCOUNT".localized(using: "LabelTitle")
         
         updateBalance()
     }
@@ -207,6 +253,11 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
             self.add(signInVC, anime: .None, rect: rectContent, parentView: contentAreaView)
         }
         hideMenuSide()
+    }
+    
+    @IBAction func languageBtnTapped(_ sender: Any) {
+        let langVC = LanguageViewController.init()
+        self.present(langVC, animated: true, completion: nil)
     }
     
     @IBAction func signInBtnTapped(_ sender: Any) {
@@ -278,7 +329,7 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
         UserDefaults.standard.removeObject(forKey: "user-email")
         USER_DATA = nil
         isLogin = false
-        signInLbl.text = "SIGN IN"
+        signInLbl.text = "SIGN IN".localized(using: "LabelTitle")
         signUpView.isHidden = false
         
         ltrCoin = 0

@@ -9,10 +9,12 @@
 import UIKit
 
 class GalleryCamCollectionViewCell: UICollectionViewCell {
-
+    @IBOutlet weak var cameraLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        cameraLbl.text = "Camera".localized(using: "LabelTitle")
     }
 
 }

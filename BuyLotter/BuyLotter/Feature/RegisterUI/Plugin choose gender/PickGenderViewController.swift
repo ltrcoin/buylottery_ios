@@ -12,6 +12,9 @@ import UIKit
     @objc optional func exitPopup()
 }
 class PickGenderViewController: UIViewController {
+    @IBOutlet weak var maleBtn: UIButton!
+    @IBOutlet weak var femaleBtn: UIButton!
+    @IBOutlet weak var otherBtn: UIButton!
     
     var delegate: PickGenderDelegate?
     init() {
@@ -31,24 +34,28 @@ class PickGenderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        maleBtn.setTitle("Male".localized(using: "LabelTitle"), for: .normal)
+        
+        femaleBtn.setTitle("Female".localized(using: "LabelTitle"), for: .normal)
+        
+        otherBtn.setTitle("Other".localized(using: "LabelTitle"), for: .normal)
     }
     
     @IBAction func maleBtnTapped(_ sender: Any) {
         print("maleBtnTapped")
-        delegate?.changePickGender("Male", index: 1)
+        delegate?.changePickGender("Male".localized(using: "LabelTitle"), index: 1)
         self.removeSelf(anime: .Center, _parentView: nil)
     }
     
     @IBAction func femaleBtnTapped(_ sender: Any) {
         print("femaleBtnTapped")
-        delegate?.changePickGender("Female", index: 2)
+        delegate?.changePickGender("Female".localized(using: "LabelTitle"), index: 2)
         self.removeSelf(anime: .Center, _parentView: nil)
     }
     
     @IBAction func otherBtnTapped(_ sender: Any) {
         print("otherBtnTapped")
-        delegate?.changePickGender("Other", index: 3)
+        delegate?.changePickGender("Other".localized(using: "LabelTitle"), index: 3)
         self.removeSelf(anime: .Center, _parentView: nil)
     }
     

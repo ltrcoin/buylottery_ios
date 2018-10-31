@@ -1,0 +1,40 @@
+/* 
+  ButtonTitle.strings
+  BuyLotter
+
+  Created by admin on 2018/9/7.
+  Copyright © 2018 kazy. All rights reserved.
+*/
+"Login" = "Đăng nhập";
+
+"Sign up now" = "Đăng ký ngay";
+
+"Next" = "Tiếp";
+
+"Skip" = "Bỏ qua";
+
+"Submit" = "Gửi";
+
+"Play" = "Chơi";
+
+"Buy A Ticket" = "Mua vé";
+
+"Buy Now" = "Mua Ngay";
+
+"Buying" = "Đang mua";
+
+"Update" = "Cập nhật";
+
+"Updating" = "Đang cập nhật";
+
+"Systematic" = "Chơi bao";
+
+"Quick pick" = "Chọn ngẫu nhiên";
+
+"Quick Pick" = "Chọn ngẫu nhiên";
+
+"CHECKOUT" = "THANH TOÁN";
+
+"PROCESSING" = "ĐANG XỬ LÝ";
+
+"Buy more LTR" = "Mua thêm LTR";

@@ -48,10 +48,12 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var addressTxt: UITextField!
     
+    @IBOutlet weak var imagePortraitLbl: UILabel!
     @IBOutlet weak var portraitImg: UIImageView!
     
     @IBOutlet weak var imagePortraitCam: UIImageView!
     
+    @IBOutlet weak var imagePassportLbl: UILabel!
     @IBOutlet weak var passportImg: UIImageView!
     
     @IBOutlet weak var imagePassportCam: UIImageView!
@@ -127,10 +129,27 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         addKeyboardEvent()
+        updateUIFollowLanguage()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         removeKeyboardEvent()
+    }
+    
+    func updateUIFollowLanguage() {
+        fullnameLbl.text = "Full name".localized(using: "LabelTitle")
+        phoneLbl.text = "Phone".localized(using: "LabelTitle")
+        btcWalletLbl.text = "BTC Wallet address".localized(using: "LabelTitle")
+        ltrWalletLbl.text = "LTR Wallet address".localized(using: "LabelTitle")
+        dobLbl.text = "Date of birth".localized(using: "LabelTitle")
+        genderLbl.text = "Gender".localized(using: "LabelTitle")
+        countryLbl.text = "Country".localized(using: "LabelTitle")
+        addressLbl.text = "Address".localized(using: "LabelTitle")
+        imagePortraitLbl.text = "Image portrait".localized(using: "LabelTitle")
+        
+        imagePassportLbl.text = "Image passport".localized(using: "LabelTitle")
+        
+        updateBtn.setTitle("Update".localized(using: "ButtonTitle"), for: .normal)
     }
     
     func updateViewWithData(){
@@ -163,16 +182,21 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
             if let sex = USER_DATA["sex"] as? Int, sex > 0 {
                 switch sex {
                 case 1:
-                    genderContentLbl.text = "Male"
+                    genderContentLbl.text = "Male".localized(using: "LabelTitle")
                 case 2:
-                    genderContentLbl.text = "Female"
+                    genderContentLbl.text = "Female".localized(using: "LabelTitle")
                 default:
-                    genderContentLbl.text = "Other"
+                    genderContentLbl.text = "Other".localized(using: "LabelTitle")
                 }
+            } else {
+                genderContentLbl.text = "-- Select gender --".localized(using: "LabelTitle")
             }
+            
             
             if let country = USER_DATA["country"] as? Int, country > 0 ,  country < CountryConfig.data.count {
                 countryContentLbl.text = "\(CountryConfig.data[country - 1])"
+            } else {
+                countryContentLbl.text = "-- Select country --".localized(using: "LabelTitle")
             }
             
             if let address = USER_DATA["address"] as? String {
@@ -278,7 +302,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         
         updateBtn.isUserInteractionEnabled = false
         updateBtn.backgroundColor = UIColor.lightGray
-        updateBtn.setTitle("Updating", for: .normal)
+        updateBtn.setTitle("Updating".localized(using: "ButtonTitle"), for: .normal)
         
         if let username = UserDefaults.standard.string(forKey: "user-email"), let pwd = UserDefaults.standard.string(forKey: "user-pwd") {
             ProfileService.init().update(email: username, pwd: pwd, data: data, portraitImg: portraitImg.image, passportImg: passportImg.image) { [weak self] (done, msg, data) in
@@ -287,7 +311,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
                 }
                 self?.updateBtn.isUserInteractionEnabled = true
                 self?.updateBtn.backgroundColor = UIColor.orange
-                self?.updateBtn.setTitle("Update", for: .normal)
+                self?.updateBtn.setTitle("Update".localized(using: "ButtonTitle"), for: .normal)
             }
         }
         

@@ -18,7 +18,10 @@ class BuyTicketViewController: UIViewController {
     @IBOutlet weak var stackSystematicView: UIView!
     @IBOutlet weak var systematicBtn: UIButton!
     
+    @IBOutlet weak var howToPlayLbl: UILabel!
     @IBOutlet weak var psSystematicLbl: UILabel!
+    @IBOutlet weak var pickYourNumberLbl: UILabel!
+    @IBOutlet weak var viewYourNumberLbl: UILabel!
     
     @IBOutlet weak var systematicHeightCT: NSLayoutConstraint!
     
@@ -77,9 +80,6 @@ class BuyTicketViewController: UIViewController {
         heightBuyBtnCT.constant = 0
         
         
-        
-        
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -110,6 +110,7 @@ class BuyTicketViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        updateUIFollowLanguage()
         if ticketVC != nil {
             var isShowNumber = false
             var isShowBuy = false
@@ -131,6 +132,17 @@ class BuyTicketViewController: UIViewController {
             }
         }
     }
+    
+    func updateUIFollowLanguage() {
+        howToPlayLbl.text = "Choose how to play".localized(using: "LabelTitle")
+        pickYourNumberLbl.text = "Pick your numbers".localized(using: "LabelTitle")
+        viewYourNumberLbl.text = "View Your Numbers".localized(using: "LabelTitle")
+        quickPickBtn.setTitle("Quick pick".localized(using: "ButtonTitle"), for: .normal)
+        systematicBtn.setTitle("Systematic".localized(using: "ButtonTitle"), for: .normal)
+        
+        buyBtn.setTitle("Buy A Ticket".localized(using: "ButtonTitle"), for: .normal)
+    }
+    
     
     @IBAction func buyTicketTapped(_ sender: Any) {
         print("buy ticket tapped")
@@ -173,7 +185,7 @@ class BuyTicketViewController: UIViewController {
         
         systematicNumberBtns[0].backgroundColor = focusColor
         systematicNumberBtns[0].setTitleColor(UIColor.white, for: .normal)
-        psSystematicLbl.text = "\(systematicTitles[0]) Numbers = \(systematicPSData[0]) Lines"
+        psSystematicLbl.text = "\(systematicTitles[0]) \("Numbers".localized(using: "LabelTitle")) = \(systematicPSData[0]) \("Lines".localized(using: "LabelTitle"))"
         
         systematicBtn.layer.borderWidth = 1
         systematicBtn.layer.cornerRadius = 5
@@ -255,7 +267,7 @@ class BuyTicketViewController: UIViewController {
                     
                     numberSystematic = systematicTitles[i]
                     
-                    psSystematicLbl.text = "\(systematicTitles[i]) Numbers = \(systematicPSData[i]) Lines"
+                    psSystematicLbl.text = "\(systematicTitles[i]) \("Numbers".localized(using: "LabelTitle")) = \(systematicPSData[i]) \("Lines".localized(using: "LabelTitle"))"
                     
                     
                     ticketVC.numberSystematic = numberSystematic

@@ -14,6 +14,7 @@ class ResultDetailView: UIView {
     @IBOutlet weak var contentAreaView: UIView!
     
     @IBOutlet weak var logoImg: UIImageView!
+    @IBOutlet weak var currentJackpotLbl: UILabel!
     
     @IBOutlet weak var timeDrawLbl: UILabel!
     
@@ -34,6 +35,10 @@ class ResultDetailView: UIView {
         
         setupTestData()
         setupTableView()
+        
+        currentJackpotLbl.text = "Current jackpot".localized(using: "LabelTitle")
+        
+        buyBtn.setTitle("Buy A Ticket".localized(using: "ButtonTitle"), for: .normal)
     }
     
     func setupTestData(){
@@ -125,16 +130,20 @@ extension ResultDetailView : UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! PrizeTableViewCell
 
         if indexPath.row == 0 {
-            cell.noLbl.text = "Divisions"
-            cell.matchLbl.text = "Match"
-            cell.payoutLbl.text = "Payout"
+            cell.noLbl.text = "Divisions".localized(using: "LabelTitle")
+            cell.matchLbl.text = "Match".localized(using: "LabelTitle")
+            cell.payoutLbl.text = "Payout".localized(using: "LabelTitle")
         } else {
             cell.noLbl.text = "\(indexPath.row)"
             cell.matchLbl.text = prizeData.smallPrizeData[indexPath.row - 1].kind
             if prizeData.smallPrizeData[indexPath.row - 1].value != 0 {
-                cell.payoutLbl.text = "LTR \(prizeData.smallPrizeData[indexPath.row - 1].value)"
+                let numberFormatter = NumberFormatter()
+                numberFormatter.numberStyle = .decimal
+                numberFormatter.allowsFloats = true
+                numberFormatter.maximumFractionDigits = 6
+                cell.payoutLbl.text = "USD " + numberFormatter.string(from: NSNumber.init(value: prizeData.smallPrizeData[indexPath.row - 1].value))!
             } else {
-                cell.payoutLbl.text = "No Winner"
+                cell.payoutLbl.text = "No Winner".localized(using: "LabelTitle")
             }
         }
         

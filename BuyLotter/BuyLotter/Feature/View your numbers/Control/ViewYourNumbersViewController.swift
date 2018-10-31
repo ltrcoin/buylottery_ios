@@ -50,16 +50,21 @@ class ViewYourNumbersViewController: UIViewController, UITableViewDataSource, UI
         if ticketVC.isSystematic {
             systematicData = ticketVC.systematicData
             numberSystematic = ticketVC.numberSystematic
+            
+            titleLbl.text = "1 \("lines".localized(using: "LabelTitle"))"
         } else {
             data = ticketVC.data
-            titleLbl.text = "\(data.count) lines"
+            titleLbl.text = "\(data.count) \("lines".localized(using: "LabelTitle"))"
         }
-        
+        quickPickBtn.setTitle("Quick Pick".localized(using: "ButtonTitle"), for: .normal)
         quickPickBtn.layer.borderWidth = 1
         quickPickBtn.layer.cornerRadius = 5
         quickPickBtn.layer.borderColor = focusColor.cgColor
         quickPickBtn.backgroundColor = nil
         quickPickBtn.setTitleColor(focusColor, for: .normal)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
     }
     
     override func viewWillDisappear(_ animated: Bool) {

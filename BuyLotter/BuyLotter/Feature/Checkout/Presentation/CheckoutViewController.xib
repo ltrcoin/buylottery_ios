@@ -13,14 +13,17 @@
             <connections>
                 <outlet property="checkoutBtn" destination="9hR-oB-bB4" id="Kch-XT-gmX"/>
                 <outlet property="detailValueTicketLbl" destination="6Ii-fx-rTi" id="eWc-EW-v0Z"/>
+                <outlet property="ethTitleLbl" destination="b7z-gm-ARb" id="aKl-Ve-hEM"/>
                 <outlet property="ethValueLbl" destination="qTx-xd-Stu" id="3yV-D1-w1q"/>
                 <outlet property="logoImg" destination="SVO-3F-QvY" id="jHL-Gt-8w5"/>
+                <outlet property="ltrTitleLbl" destination="MQd-RC-QgE" id="wRB-AP-jIH"/>
                 <outlet property="ltrValueLbl" destination="4jQ-9Y-qVs" id="acK-91-ciS"/>
                 <outlet property="notifyPwdLbl" destination="I2p-HV-t27" id="YPs-JV-7cK"/>
                 <outlet property="pwdTxt" destination="YK3-7P-BWJ" id="EhH-pF-jZB"/>
                 <outlet property="quitImg" destination="wtB-34-vih" id="RfA-ey-xCf"/>
                 <outlet property="ticketPriceExplainLbl" destination="AOj-ZO-NKm" id="kTx-63-lXh"/>
                 <outlet property="timeDrawLbl" destination="A7K-ll-eZS" id="4ZT-Ik-y7J"/>
+                <outlet property="totalTitleLbl" destination="kcf-Fk-ggr" id="bqU-CX-ppz"/>
                 <outlet property="totalValueTicketLbl" destination="76J-pv-pfg" id="tSe-H0-ilt"/>
                 <outlet property="valueJackpotLbl" destination="jPa-gR-dmp" id="9fS-ef-2Ws"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

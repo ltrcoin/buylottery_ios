@@ -14,10 +14,13 @@ class MyWalletViewController: UIViewController {
     @IBOutlet weak var copiedLbl: UILabel!
     @IBOutlet weak var menuImg: UIImageView!
     
+    @IBOutlet weak var walletAddressLbl: UILabel!
     @IBOutlet weak var walletAddressTv: UITextView!
     
+    @IBOutlet weak var ltrLbl: UILabel!
     @IBOutlet weak var ltrTxt: UITextField!
     
+    @IBOutlet weak var ethLbl: UILabel!
     @IBOutlet weak var ethTxt: UITextField!
     
     init() {
@@ -36,6 +39,17 @@ class MyWalletViewController: UIViewController {
         walletAddressTv.layer.borderWidth = 1
         walletAddressTv.layer.borderColor = UIColor.init(red: 231/255, green: 231/255, blue: 231/255, alpha: 1).cgColor
         copiedLbl.layer.cornerRadius = 5
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        updateUIFollowLanguage()
+    }
+    
+    func updateUIFollowLanguage(){
+        walletAddressLbl.text = "Wallet address".localized(using: "LabelTitle")
+        ltrLbl.text = "LTR Balance".localized(using: "LabelTitle")
+        ethLbl.text = "ETH Balance".localized(using: "LabelTitle")
+        copiedLbl.text = "copied".localized(using: "LabelTitle")
     }
     
     override func viewDidAppear(_ animated: Bool) {

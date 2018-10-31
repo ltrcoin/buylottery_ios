@@ -12,8 +12,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckoutPopupViewController" customModule="BuyLotter" customModuleProvider="target">
             <connections>
+                <outlet property="popUpAreaView" destination="Qst-NJ-cCL" id="QQL-Iw-XKp"/>
+                <outlet property="titleLbl" destination="HFL-7O-OoC" id="PCY-6o-mXE"/>
+                <outlet property="transactionLbl" destination="oD5-aG-vBL" id="25M-k2-GhS"/>
                 <outlet property="txhashLbl" destination="pxi-VG-uru" id="il8-Nf-LHC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewLbl" destination="WHx-Vr-YaI" id="29d-JY-EbJ"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
