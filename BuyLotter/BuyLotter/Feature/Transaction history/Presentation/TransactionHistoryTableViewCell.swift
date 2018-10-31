@@ -38,7 +38,7 @@ class TransactionHistoryTableViewCell: UITableViewCell {
             if data.gameId == 3 {
                 titleLbl.text = "LTR jackpot"
             }
-            priceLbl.text = "Price: \(data.price) LTR"
+            priceLbl.text = "Price".localized(using: "LabelTitle") + " \(data.price) LTR"
         }
     }
     

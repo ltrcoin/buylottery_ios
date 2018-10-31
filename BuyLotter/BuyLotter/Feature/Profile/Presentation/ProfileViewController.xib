@@ -31,7 +31,9 @@
                 <outlet property="genderLbl" destination="K1f-qp-WWG" id="MXh-CG-s3D"/>
                 <outlet property="genderView" destination="3NA-Lq-ssg" id="aV4-ug-dPb"/>
                 <outlet property="imagePassportCam" destination="VuO-wI-gZQ" id="NPQ-5a-Twp"/>
+                <outlet property="imagePassportLbl" destination="Ld6-zI-FDR" id="1PK-go-1cW"/>
                 <outlet property="imagePortraitCam" destination="5Ub-Cs-T8O" id="UIv-no-WMw"/>
+                <outlet property="imagePortraitLbl" destination="g3p-Cu-dTH" id="bWX-ST-c2h"/>
                 <outlet property="inputAreaView" destination="bhN-ex-2KJ" id="wHP-rn-hF0"/>
                 <outlet property="ltrWalletLbl" destination="z64-Sa-55f" id="9xE-oU-y5K"/>
                 <outlet property="ltrWalletTxt" destination="lPc-Vm-8tF" id="GJZ-n0-Hql"/>

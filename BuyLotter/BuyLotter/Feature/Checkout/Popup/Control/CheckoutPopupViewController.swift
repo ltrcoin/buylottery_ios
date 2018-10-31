@@ -10,8 +10,12 @@ import UIKit
 
 class CheckoutPopupViewController: UIViewController {
     
+    @IBOutlet weak var popUpAreaView: UIView!
     
     @IBOutlet weak var txhashLbl: UILabel!
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var transactionLbl: UILabel!
+    @IBOutlet weak var viewLbl: UILabel!
     
     var txhash = ""
     
@@ -28,9 +32,18 @@ class CheckoutPopupViewController: UIViewController {
         super.viewDidLoad()
         
         txhashLbl.text = "\(txhash)"
-        
+        popUpAreaView.layer.cornerRadius = 10
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        updateUIFollowLanguage()
+    }
+    func updateUIFollowLanguage() {
+        titleLbl.text = "SUCCESS".localized(using: "LabelTitle")
+        transactionLbl.text = "Transaction:".localized(using: "LabelTitle")
+        viewLbl.text = "View".localized(using: "LabelTitle")
+    }
+    
     @IBAction func viewBtnTapped(_ sender: Any) {
         print("view transaction")
         let webview = TransactionViewController.init(txhash: txhash)

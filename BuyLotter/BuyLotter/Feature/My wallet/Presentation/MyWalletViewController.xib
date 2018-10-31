@@ -13,10 +13,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyWalletViewController" customModule="BuyLotter" customModuleProvider="target">
             <connections>
                 <outlet property="copiedLbl" destination="Krv-wn-Po6" id="Zi6-UP-CZ7"/>
+                <outlet property="ethLbl" destination="fIM-Tl-CDS" id="00H-yW-e7N"/>
                 <outlet property="ethTxt" destination="1Cg-U7-h36" id="Kxo-X2-0bI"/>
+                <outlet property="ltrLbl" destination="w2I-Ew-mFO" id="IGC-Ro-vxh"/>
                 <outlet property="ltrTxt" destination="hfz-KL-n1L" id="jLx-OQ-xq5"/>
                 <outlet property="menuImg" destination="pLr-1M-OVk" id="Lxe-9r-jpV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="walletAddressLbl" destination="C9j-XX-82E" id="Cck-8f-WJg"/>
                 <outlet property="walletAddressTv" destination="pZE-wy-isW" id="CLj-We-kvN"/>
             </connections>
         </placeholder>
@@ -70,13 +73,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="66400" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hfz-KL-n1L">
-                    <rect key="frame" x="15" y="208.5" width="345" height="30"/>
+                    <rect key="frame" x="15" y="198.5" width="345" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="ETH Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIM-Tl-CDS">
-                    <rect key="frame" x="15" y="253.5" width="97.5" height="21"/>
+                    <rect key="frame" x="15" y="243.5" width="97.5" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -101,7 +104,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.0567" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Cg-U7-h36">
-                    <rect key="frame" x="15" y="289.5" width="345" height="30"/>
+                    <rect key="frame" x="15" y="269.5" width="345" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <textInputTraits key="textInputTraits"/>
@@ -131,12 +134,12 @@
                 <constraint firstItem="ONo-tS-3Ia" firstAttribute="width" secondItem="pZE-wy-isW" secondAttribute="width" id="OGZ-Km-NmV"/>
                 <constraint firstItem="ONo-tS-3Ia" firstAttribute="centerX" secondItem="pZE-wy-isW" secondAttribute="centerX" id="Rpa-ca-KjG"/>
                 <constraint firstItem="hfz-KL-n1L" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="ViU-F8-D5M"/>
-                <constraint firstItem="1Cg-U7-h36" firstAttribute="top" secondItem="fIM-Tl-CDS" secondAttribute="bottom" constant="15" id="WMc-Kh-hHA"/>
+                <constraint firstItem="1Cg-U7-h36" firstAttribute="top" secondItem="fIM-Tl-CDS" secondAttribute="bottom" constant="5" id="WMc-Kh-hHA"/>
                 <constraint firstItem="ONo-tS-3Ia" firstAttribute="height" secondItem="pZE-wy-isW" secondAttribute="height" id="XDt-xP-etJ"/>
                 <constraint firstItem="C9j-XX-82E" firstAttribute="top" secondItem="Uur-BI-umh" secondAttribute="bottom" constant="30" id="Xdu-hO-6H3"/>
                 <constraint firstItem="C9j-XX-82E" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="a40-Sm-e2i"/>
                 <constraint firstItem="1Cg-U7-h36" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="cOd-rf-eZt"/>
-                <constraint firstItem="hfz-KL-n1L" firstAttribute="top" secondItem="w2I-Ew-mFO" secondAttribute="bottom" constant="15" id="gPv-pl-0Vi"/>
+                <constraint firstItem="hfz-KL-n1L" firstAttribute="top" secondItem="w2I-Ew-mFO" secondAttribute="bottom" constant="5" id="gPv-pl-0Vi"/>
                 <constraint firstItem="fIM-Tl-CDS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="geq-R6-TSn"/>
                 <constraint firstItem="Krv-wn-Po6" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="m5b-Hg-aMp"/>
                 <constraint firstItem="w2I-Ew-mFO" firstAttribute="top" secondItem="pZE-wy-isW" secondAttribute="bottom" constant="15" id="pL1-ju-bp4"/>

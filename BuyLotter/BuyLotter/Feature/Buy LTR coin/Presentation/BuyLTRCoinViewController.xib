@@ -15,15 +15,20 @@
                 <outlet property="bottomCT" destination="aVD-rF-Ljb" id="GRX-5s-X78"/>
                 <outlet property="buyBtn" destination="SHT-Pl-uh3" id="WIS-KP-fhp"/>
                 <outlet property="copiedLbl" destination="CmU-nA-hie" id="PAC-Va-8hW"/>
+                <outlet property="ethExchangeLbl" destination="mqf-vt-qSu" id="ylM-6U-scp"/>
                 <outlet property="ethExchangeTxt" destination="ZE5-JL-6hH" id="1Rt-Pw-Hcu"/>
+                <outlet property="ethLbl" destination="OWq-Gz-Fi0" id="xNP-l1-1rM"/>
                 <outlet property="ethTxt" destination="KRw-oe-JIm" id="UNY-oa-SoL"/>
                 <outlet property="ltrExchangeTxt" destination="YcG-Ph-kga" id="WUB-gD-c3G"/>
+                <outlet property="ltrLbl" destination="eba-6d-bTh" id="fRn-H7-x6L"/>
                 <outlet property="ltrTxt" destination="1kw-ET-2UK" id="oF2-gA-aJW"/>
                 <outlet property="menuImg" destination="9oG-Yu-hbe" id="Jj8-w3-yeu"/>
+                <outlet property="ratioLbl" destination="KCW-Ad-g9H" id="Ga1-r1-ZcR"/>
                 <outlet property="ratioTxt" destination="lVJ-JU-GfN" id="BBY-PF-sJo"/>
                 <outlet property="scrollView" destination="SwC-ng-ACF" id="WgK-jj-jY2"/>
                 <outlet property="titleLTRExchangeLbl" destination="11D-LG-R2W" id="c74-Ta-3Dp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="walletAddressLbl" destination="9bx-Mp-UN7" id="7sD-Z2-BGt"/>
                 <outlet property="walletAddressTv" destination="9Ie-Il-uYj" id="TpK-yj-mq8"/>
             </connections>
         </placeholder>
@@ -77,13 +82,13 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="606"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YcG-Ph-kga">
-                                    <rect key="frame" x="15" y="385.5" width="345" height="30"/>
+                                    <rect key="frame" x="15" y="365.5" width="345" height="30"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Currently Exchange Rate ETH/LTR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCW-Ad-g9H">
-                                    <rect key="frame" x="15" y="238.5" width="345" height="21"/>
+                                    <rect key="frame" x="15" y="228.5" width="345" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -95,14 +100,14 @@
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                                 <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="66,400" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1kw-ET-2UK">
-                                    <rect key="frame" x="15" y="132.5" width="345" height="20"/>
+                                    <rect key="frame" x="15" y="127.5" width="345" height="20"/>
                                     <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="ETH Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWq-Gz-Fi0">
-                                    <rect key="frame" x="15" y="167.5" width="97.5" height="21"/>
+                                    <rect key="frame" x="15" y="162.5" width="97.5" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -114,34 +119,34 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZE5-JL-6hH">
-                                    <rect key="frame" x="15" y="486.5" width="345" height="20"/>
+                                    <rect key="frame" x="15" y="461.5" width="345" height="20"/>
                                     <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.0567" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KRw-oe-JIm">
-                                    <rect key="frame" x="15" y="203.5" width="345" height="20"/>
+                                    <rect key="frame" x="15" y="193.5" width="345" height="20"/>
                                     <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Enter the number of LTR to buy by exchange ETH in your account. You can buy maximum 318428 LTR with your current ETH balance" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11D-LG-R2W">
-                                    <rect key="frame" x="15" y="309.5" width="345" height="61"/>
+                                    <rect key="frame" x="15" y="294.5" width="345" height="61"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20,5714.69" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lVJ-JU-GfN">
-                                    <rect key="frame" x="15" y="274.5" width="345" height="20"/>
+                                    <rect key="frame" x="15" y="259.5" width="345" height="20"/>
                                     <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Number of ETH need to exchange to LTR (include ETH transaction gas fee)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqf-vt-qSu">
-                                    <rect key="frame" x="15" y="430.5" width="345" height="41"/>
+                                    <rect key="frame" x="15" y="410.5" width="345" height="41"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -160,7 +165,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHT-Pl-uh3">
-                                    <rect key="frame" x="15" y="521.5" width="345" height="30"/>
+                                    <rect key="frame" x="15" y="496.5" width="345" height="30"/>
                                     <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <state key="normal" title="Buy Now">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -176,7 +181,7 @@
                                 <constraint firstItem="ZE5-JL-6hH" firstAttribute="leading" secondItem="KRw-oe-JIm" secondAttribute="leading" id="37h-9A-g7P"/>
                                 <constraint firstItem="1kw-ET-2UK" firstAttribute="trailing" secondItem="9Ie-Il-uYj" secondAttribute="trailing" id="3ai-GE-6Lm"/>
                                 <constraint firstItem="eba-6d-bTh" firstAttribute="leading" secondItem="9bx-Mp-UN7" secondAttribute="leading" id="3rQ-TN-VsZ"/>
-                                <constraint firstItem="ZE5-JL-6hH" firstAttribute="top" secondItem="mqf-vt-qSu" secondAttribute="bottom" constant="15" id="6D4-Np-DZM"/>
+                                <constraint firstItem="ZE5-JL-6hH" firstAttribute="top" secondItem="mqf-vt-qSu" secondAttribute="bottom" constant="10" id="6D4-Np-DZM"/>
                                 <constraint firstItem="9bx-Mp-UN7" firstAttribute="leading" secondItem="msZ-xK-l4L" secondAttribute="leading" constant="15" id="6ZJ-zk-vWc"/>
                                 <constraint firstItem="mqf-vt-qSu" firstAttribute="leading" secondItem="9bx-Mp-UN7" secondAttribute="leading" id="6ad-07-e9w"/>
                                 <constraint firstItem="YcG-Ph-kga" firstAttribute="leading" secondItem="KRw-oe-JIm" secondAttribute="leading" id="6dY-VF-9ok"/>
@@ -186,7 +191,7 @@
                                 <constraint firstAttribute="trailing" secondItem="mqf-vt-qSu" secondAttribute="trailing" constant="15" id="Aqj-wS-YNf"/>
                                 <constraint firstItem="KRw-oe-JIm" firstAttribute="trailing" secondItem="9Ie-Il-uYj" secondAttribute="trailing" id="HdD-qJ-IEJ"/>
                                 <constraint firstItem="eba-6d-bTh" firstAttribute="top" secondItem="9Ie-Il-uYj" secondAttribute="bottom" constant="15" id="JpT-FF-Fhl"/>
-                                <constraint firstItem="YcG-Ph-kga" firstAttribute="top" secondItem="11D-LG-R2W" secondAttribute="bottom" constant="15" id="M80-Fj-eLw"/>
+                                <constraint firstItem="YcG-Ph-kga" firstAttribute="top" secondItem="11D-LG-R2W" secondAttribute="bottom" constant="10" id="M80-Fj-eLw"/>
                                 <constraint firstItem="SHT-Pl-uh3" firstAttribute="centerX" secondItem="YcG-Ph-kga" secondAttribute="centerX" id="OZR-Z9-biD"/>
                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="SHT-Pl-uh3" secondAttribute="bottom" constant="8" id="QrU-kI-nDu"/>
                                 <constraint firstItem="tDK-JF-0YC" firstAttribute="centerY" secondItem="9Ie-Il-uYj" secondAttribute="centerY" id="SHT-D1-Ihn"/>
@@ -194,7 +199,7 @@
                                 <constraint firstItem="9bx-Mp-UN7" firstAttribute="top" secondItem="msZ-xK-l4L" secondAttribute="top" constant="15" id="VTg-cw-I24"/>
                                 <constraint firstItem="SHT-Pl-uh3" firstAttribute="top" secondItem="ZE5-JL-6hH" secondAttribute="bottom" constant="15" id="WTz-4U-aPK"/>
                                 <constraint firstItem="tDK-JF-0YC" firstAttribute="centerX" secondItem="9Ie-Il-uYj" secondAttribute="centerX" id="YZ4-9T-Agl"/>
-                                <constraint firstItem="KRw-oe-JIm" firstAttribute="top" secondItem="OWq-Gz-Fi0" secondAttribute="bottom" constant="15" id="Zll-92-5Q6"/>
+                                <constraint firstItem="KRw-oe-JIm" firstAttribute="top" secondItem="OWq-Gz-Fi0" secondAttribute="bottom" constant="10" id="Zll-92-5Q6"/>
                                 <constraint firstAttribute="trailing" secondItem="11D-LG-R2W" secondAttribute="trailing" constant="15" id="aXa-Ut-f6Q"/>
                                 <constraint firstItem="KRw-oe-JIm" firstAttribute="leading" secondItem="9Ie-Il-uYj" secondAttribute="leading" id="bF6-yE-kgN"/>
                                 <constraint firstItem="11D-LG-R2W" firstAttribute="top" secondItem="lVJ-JU-GfN" secondAttribute="bottom" constant="15" id="bzZ-p4-9A0"/>
@@ -204,8 +209,8 @@
                                 <constraint firstItem="11D-LG-R2W" firstAttribute="leading" secondItem="9bx-Mp-UN7" secondAttribute="leading" id="jQd-le-toB"/>
                                 <constraint firstItem="tDK-JF-0YC" firstAttribute="width" secondItem="9Ie-Il-uYj" secondAttribute="width" id="jSp-JV-yHd"/>
                                 <constraint firstItem="mqf-vt-qSu" firstAttribute="top" secondItem="YcG-Ph-kga" secondAttribute="bottom" constant="15" id="l8l-fI-5MP"/>
-                                <constraint firstItem="1kw-ET-2UK" firstAttribute="top" secondItem="eba-6d-bTh" secondAttribute="bottom" constant="15" id="m9A-mC-IFN"/>
-                                <constraint firstItem="lVJ-JU-GfN" firstAttribute="top" secondItem="KCW-Ad-g9H" secondAttribute="bottom" constant="15" id="mZr-Ht-jyD"/>
+                                <constraint firstItem="1kw-ET-2UK" firstAttribute="top" secondItem="eba-6d-bTh" secondAttribute="bottom" constant="10" id="m9A-mC-IFN"/>
+                                <constraint firstItem="lVJ-JU-GfN" firstAttribute="top" secondItem="KCW-Ad-g9H" secondAttribute="bottom" constant="10" id="mZr-Ht-jyD"/>
                                 <constraint firstItem="9Ie-Il-uYj" firstAttribute="top" secondItem="9bx-Mp-UN7" secondAttribute="bottom" constant="10" id="mfp-T9-4AL"/>
                                 <constraint firstItem="YcG-Ph-kga" firstAttribute="trailing" secondItem="KRw-oe-JIm" secondAttribute="trailing" id="ptV-R9-Zrc"/>
                                 <constraint firstItem="OWq-Gz-Fi0" firstAttribute="leading" secondItem="9bx-Mp-UN7" secondAttribute="leading" id="qI2-qH-Fls"/>

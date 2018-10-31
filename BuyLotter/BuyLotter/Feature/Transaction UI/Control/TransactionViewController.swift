@@ -14,6 +14,7 @@ class TransactionViewController: UIViewController {
     
     @IBOutlet weak var backImg: UIImageView!
     
+    @IBOutlet weak var titleLbl: UILabel!
     init(txhash:String) {
         self.txhash = txhash
         super.init(nibName: "TransactionViewController", bundle: nil)
@@ -31,7 +32,14 @@ class TransactionViewController: UIViewController {
         backImg.image = UIImage.init(named: "back-icon")?.withRenderingMode(.alwaysTemplate)
         backImg.tintColor = .white
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        updateUIFollowLanguage()
+    }
+    
+    func updateUIFollowLanguage(){
+        titleLbl.text = "View transaction".localized(using: "LabelTitle")
+    }
     @IBAction func backBtnTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

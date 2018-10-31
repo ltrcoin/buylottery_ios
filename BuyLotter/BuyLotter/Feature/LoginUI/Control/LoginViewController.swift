@@ -15,10 +15,14 @@ class LoginViewController: UIViewController {
     
     
     @IBOutlet weak var inputAreaView: UIView!
+    @IBOutlet weak var descLbl: UILabel!
     
     @IBOutlet weak var menuImg: UIImageView!
     @IBOutlet weak var accountTxt: UITextField!
-
+    
+    @IBOutlet weak var titleLbl: UILabel!
+    
+    @IBOutlet weak var pwdLbl: UILabel!
     @IBOutlet weak var pwdTxt: UITextField!
     
     @IBOutlet weak var loginBtn: UIButton!
@@ -35,12 +39,12 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        Localize.resetCurrentLanguageToDefault()
+     //   Localize.resetCurrentLanguageToDefault()
         
         menuImg.image = UIImage.init(named: "menu")?.withRenderingMode(.alwaysTemplate)
         menuImg.tintColor = .white
         
-        setText()
+        updateUIFollowLanguage()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -68,7 +72,7 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        NotificationCenter.default.addObserver(self, selector: #selector(setText), name: NSNotification.Name( LCLLanguageChangeNotification), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateUIFollowLanguage), name: NSNotification.Name( LCLLanguageChangeNotification), object: nil)
     }
 
 
@@ -78,8 +82,13 @@ class LoginViewController: UIViewController {
         removeKeyboardEvent()
     }
     
-    @objc func setText(){
-        loginBtn.setTitle("login".localized(using: "ButtonTitle"), for: .normal)
+    @objc func updateUIFollowLanguage(){
+        descLbl.text = "Login to your Account".localized(using: "LabelTitle")
+        titleLbl.text = "SIGN IN".localized(using: "LabelTitle")
+        loginBtn.setTitle("Login".localized(using: "ButtonTitle"), for: .normal)
+        registerBtn.setTitle("Sign up now".localized(using: "ButtonTitle"), for: .normal)
+        pwdLbl.text = "Password".localized(using: "LabelTitle")
+        pwdTxt.placeholder = "Password".localized(using: "LabelTitle")
     }
     
     @IBAction func registerBtnTapped(_ sender: Any) {
@@ -117,7 +126,7 @@ class LoginViewController: UIViewController {
             self?.pwdTxt.text = ""
             if !error {
                 self?.notifyLbl.isHidden = false
-                self?.notifyLbl.text = msg
+                self?.notifyLbl.text = msg.localized(using: "LabelTitle")
             } else {
                 self?.notifyLbl.isHidden = true
                 print("🤗\(data)")

@@ -17,13 +17,16 @@
                 <outlet property="heighListTicketViewCT" destination="3Ro-pR-niC" id="Naf-1N-nhs"/>
                 <outlet property="heightBuyBtnCT" destination="2KZ-D8-J7Q" id="N19-i7-FE8"/>
                 <outlet property="heightViewNumberCT" destination="h0Y-5b-E6Z" id="acG-bL-OGn"/>
+                <outlet property="howToPlayLbl" destination="ilr-iy-u8g" id="mzI-ky-TTB"/>
                 <outlet property="listTicksView" destination="Pk0-mM-GCu" id="Q7X-JX-F7x"/>
+                <outlet property="pickYourNumberLbl" destination="7T5-Pv-YvC" id="vWU-uD-LW0"/>
                 <outlet property="psSystematicLbl" destination="D4u-xM-Vgz" id="1p5-sD-KFu"/>
                 <outlet property="quickPickBtn" destination="iVa-9K-3r8" id="eZ8-us-Cmu"/>
                 <outlet property="stackSystematicView" destination="PhH-Wd-2O0" id="f8F-bT-Qnl"/>
                 <outlet property="systematicBtn" destination="mpd-Xq-GkN" id="XEl-TO-zMC"/>
                 <outlet property="systematicHeightCT" destination="bfH-0C-hI6" id="4Cv-b0-u0T"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewYourNumberLbl" destination="0xD-7X-noR" id="3UN-Aj-Eic"/>
                 <outletCollection property="numberBtns" destination="Cjv-s2-BII" collectionClass="NSMutableArray" id="vtY-dp-Z56"/>
                 <outletCollection property="numberBtns" destination="Blh-J9-oFn" collectionClass="NSMutableArray" id="uBr-EF-DhZ"/>
                 <outletCollection property="numberBtns" destination="ycE-O7-cOT" collectionClass="NSMutableArray" id="Uiy-rZ-hwj"/>

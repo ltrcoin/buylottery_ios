@@ -1,0 +1,191 @@
+/* 
+  LabelTitle.strings
+  BuyLotter
+
+  Created by Hieu Tran on 2018/10/29.
+  Copyright © 2018 kazy. All rights reserved.
+*/
+"SIGN IN" = "SIGN IN";
+
+"SIGN UP" = "SIGN UP";
+
+"Login to your Account" = "Login to your Account";
+
+"Create Account" = "Create Account";
+
+"Email" = "Email";
+
+"Password" = "Password";
+
+"Re-enter - password" = "Re-enter - password";
+
+"Email is required." = "Email is required.";
+
+"Email is invalided." = "Email is invalided.";
+
+"Password is required." = "Password is required.";
+
+"Re-enter password is required." = "Re-enter password is required.";
+
+"Phone is required." = "Phone is required.";
+
+"The tel has already been taken." = "The tel has already been taken.";
+
+"Full name" = "Full name";
+
+"Date of birth" = "Date of birth";
+
+"-- Select gender --" = "-- Select gender --";
+
+"-- Select country --" = "-- Select country --";
+
+"Male" = "Male";
+
+"Female" = "Female";
+
+"Other" = "Other";
+
+"Wallet BTC" = "Wallet BTC";
+
+"Address" = "Address";
+
+"Image portrait" = "Image portrait";
+
+"Image passport" = "Image passport";
+
+"Wrong Password" = "Wrong Password";
+
+"days" = "days";
+
+"HOME" = "HOME";
+
+"LOTTERY RESULTS" = "LOTTERY RESULTS";
+
+"TRANSACTION" = "TRANSACTION";
+
+"MY ACCOUNT" = "MY ACCOUNT";
+
+"My wallet" = "My wallet";
+
+"Buy LTR token" = "Buy LTR token";
+
+"Profile" = "Profile";
+
+"2FA Verification" = "2FA Verification";
+
+"Sign out" = "Sign out";
+
+"Prize Breakdown" = "Prize Breakdown";
+
+"Current jackpot" = "Current jackpot";
+
+"Divisions" = "Divisions";
+
+"Match" = "Match";
+
+"Payout" = "Payout";
+
+"No Winner" = "No Winner";
+
+"Price" = "Price";
+
+"LTR jackpot" = "LTR jackpot";
+
+"Wallet address" = "Wallet address";
+
+"LTR Balance" = "LTR Balance";
+
+"ETH Balance" = "ETH Balance";
+
+"Currently Exchange Rate ETH/LTR" = "Currently Exchange Rate ETH/LTR";
+
+"Enter the number of LTR to buy by exchange ETH in your account. You can buy maximum" = "Enter the number of LTR to buy by exchange ETH in your account. You can buy maximum";
+
+"LTR with your current ETH balance" = "LTR with your current ETH balance";
+
+"Number of ETH need to exchange to LTR (include ETH transaction gas fee)" = "Number of ETH need to exchange to LTR (include ETH transaction gas fee)";
+
+"Phone" = "Phone";
+
+"BTC Wallet address" = "BTC Wallet address";
+
+"LTR Wallet address" = "LTR Wallet address";
+
+"Date of birth" = "Date of birth";
+
+"Gender" = "Gender";
+
+"Country" = "Country";
+// buy ticket
+"Choose how to play" = "Choose how to play";
+
+"Pick your numbers" = "Pick your numbers";
+
+"Numbers" = "Numbers";
+
+"Lines" = "Lines";
+
+"lines" = "lines";
+
+"View Your Numbers" = "View Your Numbers";
+//checkout screen
+"Draw close in" = "Draw close in";
+
+"LTR Balance" = "LTR Balance";
+
+"ETH Balance" = "ETH Balance";
+
+"Ticket price" = "Ticket price";
+
+"Total" = "Total";
+
+"Please enter correct your password to checkout" = "Please enter correct your password to checkout";
+
+"You need more LTR to buy ticket." = "You need more LTR to buy ticket.";
+// check out popup
+"SUCCESS" = "SUCCESS";
+
+"Transaction:" = "Transaction:";
+
+"View" = "View";
+
+"FAIL" = "FAIL";
+
+"Not enough LTR" = "Not enough LTR";
+
+"copied" = "copied";
+
+"You need more ETH to buy LTR." = "You need more ETH to buy LTR.";
+
+"Number LTR" = "Number LTR";
+
+"Number LTR must greater or equal than 1000." = "Number LTR must greater or equal than 1000.";
+
+"Your order is succesfull" = "Your order is succesfull";
+
+"Please wait 5 minutes to let blockchain confirm your transaction and send LTR to your wallet." = "Please wait 5 minutes to let blockchain confirm your transaction and send LTR to your wallet.";
+
+"View transaction" = "View transaction";
+
+// Systematic Forms
+"Systematic Forms" = "Systematic Forms";
+
+"What is a Systematic Form?" = "What is a Systematic Form?";
+
+"A systematic form takes your selected numbers and creates every unique combination possible, increasing your chances of hitting the jackpot!" = "A systematic form takes your selected numbers and creates every unique combination possible, increasing your chances of hitting the jackpot!";
+
+"Why Play a Systematic Form?" = "Why Play a Systematic Form?";
+
+"A systematic form increase your odds of winning the jackpot and also the total of wins! Any winning comvination will appear multiple times in the combinations generated for you, upping your total win amount!" = "A systematic form increase your odds of winning the jackpot and also the total of wins! Any winning comvination will appear multiple times in the combinations generated for you, upping your total win amount!";
+
+"Country ?" = "Country ?";
+
+"search" = "search";
+
+"Camera" = "Camera";
+
+"Don't have camera" = "Don't have camera";
+
+"LANGUAGE" = "LANGUAGE";
+
+"selected" = "selected";

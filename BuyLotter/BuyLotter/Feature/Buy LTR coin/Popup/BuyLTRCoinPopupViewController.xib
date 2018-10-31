@@ -12,9 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BuyLTRCoinPopupViewController" customModule="BuyLotter" customModuleProvider="target">
             <connections>
+                <outlet property="contentNotifyLbl" destination="qFf-wd-4jC" id="1mR-bZ-6S8"/>
                 <outlet property="ethTxHashLbl" destination="JdY-DS-a1a" id="88Q-Ya-pr9"/>
                 <outlet property="ltrTxHashLbl" destination="uMc-2l-0VF" id="3oO-Ph-pLy"/>
                 <outlet property="popUpView" destination="6oP-le-DVk" id="qvz-4J-tft"/>
+                <outlet property="titleLbl" destination="fvl-Wm-eTh" id="s8o-te-Rge"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

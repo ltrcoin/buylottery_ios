@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="buyBtn" destination="vFD-u8-cE0" id="hW3-0e-8kb"/>
                 <outlet property="contentAreaView" destination="kgt-JI-g31" id="aKu-Pk-8PC"/>
+                <outlet property="currentJackpotLbl" destination="tNw-LQ-eh8" id="gn9-i0-PHD"/>
                 <outlet property="heightTableViewCT" destination="LZ7-vI-APo" id="Dpe-LE-9BJ"/>
                 <outlet property="logoImg" destination="kLo-hD-u3t" id="RIj-kH-dcQ"/>
                 <outlet property="tableView" destination="3gJ-bx-V9s" id="xKq-ha-gaL"/>

@@ -13,6 +13,7 @@ import UIKit
 }
 
 class PickCountryViewController: UIViewController  ,UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource {
+    @IBOutlet weak var titleLbl: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -38,7 +39,8 @@ class PickCountryViewController: UIViewController  ,UISearchBarDelegate,UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        titleLbl.text = "Country ?".localized(using: "LabelTitle")
+        searchBar.placeholder = "search".localized(using: "LabelTitle")
         searchBar.delegate = self
         self.tableView.delegate = self
         self.tableView.dataSource = self

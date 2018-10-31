@@ -15,6 +15,7 @@ class BuyLTRCoinViewController: UIViewController, UITextFieldDelegate {
     var eth:Double = 0
     var ltr:Double = 0
     
+    @IBOutlet weak var walletAddressLbl: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var buyBtn: UIButton!
@@ -25,12 +26,16 @@ class BuyLTRCoinViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var walletAddressTv: UITextView!
     
+    @IBOutlet weak var ltrLbl: UILabel!
     @IBOutlet weak var ltrTxt: UITextField!
     
+    @IBOutlet weak var ethLbl: UILabel!
     @IBOutlet weak var ethTxt: UITextField!
     
+    @IBOutlet weak var ratioLbl: UILabel!
     @IBOutlet weak var ratioTxt: UITextField!
     
+    @IBOutlet weak var ethExchangeLbl: UILabel!
     @IBOutlet weak var ethExchangeTxt: UITextField!
     
     @IBOutlet weak var titleLTRExchangeLbl: UILabel!
@@ -70,6 +75,7 @@ class BuyLTRCoinViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         addKeyboardEvent()
+        updateUIFollowLanguage()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -84,10 +90,19 @@ class BuyLTRCoinViewController: UIViewController, UITextFieldDelegate {
         }
         self.buyBtn.isUserInteractionEnabled = true
         self.buyBtn.backgroundColor = UIColor.orange
-        buyBtn.setTitle("Buy Now", for: .normal)
+        buyBtn.setTitle("Buy Now".localized(using: "ButtonTitle"), for: .normal)
         self.ltrExchangeTxt.text = "0"
         self.ethExchangeTxt.text = "0"
         menuSide.updateBalance()
+    }
+    
+    func updateUIFollowLanguage(){
+        walletAddressLbl.text = "Wallet address".localized(using: "LabelTitle")
+        ltrLbl.text = "LTR Balance".localized(using: "LabelTitle")
+        ethLbl.text = "ETH Balance".localized(using: "LabelTitle")
+        ratioLbl.text = "Currently Exchange Rate ETH/LTR".localized(using: "LabelTitle")
+        
+        ethExchangeLbl.text = "Number of ETH need to exchange to LTR (include ETH transaction gas fee)".localized(using: "LabelTitle")
     }
     
     func updateRatio(_ value:Double){
@@ -110,12 +125,13 @@ class BuyLTRCoinViewController: UIViewController, UITextFieldDelegate {
         ltrTxt.text = numberFormatter.string(from: NSNumber.init(value: ltr))
         ethTxt.text = numberFormatter.string(from: NSNumber.init(value: eth))
         
-        titleLTRExchangeLbl.text = "Enter the number of LTR to buy by exchange ETH in your account. You can buy maximum \(numberFormatter.string(from: NSNumber.init(value: eth * ratio))!) LTR with your current ETH balance"
+        titleLTRExchangeLbl.text = "\("Enter the number of LTR to buy by exchange ETH in your account. You can buy maximum".localized(using: "LabelTitle")) \(numberFormatter.string(from: NSNumber.init(value: eth * ratio))!) \("LTR with your current ETH balance".localized(using: "LabelTitle"))"
     }
     
     
     
     @IBAction func menuSideBtnTapped(_ sender: Any) {
+        self.view.endEditing(true)
         menuSide.toggleMenuSide()
     }
     
@@ -174,17 +190,29 @@ class BuyLTRCoinViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func buyBtnTapped(_ sender: Any) {
-        
-        if let value = Double(ltrExchangeTxt.text!), value > eth * ratio  {
-            self.alertOk(title: "Not Enough ETH", message: "You need more ETH to buy LTR.") {
-                
+        self.view.endEditing(true)
+        if let value = Double(ltrExchangeTxt.text!) {
+            if value > eth * ratio {
+                self.alertOk(title: "Not enough ETH".localized(using: "LabelTitle"), message: "You need more ETH to buy LTR.".localized(using: "LabelTitle")) {
+                    
+                }
+                return
             }
+            if value < 1000 {
+                self.alertOk(title: "Number LTR".localized(using: "LabelTitle"), message: "Number LTR must greater or equal than 1000.".localized(using: "LabelTitle")) {
+                    
+                }
+                return
+            }
+            
+        } else {
             return
         }
         
+        
         buyBtn.isUserInteractionEnabled = false
         buyBtn.backgroundColor = UIColor.lightGray
-        buyBtn.setTitle("Buying", for: .normal)
+        buyBtn.setTitle("Buying".localized(using: "ButtonTitle"), for: .normal)
         
         if let email = UserDefaults.standard.string(forKey: "user-email"), let pwd = UserDefaults.standard.string(forKey: "user-pwd") {
             BuyLTRCoinService.init().buyLTR(username: email, pwd: pwd, ltr: ltrExchangeTxt.text!) { [weak self] (done, ethTxhash, ltrTxhash) in
@@ -192,8 +220,8 @@ class BuyLTRCoinViewController: UIViewController, UITextFieldDelegate {
                 self?.buyBtn.isUserInteractionEnabled = true
                 self?.buyBtn.hideLoading()
                 
-                if done {
-                    let popup = BuyLTRCoinPopupViewController.init(ethTxhash: ethTxhash, ltrTxhash: ltrTxhash)
+                if done && self != nil {
+                    let popup = BuyLTRCoinPopupViewController.init(ethTxhash: ethTxhash, ltrTxhash: ltrTxhash, vc: self!)
                     self?.add(popup, anime: .None)
                 } else {
                     

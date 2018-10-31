@@ -1,0 +1,186 @@
+/* 
+  LabelTitle.strings
+  BuyLotter
+
+  Created by Hieu Tran on 2018/10/29.
+  Copyright © 2018 kazy. All rights reserved.
+*/
+"SIGN IN" = "ĐĂNG NHẬP";
+
+"SIGN UP" = "ĐĂNG KÝ";
+
+"Login to your Account" = "Đăng nhập vào tài khoản";
+
+"Create Account" = "Tạo tài khoản";
+
+"Email" = "Email";
+
+"Password" = "Mật khẩu";
+
+"Re-enter - password" = "Nhập lại mật khẩu";
+
+"Email is required." = "Cần nhập email.";
+
+"Email is invalided." = "Email không đúng định dạng.";
+
+"Password is required." = "Cần nhập mật khẩu.";
+
+"Re-enter password is required." = "Cần nhật lại mật khẩu.";
+
+"Phone is required." = "Cần nhập số điện thoại.";
+
+"The tel has already been taken." = "Số điện thoại đã sử dụng.";
+
+"Full name" = "Họ và tên";
+
+"Date of birth" = "Ngày sinh";
+
+"-- Select gender --" = "-- Chọn giới tính --";
+
+"-- Select country --" = "-- Chọn đất nước --";
+
+"Male" = "Nam";
+
+"Female" = "Nữ";
+
+"Other" = "Khác";
+
+"Wallet BTC" = "Ví BTC";
+
+"Address" = "Địa chỉ";
+
+"Image portrait" = "Ảnh chân dung";
+
+"Image passport" = "Ảnh hộ chiếu";
+
+"Wrong Password" = "Mật khẩu không đúng";
+
+"days" = "ngày";
+
+"HOME" = "TRANG CHỦ";
+
+"LOTTERY RESULTS" = "KẾT QUẢ";
+
+"TRANSACTION" = "GIAO DỊCH";
+
+"MY ACCOUNT" = "TÀI KHOẢN";
+
+"My wallet" = "Ví tiền";
+
+"Buy LTR token" = "Mua LTR";
+
+"Profile" = "Thông tin cá nhân";
+
+"2FA Verification" = "Xác nhận 2 bước";
+
+"Sign out" = "Đăng xuất";
+
+"Prize Breakdown" = "Giải thưởng";
+
+"Current jackpot" = "jackpot hiện tại";
+
+"Divisions" = "STT";
+
+"Match" = "Số";
+
+"Payout" = "Tiền thưởng";
+
+"No Winner" = "Chưa Trúng";
+
+"Price" = "Giá";
+
+"LTR jackpot" = "LTR jackpot";
+
+"Wallet address" = "Địa chỉ ví";
+
+"LTR Balance" = "Số lượng LTR";
+
+"ETH Balance" = "Số lượng ETH";
+
+"Currently Exchange Rate ETH/LTR" = "Tỷ giá trao đổi ETH/LTR";
+
+"Enter the number of LTR to buy by exchange ETH in your account. You can buy maximum" = "Nhập số lượng LTR để mua bởi ETH trong tài khoản của bạn. Bạn có thể mua tối đa";
+
+"LTR with your current ETH balance" = "LTR với số lượng ETH bạn có";
+
+"Number of ETH need to exchange to LTR (include ETH transaction gas fee)" = "Số lượng ETH cần để đổi sang LTR (bao gồm cả phí giao dịch ETH)";
+
+"Phone" = "Số điện thoại";
+
+"BTC Wallet address" = "Địa chỉ ví BTC";
+
+"LTR Wallet address" = "Địa chỉ ví LTR";
+
+"Date of birth" = "Ngày sinh";
+
+"Gender" = "Giới tính";
+
+"Country" = "Đất nước";
+
+"Choose how to play" = "Chọn cách chơi";
+
+"Pick your numbers" = "Chọn số";
+
+"Numbers" = "Số";
+
+"Lines" = "Vé";
+
+"lines" = "vé";
+
+"View Your Numbers" = "Xem số đã chọn";
+//checkout screen
+"Draw close in" = "Quay thưởng lúc";
+
+"Ticket price" = "Giá vé";
+
+"Total" = "Tổng";
+
+"Please enter correct your password to checkout" = "Xin hay điền đúng mật khẩu để thanh toán";
+
+"You need more LTR to buy ticket." = "Bạn cần nhiều LTR hơn để mua vé.";
+// check out popup
+"SUCCESS" = "THÀNH CÔNG";
+
+"Transaction:" = "Giao dịch:";
+
+"View" = "Xem";
+
+"FAIL" = "CÓ LỖI";
+
+"Not enough LTR" = "Không đủ LTR";
+
+"copied" = "sao chép";
+
+"You need more ETH to buy LTR." = "Bạn cần nhiều hơn ETH để mua LTR.";
+
+"Number LTR" = "Số lượng LTR";
+
+"Number LTR must greater or equal than 1000." = "Số lượng LTR phải lớn hơn hoặc bằng 1000.";
+
+"Your order is succesfull" = "Bạn đã đặt mua thành công";
+
+"Please wait 5 minutes to let blockchain confirm your transaction and send LTR to your wallet." = "Xin đợi 5 phút để hệ thống blockchain xác nhận giao dịch của bạn và chuyển LTR vào ví của bạn.";
+
+"View transaction" = "Xem giao dịch";
+// Systematic Forms
+"Systematic Forms" = "Hướng dẫn chơi bao";
+
+"What is a Systematic Form?" = "Chơi bao là gì?";
+
+"A systematic form takes your selected numbers and creates every unique combination possible, increasing your chances of hitting the jackpot!" = "Chơi bao có nghĩa là bạn chọn các số và kết hơpj với nhau tạo thành các tổ hợp số, nhằm mục đích tăng cơ hội trúng thưởng giải jackpot";
+
+"Why Play a Systematic Form?" = "Tại sao chơi bao?";
+
+"A systematic form increase your odds of winning the jackpot and also the total of wins! Any winning comvination will appear multiple times in the combinations generated for you, upping your total win amount!" = "Chơi bao tăng khả năng trúng thưởng giải jackpot và toàn bộ các giải khác! Các giải thưởng sẽ xuất hiện nhiều lần ở tổ hợp số mà bạn đã chọn giúp bạn thắng được nhiều tiền thường hơn!";
+
+"Country ?" = "Đất nước ?";
+
+"search" = "tìm kiếm";
+
+"Camera" = "Máy ảnh";
+
+"Don't have camera" = "Thiết bị không có máy ảnh";
+
+"LANGUAGE" = "NGÔN NGỮ";
+
+"selected" = "đã chọn";

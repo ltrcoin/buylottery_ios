@@ -5,5 +5,36 @@
   Created by admin on 2018/9/7.
   Copyright © 2018 kazy. All rights reserved.
 */
-"login" = "Login";
+"Login" = "Login";
 
+"Sign up now" = "Sign up now";
+
+"Next" = "Next";
+
+"Skip" = "Skip";
+
+"Submit" = "Submit";
+
+"Play" = "Play";
+
+"Buy A Ticket" = "Buy A Ticket";
+
+"Buy Now" = "Buy Now";
+
+"Buying" = "Buying";
+
+"Update" = "Update";
+
+"Updating" = "Updating";
+
+"Systematic" = "Systematic";
+
+"Quick pick" = "Quick pick";
+
+"Quick Pick" = "Quick Pick";
+
+"CHECKOUT" = "CHECKOUT";
+
+"PROCESSING" = "PROCESSING";
+
+"Buy more LTR" = "Buy more LTR";

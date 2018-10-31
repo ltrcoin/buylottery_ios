@@ -12,6 +12,7 @@ class ResultDetailViewController: UIViewController {
     
     var menuSide:MenuSideInterface!
     
+    @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var nextAreaView: UIView!
     @IBOutlet weak var previousAreaView: UIView!
     @IBOutlet weak var nextDateLbl: UILabel!
@@ -77,6 +78,11 @@ class ResultDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         print("😳 view will appear")
+        updateUIFollowLanguage()
+    }
+    
+    func updateUIFollowLanguage() {
+        titleLbl.text = "Prize Breakdown".localized(using: "LabelTitle")
     }
     
     override func viewWillDisappear(_ animated: Bool) {

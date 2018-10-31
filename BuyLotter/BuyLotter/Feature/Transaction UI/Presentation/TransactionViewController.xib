@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransactionViewController" customModule="BuyLotter" customModuleProvider="target">
             <connections>
                 <outlet property="backImg" destination="JPz-xU-kHf" id="7Z6-jc-wOd"/>
+                <outlet property="titleLbl" destination="rgJ-g5-mxl" id="SYz-m6-fYf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="webView" destination="wVQ-Wl-C5A" id="GIz-fz-Raa"/>
             </connections>

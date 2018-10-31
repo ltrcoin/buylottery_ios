@@ -188,12 +188,15 @@
                     </view>
                     <connections>
                         <outlet property="accountTxt" destination="3cr-MP-jfT" id="tCc-tr-wbZ"/>
+                        <outlet property="descLbl" destination="iQG-Bu-MWK" id="IcU-7S-IPs"/>
                         <outlet property="inputAreaView" destination="8im-ym-t9w" id="Jum-di-HsY"/>
                         <outlet property="loginBtn" destination="fwR-TK-fMB" id="h5X-sM-5fF"/>
                         <outlet property="menuImg" destination="BZW-qG-Jdq" id="ayO-Vz-F7F"/>
                         <outlet property="notifyLbl" destination="46h-PN-EAc" id="TiV-ae-7tK"/>
+                        <outlet property="pwdLbl" destination="DpI-Zd-0BP" id="stk-gc-Sua"/>
                         <outlet property="pwdTxt" destination="S36-4G-frb" id="EaW-5H-oWJ"/>
                         <outlet property="registerBtn" destination="bAS-Up-JDQ" id="ogX-Xh-MT5"/>
+                        <outlet property="titleLbl" destination="N0O-Zn-0IM" id="jj4-gc-tBb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hwa-aU-obz" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -55,11 +55,9 @@
 		184CFA7C215CC5C4003B2FEE /* Extension HandPickNumberTicketVC paging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184CFA7B215CC5C4003B2FEE /* Extension HandPickNumberTicketVC paging.swift */; };
 		1853A6862181B714009B8AD5 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853A6852181B714009B8AD5 /* ProfileService.swift */; };
 		18588CC42174437A0034E4ED /* CheckoutPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18588CC22174437A0034E4ED /* CheckoutPopupViewController.swift */; };
-		18588CC52174437A0034E4ED /* CheckoutPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18588CC32174437A0034E4ED /* CheckoutPopupViewController.xib */; };
 		18588CCB217455800034E4ED /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18588CC9217455800034E4ED /* TransactionViewController.swift */; };
 		18588CCC217455800034E4ED /* TransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18588CCA217455800034E4ED /* TransactionViewController.xib */; };
 		18588CCF217479B50034E4ED /* CheckoutFailtPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18588CCD217479B50034E4ED /* CheckoutFailtPopupViewController.swift */; };
-		18588CD0217479B50034E4ED /* CheckoutFailtPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18588CCE217479B50034E4ED /* CheckoutFailtPopupViewController.xib */; };
 		185D6AAA21675CDF001B1412 /* ListGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185D6AA821675CDF001B1412 /* ListGamesViewController.swift */; };
 		185D6AAB21675CDF001B1412 /* ListGamesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185D6AA921675CDF001B1412 /* ListGamesViewController.xib */; };
 		185D6AAF21675ECA001B1412 /* ListGamesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185D6AAD21675ECA001B1412 /* ListGamesTableViewCell.swift */; };
@@ -93,6 +91,9 @@
 		188A9F27214BA5BC001FF793 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A9F26214BA5BC001FF793 /* Config.swift */; };
 		188A9F29214BB1D6001FF793 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188A9F28214BB1D6001FF793 /* RegisterService.swift */; };
 		188B8A6D2186EADB00CB2E5C /* Extension Image compress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188B8A6C2186EADB00CB2E5C /* Extension Image compress.swift */; };
+		188B8A722186FD7C00CB2E5C /* Content.strings in Resources */ = {isa = PBXBuildFile; fileRef = 188B8A742186FD7C00CB2E5C /* Content.strings */; };
+		188B8A7A2186FF0400CB2E5C /* Policy.strings in Resources */ = {isa = PBXBuildFile; fileRef = 188B8A7C2186FF0400CB2E5C /* Policy.strings */; };
+		188B8A802186FF6400CB2E5C /* LabelTitle.strings in Resources */ = {isa = PBXBuildFile; fileRef = 188B8A822186FF6400CB2E5C /* LabelTitle.strings */; };
 		18938E812166016F0039F2E4 /* ResultDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18938E7F2166016F0039F2E4 /* ResultDetailViewController.swift */; };
 		18938E822166016F0039F2E4 /* ResultDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18938E802166016F0039F2E4 /* ResultDetailViewController.xib */; };
 		18938E86216610780039F2E4 /* ResultDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18938E85216610780039F2E4 /* ResultDetailView.xib */; };
@@ -106,6 +107,8 @@
 		1895B884215B38C800E6C182 /* ViewYourNumbersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1895B882215B38C800E6C182 /* ViewYourNumbersViewController.xib */; };
 		1895B887215B39D700E6C182 /* ViewYourNumbersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1895B885215B39D700E6C182 /* ViewYourNumbersTableViewCell.swift */; };
 		1895B888215B39D700E6C182 /* ViewYourNumbersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1895B886215B39D700E6C182 /* ViewYourNumbersTableViewCell.xib */; };
+		189858072188534F006BB2B1 /* CheckoutPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189858092188534F006BB2B1 /* CheckoutPopupViewController.xib */; };
+		1898580C2188535A006BB2B1 /* CheckoutFailtPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1898580E2188535A006BB2B1 /* CheckoutFailtPopupViewController.xib */; };
 		18A06332215DD0F9004CBD55 /* TicketHandPickView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A06331215DD0F9004CBD55 /* TicketHandPickView.xib */; };
 		18A06334215DE424004CBD55 /* TicketHandPickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A06333215DE424004CBD55 /* TicketHandPickView.swift */; };
 		18A06336215DE6C8004CBD55 /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A06335215DE6C8004CBD55 /* test.storyboard */; };
@@ -114,6 +117,9 @@
 		18A18C7921634DA200F01838 /* MenuSideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A18C5B21634DA200F01838 /* MenuSideViewController.xib */; };
 		18A18C7A21634DA200F01838 /* MenuSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A18C5D21634DA200F01838 /* MenuSideViewController.swift */; };
 		18BCF9A1216B13B70015F9FE /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BCF9A0216B13B70015F9FE /* AccountService.swift */; };
+		18BD7FF721896BBD00CC939E /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD7FF521896BBD00CC939E /* LanguageViewController.swift */; };
+		18BD7FF821896BBD00CC939E /* LanguageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BD7FF621896BBD00CC939E /* LanguageViewController.xib */; };
+		18BD7FFB21896C7300CC939E /* asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BD7FFA21896C7300CC939E /* asset.xcassets */; };
 		18BDEE8B21422D9500386EA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BDEE8A21422D9500386EA7 /* AppDelegate.swift */; };
 		18BDEE8D21422D9500386EA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BDEE8C21422D9500386EA7 /* ViewController.swift */; };
 		18BDEE9021422D9500386EA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BDEE8E21422D9500386EA7 /* Main.storyboard */; };
@@ -216,11 +222,9 @@
 		184CFA7B215CC5C4003B2FEE /* Extension HandPickNumberTicketVC paging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension HandPickNumberTicketVC paging.swift"; sourceTree = "<group>"; };
 		1853A6852181B714009B8AD5 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
 		18588CC22174437A0034E4ED /* CheckoutPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutPopupViewController.swift; sourceTree = "<group>"; };
-		18588CC32174437A0034E4ED /* CheckoutPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckoutPopupViewController.xib; sourceTree = "<group>"; };
 		18588CC9217455800034E4ED /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		18588CCA217455800034E4ED /* TransactionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionViewController.xib; sourceTree = "<group>"; };
 		18588CCD217479B50034E4ED /* CheckoutFailtPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutFailtPopupViewController.swift; sourceTree = "<group>"; };
-		18588CCE217479B50034E4ED /* CheckoutFailtPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckoutFailtPopupViewController.xib; sourceTree = "<group>"; };
 		185D6AA821675CDF001B1412 /* ListGamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGamesViewController.swift; sourceTree = "<group>"; };
 		185D6AA921675CDF001B1412 /* ListGamesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListGamesViewController.xib; sourceTree = "<group>"; };
 		185D6AAD21675ECA001B1412 /* ListGamesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGamesTableViewCell.swift; sourceTree = "<group>"; };
@@ -256,6 +260,14 @@
 		188A9F26214BA5BC001FF793 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		188A9F28214BB1D6001FF793 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 		188B8A6C2186EADB00CB2E5C /* Extension Image compress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension Image compress.swift"; sourceTree = "<group>"; };
+		188B8A6E2186FD0700CB2E5C /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localize.strings; sourceTree = "<group>"; };
+		188B8A6F2186FD0700CB2E5C /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/ButtonTitle.strings; sourceTree = "<group>"; };
+		188B8A732186FD7C00CB2E5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Content.strings; sourceTree = "<group>"; };
+		188B8A752186FD7E00CB2E5C /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Content.strings; sourceTree = "<group>"; };
+		188B8A7B2186FF0400CB2E5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Policy.strings; sourceTree = "<group>"; };
+		188B8A7D2186FF0500CB2E5C /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Policy.strings; sourceTree = "<group>"; };
+		188B8A812186FF6400CB2E5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LabelTitle.strings; sourceTree = "<group>"; };
+		188B8A832186FF6600CB2E5C /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LabelTitle.strings; sourceTree = "<group>"; };
 		18938E7F2166016F0039F2E4 /* ResultDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailViewController.swift; sourceTree = "<group>"; };
 		18938E802166016F0039F2E4 /* ResultDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultDetailViewController.xib; sourceTree = "<group>"; };
 		18938E85216610780039F2E4 /* ResultDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultDetailView.xib; sourceTree = "<group>"; };
@@ -269,6 +281,8 @@
 		1895B882215B38C800E6C182 /* ViewYourNumbersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewYourNumbersViewController.xib; sourceTree = "<group>"; };
 		1895B885215B39D700E6C182 /* ViewYourNumbersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewYourNumbersTableViewCell.swift; sourceTree = "<group>"; };
 		1895B886215B39D700E6C182 /* ViewYourNumbersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewYourNumbersTableViewCell.xib; sourceTree = "<group>"; };
+		189858082188534F006BB2B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CheckoutPopupViewController.xib; sourceTree = "<group>"; };
+		1898580D2188535A006BB2B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CheckoutFailtPopupViewController.xib; sourceTree = "<group>"; };
 		18A06331215DD0F9004CBD55 /* TicketHandPickView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketHandPickView.xib; sourceTree = "<group>"; };
 		18A06333215DE424004CBD55 /* TicketHandPickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketHandPickView.swift; sourceTree = "<group>"; };
 		18A06335215DE6C8004CBD55 /* test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = test.storyboard; sourceTree = "<group>"; };
@@ -277,6 +291,9 @@
 		18A18C5B21634DA200F01838 /* MenuSideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuSideViewController.xib; sourceTree = "<group>"; };
 		18A18C5D21634DA200F01838 /* MenuSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuSideViewController.swift; sourceTree = "<group>"; };
 		18BCF9A0216B13B70015F9FE /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
+		18BD7FF521896BBD00CC939E /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
+		18BD7FF621896BBD00CC939E /* LanguageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguageViewController.xib; sourceTree = "<group>"; };
+		18BD7FFA21896C7300CC939E /* asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = asset.xcassets; sourceTree = "<group>"; };
 		18BDEE8721422D9500386EA7 /* BuyLotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuyLotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BDEE8A21422D9500386EA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18BDEE8C21422D9500386EA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -313,9 +330,7 @@
 		18BDEED7214231E200386EA7 /* UIImageViewModeScaleAspect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewModeScaleAspect.swift; sourceTree = "<group>"; };
 		18BDEEEE2142364200386EA7 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		18BDEF0221427ADF00386EA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localize.strings; sourceTree = "<group>"; };
-		18BDEF0421427AE400386EA7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localize.strings; sourceTree = "<group>"; };
 		18BDEF0921427B0A00386EA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ButtonTitle.strings; sourceTree = "<group>"; };
-		18BDEF0B21427B0B00386EA7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/ButtonTitle.strings; sourceTree = "<group>"; };
 		18C483B32158CFDA00AA2274 /* BuyTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTicketViewController.swift; sourceTree = "<group>"; };
 		18C483B42158CFDA00AA2274 /* BuyTicketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyTicketViewController.xib; sourceTree = "<group>"; };
 		18CB8488217D86F4001E363B /* BuyLTRCoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyLTRCoinViewController.swift; sourceTree = "<group>"; };
@@ -483,6 +498,7 @@
 		1840A017215B6DCD009FA815 /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				1840A019215B6DF9009FA815 /* GuideSystematicViewController.swift */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -490,7 +506,6 @@
 		1840A018215B6DD9009FA815 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				1840A019215B6DF9009FA815 /* GuideSystematicViewController.swift */,
 				1840A01A215B6DF9009FA815 /* GuideSystematicViewController.xib */,
 			);
 			path = Presentation;
@@ -673,8 +688,8 @@
 		18588CC1217443520034E4ED /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				18588CC32174437A0034E4ED /* CheckoutPopupViewController.xib */,
-				18588CCE217479B50034E4ED /* CheckoutFailtPopupViewController.xib */,
+				189858092188534F006BB2B1 /* CheckoutPopupViewController.xib */,
+				1898580E2188535A006BB2B1 /* CheckoutFailtPopupViewController.xib */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -998,6 +1013,40 @@
 			path = Abstraction;
 			sourceTree = "<group>";
 		};
+		18BD7FF221896B8F00CC939E /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				18BD7FF921896C6000CC939E /* Resource */,
+				18BD7FF421896BA900CC939E /* Presentation */,
+				18BD7FF321896BA200CC939E /* Control */,
+			);
+			path = Language;
+			sourceTree = "<group>";
+		};
+		18BD7FF321896BA200CC939E /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				18BD7FF521896BBD00CC939E /* LanguageViewController.swift */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		18BD7FF421896BA900CC939E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				18BD7FF621896BBD00CC939E /* LanguageViewController.xib */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		18BD7FF921896C6000CC939E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				18BD7FFA21896C7300CC939E /* asset.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		18BDEE7E21422D9500386EA7 = {
 			isa = PBXGroup;
 			children = (
@@ -1166,6 +1215,9 @@
 			children = (
 				18BDEF0321427ADF00386EA7 /* Localize.strings */,
 				18BDEF0A21427B0A00386EA7 /* ButtonTitle.strings */,
+				188B8A742186FD7C00CB2E5C /* Content.strings */,
+				188B8A7C2186FF0400CB2E5C /* Policy.strings */,
+				188B8A822186FF6400CB2E5C /* LabelTitle.strings */,
 			);
 			path = "Multi language";
 			sourceTree = "<group>";
@@ -1244,6 +1296,7 @@
 		18E21C042153835F006BF9DD /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				18BD7FF221896B8F00CC939E /* Language */,
 				187E4AEF21815F38005EFCA2 /* Profile */,
 				18A18C3721634DA200F01838 /* MenuSide */,
 				18588CC62174554B0034E4ED /* Transaction UI */,
@@ -1426,7 +1479,7 @@
 			knownRegions = (
 				en,
 				Base,
-				ja,
+				vi,
 			);
 			mainGroup = 18BDEE7E21422D9500386EA7;
 			productRefGroup = 18BDEE8821422D9500386EA7 /* Products */;
@@ -1447,7 +1500,7 @@
 				18BDEE9521422D9700386EA7 /* LaunchScreen.storyboard in Resources */,
 				18BDEEB621422FE000386EA7 /* Image.xcassets in Resources */,
 				18BDEE9221422D9700386EA7 /* Assets.xcassets in Resources */,
-				18588CD0217479B50034E4ED /* CheckoutFailtPopupViewController.xib in Resources */,
+				1898580C2188535A006BB2B1 /* CheckoutFailtPopupViewController.xib in Resources */,
 				1832E14C2159E2790078A672 /* TicketCollectionViewCell.xib in Resources */,
 				1840A023215B7608009FA815 /* HandPickNumberTicketViewController.xib in Resources */,
 				18277A982178209100ED972A /* TransactionHistoryViewController.xib in Resources */,
@@ -1455,11 +1508,15 @@
 				18467887217035A1009A2C98 /* CheckoutViewController.xib in Resources */,
 				18588CCC217455800034E4ED /* TransactionViewController.xib in Resources */,
 				1895B888215B39D700E6C182 /* ViewYourNumbersTableViewCell.xib in Resources */,
+				188B8A7A2186FF0400CB2E5C /* Policy.strings in Resources */,
 				18BDEED8214231E200386EA7 /* resource.xcassets in Resources */,
+				188B8A802186FF6400CB2E5C /* LabelTitle.strings in Resources */,
 				18E21C0C215383D6006BF9DD /* TwoFactorAuthenViewController.xib in Resources */,
 				185D6AAB21675CDF001B1412 /* ListGamesViewController.xib in Resources */,
 				18A06332215DD0F9004CBD55 /* TicketHandPickView.xib in Resources */,
+				188B8A722186FD7C00CB2E5C /* Content.strings in Resources */,
 				18BDEE9021422D9500386EA7 /* Main.storyboard in Resources */,
+				18BD7FFB21896C7300CC939E /* asset.xcassets in Resources */,
 				18938E8A21661B1C0039F2E4 /* NumberCircleView.xib in Resources */,
 				18802B212147AB8400F476BC /* Image.xcassets in Resources */,
 				18A06336215DE6C8004CBD55 /* test.storyboard in Resources */,
@@ -1492,8 +1549,9 @@
 				18938E822166016F0039F2E4 /* ResultDetailViewController.xib in Resources */,
 				18773F56216720D700389BAC /* PrizeTableViewCell.xib in Resources */,
 				18BDEEB721422FE000386EA7 /* Login.storyboard in Resources */,
-				18588CC52174437A0034E4ED /* CheckoutPopupViewController.xib in Resources */,
+				189858072188534F006BB2B1 /* CheckoutPopupViewController.xib in Resources */,
 				1832E1482159DD330078A672 /* TicketViewController.xib in Resources */,
+				18BD7FF821896BBD00CC939E /* LanguageViewController.xib in Resources */,
 				18BDEF0121427ADF00386EA7 /* Localize.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1566,6 +1624,7 @@
 				188A9F22214B590C001FF793 /* Extension MyGalleryVC delegate.swift in Sources */,
 				1883C1522148FA5400F4B82D /* Extension MyGalleryVC pick images.swift in Sources */,
 				18E9343B2150AD96005EE7C9 /* RegisterModel.swift in Sources */,
+				18BD7FF721896BBD00CC939E /* LanguageViewController.swift in Sources */,
 				18EB3EDB216F05BF00B982EF /* PrizeModel.swift in Sources */,
 				18BDEEEC214231E200386EA7 /* UIImageViewModeScaleAspect.swift in Sources */,
 				18BDEEE3214231E200386EA7 /* LoadingViewController.swift in Sources */,
@@ -1661,6 +1720,49 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		188B8A742186FD7C00CB2E5C /* Content.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				188B8A732186FD7C00CB2E5C /* en */,
+				188B8A752186FD7E00CB2E5C /* vi */,
+			);
+			name = Content.strings;
+			sourceTree = "<group>";
+		};
+		188B8A7C2186FF0400CB2E5C /* Policy.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				188B8A7B2186FF0400CB2E5C /* en */,
+				188B8A7D2186FF0500CB2E5C /* vi */,
+			);
+			name = Policy.strings;
+			sourceTree = "<group>";
+		};
+		188B8A822186FF6400CB2E5C /* LabelTitle.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				188B8A812186FF6400CB2E5C /* en */,
+				188B8A832186FF6600CB2E5C /* vi */,
+			);
+			name = LabelTitle.strings;
+			sourceTree = "<group>";
+		};
+		189858092188534F006BB2B1 /* CheckoutPopupViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				189858082188534F006BB2B1 /* en */,
+			);
+			name = CheckoutPopupViewController.xib;
+			sourceTree = "<group>";
+		};
+		1898580E2188535A006BB2B1 /* CheckoutFailtPopupViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1898580D2188535A006BB2B1 /* en */,
+			);
+			name = CheckoutFailtPopupViewController.xib;
+			sourceTree = "<group>";
+		};
 		18BDEE8E21422D9500386EA7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1681,7 +1783,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				18BDEF0221427ADF00386EA7 /* en */,
-				18BDEF0421427AE400386EA7 /* ja */,
+				188B8A6E2186FD0700CB2E5C /* vi */,
 			);
 			name = Localize.strings;
 			sourceTree = "<group>";
@@ -1690,7 +1792,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				18BDEF0921427B0A00386EA7 /* en */,
-				18BDEF0B21427B0B00386EA7 /* ja */,
+				188B8A6F2186FD0700CB2E5C /* vi */,
 			);
 			name = ButtonTitle.strings;
 			sourceTree = "<group>";

@@ -65,7 +65,7 @@ extension MyGalleryViewController :UIImagePickerControllerDelegate, UINavigation
             self.present(imgPicker, animated: true, completion: nil)
         } else {
             print("Don't have camera")
-            self.alertOk(title: "Camera", message: "Don't have camera") {
+            self.alertOk(title: "Camera".localized(using: "LabelTitle"), message: "Don't have camera".localized(using: "LabelTitle")) {
             }
         }
         
