@@ -91,13 +91,9 @@ class CheckoutViewController: UIViewController {
                         self?.ltrB = ltrB
                         self?.ethB = ethB
                         
-                        let numberFormatter = NumberFormatter()
-                        numberFormatter.numberStyle = .decimal
-                        numberFormatter.allowsFloats = true
-                        numberFormatter.maximumFractionDigits = 6
                         
-                        self?.ltrValueLbl.text = numberFormatter.string(from: NSNumber.init(value: ltrB))
-                        self?.ethValueLbl.text = numberFormatter.string(from: NSNumber.init(value: ethB))
+                        self?.ltrValueLbl.text = ltrB.toStringFormat()
+                        self?.ethValueLbl.text = ethB.toStringFormat()
                     }
                 }
             }

@@ -30,8 +30,8 @@ struct TransactionService {
                         let tempN = numbers.split(separator: " ")
                         let tempS = specials.split(separator: " ")
                         
-                        th.normals = tempN.map{Int($0)!}
-                        th.specials = tempS.map{Int($0)!}
+                        th.normals = tempN.map{Int($0) != nil ? Int($0)!: -1}
+                        th.specials = tempS.map{Int($0) != nil ? Int($0)!: -1}
                         th.timeStr = timeStr
                         th.gameId = gameId
                         th.price = price

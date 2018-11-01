@@ -58,14 +58,8 @@ class MyWalletViewController: UIViewController {
 
     func updateLTR(addr:String, ltr:Double, eth:Double){
         walletAddressTv.text = addr
-//        return String(format:"%01i days %02i:%02i:%02i", day, hours, minutes, seconds)
-        
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
-        numberFormatter.allowsFloats = true
-        numberFormatter.maximumFractionDigits = 6
-        ltrTxt.text = numberFormatter.string(from: NSNumber.init(value: ltr))
-        ethTxt.text = numberFormatter.string(from: NSNumber.init(value: eth))
+        ltrTxt.text = ltr.toStringFormat()
+        ethTxt.text = eth.toStringFormat()
     }
     
     @IBAction func menuSideBtnTapped(_ sender: Any) {
