@@ -62,6 +62,7 @@
 		185D6AAB21675CDF001B1412 /* ListGamesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185D6AA921675CDF001B1412 /* ListGamesViewController.xib */; };
 		185D6AAF21675ECA001B1412 /* ListGamesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185D6AAD21675ECA001B1412 /* ListGamesTableViewCell.swift */; };
 		185D6AB021675ECA001B1412 /* ListGamesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185D6AAE21675ECA001B1412 /* ListGamesTableViewCell.xib */; };
+		18709083218AE30400F064FE /* Extension Double tostring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18709082218AE30400F064FE /* Extension Double tostring.swift */; };
 		18773F5221670F9100389BAC /* Extesion ResultDetailVC paging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18773F5121670F9100389BAC /* Extesion ResultDetailVC paging.swift */; };
 		18773F55216720D700389BAC /* PrizeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18773F53216720D700389BAC /* PrizeTableViewCell.swift */; };
 		18773F56216720D700389BAC /* PrizeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18773F54216720D700389BAC /* PrizeTableViewCell.xib */; };
@@ -229,6 +230,7 @@
 		185D6AA921675CDF001B1412 /* ListGamesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListGamesViewController.xib; sourceTree = "<group>"; };
 		185D6AAD21675ECA001B1412 /* ListGamesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGamesTableViewCell.swift; sourceTree = "<group>"; };
 		185D6AAE21675ECA001B1412 /* ListGamesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListGamesTableViewCell.xib; sourceTree = "<group>"; };
+		18709082218AE30400F064FE /* Extension Double tostring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension Double tostring.swift"; sourceTree = "<group>"; };
 		18773F5121670F9100389BAC /* Extesion ResultDetailVC paging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extesion ResultDetailVC paging.swift"; sourceTree = "<group>"; };
 		18773F53216720D700389BAC /* PrizeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeTableViewCell.swift; sourceTree = "<group>"; };
 		18773F54216720D700389BAC /* PrizeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrizeTableViewCell.xib; sourceTree = "<group>"; };
@@ -762,6 +764,14 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		18709081218AE2D800F064FE /* Format */ = {
+			isa = PBXGroup;
+			children = (
+				18709082218AE30400F064FE /* Extension Double tostring.swift */,
+			);
+			path = Format;
+			sourceTree = "<group>";
+		};
 		187B9E41214A681600E17130 /* Plugin Pick album */ = {
 			isa = PBXGroup;
 			children = (
@@ -1133,6 +1143,7 @@
 		18BDEEBD214231E200386EA7 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				18709081218AE2D800F064FE /* Format */,
 				1895B87A215B29FC00E6C182 /* Random */,
 				1857443F2150FF3600F3953B /* Validate */,
 				18BDEEBE214231E200386EA7 /* UI */,
@@ -1706,6 +1717,7 @@
 				188A9F27214BA5BC001FF793 /* Config.swift in Sources */,
 				18938E8C21661BC20039F2E4 /* NumberCircleView.swift in Sources */,
 				187B9E38214A3CB600E17130 /* Extension MyGalleryVC collection view.swift in Sources */,
+				18709083218AE30400F064FE /* Extension Double tostring.swift in Sources */,
 				18E66B922151F2C5007732CB /* Validate.swift in Sources */,
 				18BDEEE9214231E200386EA7 /* Extension UIView get view controller.swift in Sources */,
 				18A0633A215E163F004CBD55 /* Extension HandPickNumberTicketVC ticket delegate.swift in Sources */,

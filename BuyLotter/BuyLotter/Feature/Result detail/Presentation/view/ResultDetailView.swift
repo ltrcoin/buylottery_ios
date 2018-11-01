@@ -141,7 +141,7 @@ extension ResultDetailView : UITableViewDataSource, UITableViewDelegate {
                 numberFormatter.numberStyle = .decimal
                 numberFormatter.allowsFloats = true
                 numberFormatter.maximumFractionDigits = 6
-                cell.payoutLbl.text = "USD " + numberFormatter.string(from: NSNumber.init(value: prizeData.smallPrizeData[indexPath.row - 1].value))!
+                cell.payoutLbl.text = "USD " + prizeData.smallPrizeData[indexPath.row - 1].value.toStringFormat()
             } else {
                 cell.payoutLbl.text = "No Winner".localized(using: "LabelTitle")
             }

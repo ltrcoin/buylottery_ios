@@ -107,11 +107,7 @@ class BuyLTRCoinViewController: UIViewController, UITextFieldDelegate {
     }
     
     func updateRatio(_ value:Double){
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
-        numberFormatter.allowsFloats = true
-        numberFormatter.maximumFractionDigits = 6
-        ratioTxt.text = numberFormatter.string(from: NSNumber.init(value: value))
+        ratioTxt.text = value.toStringFormat()
     }
     
     func updateLTR(addr:String, ltr:Double, eth:Double){
@@ -119,14 +115,10 @@ class BuyLTRCoinViewController: UIViewController, UITextFieldDelegate {
         self.eth = eth
         self.ltr = ltr
         
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
-        numberFormatter.allowsFloats = true
-        numberFormatter.maximumFractionDigits = 6
-        ltrTxt.text = numberFormatter.string(from: NSNumber.init(value: ltr))
-        ethTxt.text = numberFormatter.string(from: NSNumber.init(value: eth))
+        ltrTxt.text = ltr.toStringFormat()
+        ethTxt.text = eth.toStringFormat()
         
-        titleLTRExchangeLbl.text = "\("Enter the number of LTR to buy by exchange ETH in your account. You can buy maximum".localized(using: "LabelTitle")) \(numberFormatter.string(from: NSNumber.init(value: eth * ratio))!) \("LTR with your current ETH balance".localized(using: "LabelTitle"))"
+        titleLTRExchangeLbl.text = "\("Enter the number of LTR to buy by exchange ETH in your account. You can buy maximum".localized(using: "LabelTitle")) \((eth * ratio).toStringFormat()) \("LTR with your current ETH balance".localized(using: "LabelTitle"))"
     }
     
     
@@ -172,11 +164,7 @@ class BuyLTRCoinViewController: UIViewController, UITextFieldDelegate {
             
             if let value = Double(valueStr) {
                 
-                let numberFormatter = NumberFormatter()
-                numberFormatter.numberStyle = .decimal
-                numberFormatter.allowsFloats = true
-                numberFormatter.maximumFractionDigits = 6
-                ethExchangeTxt.text = numberFormatter.string(from: NSNumber.init(value: (value / ratio)))
+                ethExchangeTxt.text = (value / ratio).toStringFormat()
                 if value > eth * ratio {
                     ethExchangeTxt.textColor = .red
                 } else {

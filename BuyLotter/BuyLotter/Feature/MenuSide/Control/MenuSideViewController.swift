@@ -184,12 +184,8 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
         ltrCoin = ltr
         ethCoin = eth
         
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
-        numberFormatter.allowsFloats = true
-        numberFormatter.maximumFractionDigits = 6
-        ltrLbl.text = "LTR: \(numberFormatter.string(from: NSNumber.init(value: ltr))!)"
-        ethLbl.text = "ETH: \(numberFormatter.string(from: NSNumber.init(value: eth))!)"
+        ltrLbl.text = "LTR: \(ltr.toStringFormat())"
+        ethLbl.text = "ETH: \(eth.toStringFormat())"
         
         myWalletVC.updateLTR(addr:addr, ltr: ltr, eth: eth)
         buyLtrVC.updateLTR(addr: addr, ltr: ltr, eth: eth)
