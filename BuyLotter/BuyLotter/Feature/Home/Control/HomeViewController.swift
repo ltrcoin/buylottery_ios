@@ -15,12 +15,13 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var timeDrawLbl: UILabel!
     
-    var et = 1000
+    var et = 5000
     var mt = 2134
     
     var timer = Timer()
     
     var isShowMenuSide = false
+    var canPress = true
     
     var menuSide:MenuSideInterface!
     
@@ -47,6 +48,7 @@ class HomeViewController: UIViewController {
         menuImg.image = UIImage.init(named: "menu")?.withRenderingMode(.alwaysTemplate)
         menuImg.tintColor = .white
         print("🤬 did load")
+        startTimeDown()
     }
     
 
@@ -58,7 +60,7 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        startTimeDown()
+        canPress = true
         updateUIFollowLanguage()
     }
     
@@ -68,14 +70,8 @@ class HomeViewController: UIViewController {
         }
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        timer.invalidate()
-    }
-    
-    
     
     func startTimeDown(){
-        
         timer  = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(self.updateTimer)), userInfo: nil, repeats: true)
         
     }
@@ -104,6 +100,10 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func playBtnTapped(_ sender: Any) {
+        if !canPress {
+            return
+        }
+        canPress = false
         if let pressedBtn = sender as? UIButton {
             for i in 0..<playsBtn.count {
                 if pressedBtn == playsBtn[i] {
@@ -113,7 +113,7 @@ class HomeViewController: UIViewController {
             }
         }
         
-        let buyticketVC = BuyTicketViewController.init()
+        let buyticketVC = BuyTicketViewController.init(self)
         self.add(buyticketVC, anime: .Right)
     }
     

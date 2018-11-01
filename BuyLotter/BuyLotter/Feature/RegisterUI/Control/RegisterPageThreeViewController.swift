@@ -12,6 +12,9 @@ class RegisterPageThreeViewController: UIViewController, UITextFieldDelegate {
     
     var model = RegisterModel()
     
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var descLbl: UILabel!
+    
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var inputAreaView: UIView!
@@ -22,8 +25,11 @@ class RegisterPageThreeViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var portraitImg: UIImageView!
     
+    @IBOutlet weak var imagePortraitLbl: UILabel!
     @IBOutlet weak var imagePortraitCam: UIImageView!
     
+    
+    @IBOutlet weak var imagePassportLbl: UILabel!
     @IBOutlet weak var passportImg: UIImageView!
     
     @IBOutlet weak var imagePassportCam: UIImageView!
@@ -61,6 +67,20 @@ class RegisterPageThreeViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         addKeyboardEvent()
         oldConstraint = spaceBottomCT.constant
+        updateUIFollowLanguage()
+    }
+    
+    func updateUIFollowLanguage(){
+        titleLbl.text = "SIGN UP".localized(using: "LabelTitle")
+        descLbl.text = "Create Account".localized(using: "LabelTitle")
+        walletBtnTxt.placeholder = "Wallet BTC".localized(using: "LabelTitle")
+        addressTxt.placeholder = "Address".localized(using: "LabelTitle")
+        
+        imagePassportLbl.text = "Image portrait".localized(using: "LabelTitle")
+        
+        imagePassportLbl.text = "Image passport".localized(using: "LabelTitle")
+        
+        submitBtn.setTitle("Submit".localized(using: "ButtonTitle"), for: .normal)
     }
     
     @IBAction func dismissKeyboardTapped(_ sender: Any) {

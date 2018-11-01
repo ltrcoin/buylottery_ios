@@ -12,6 +12,9 @@ class RegisterPageTwoViewController: UIViewController {
 
     var model = RegisterModel()
     
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var descLbl: UILabel!
+    
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var inputAreaView: UIView!
@@ -31,6 +34,8 @@ class RegisterPageTwoViewController: UIViewController {
     @IBOutlet weak var genderView: UIView!
     
     @IBOutlet weak var countryView: UIView!
+    
+    
     
     @IBOutlet weak var spaceBottomCT: NSLayoutConstraint!
     
@@ -74,11 +79,23 @@ class RegisterPageTwoViewController: UIViewController {
         addKeyboardEvent()
         oldConstraint = spaceBottomCT.constant
         oldSpaceGenderCT = spaceGenderCT.constant
+        updateUIFollowLanguage()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         removeKeyboardEvent()
     }
+    
+    func updateUIFollowLanguage() {
+        titleLbl.text = "SIGN UP".localized(using: "LabelTitle")
+        descLbl.text = "Create Account".localized(using: "LabelTitle")
+        fullNameTxt.placeholder = "Full name".localized(using: "LabelTitle")
+        dobTxt.placeholder = "Date of birth".localized(using: "LabelTitle")
+        genderLbl.text = "-- Select gender --".localized(using: "LabelTitle")
+        countryLbl.text = "-- Select country --".localized(using: "LabelTitle")
+        nextBtn.setTitle("Next".localized(using: "ButtonTitle"), for: .normal)
+    }
+    
     @IBAction func dismissKeyboardTapped(_ sender: Any) {
         self.view.endEditing(true)
     }
@@ -190,7 +207,7 @@ extension RegisterPageTwoViewController: PickCountryDelegate, PickGenderDelegate
         self.countryLbl.text = str
         self.countryInput = index
         
-        nextBtn.setTitle("Next", for: .normal)
+        nextBtn.setTitle("Next".localized(using: "ButtonTitle"), for: .normal)
     }
     
     func exitPopup() {
@@ -202,7 +219,7 @@ extension RegisterPageTwoViewController: PickCountryDelegate, PickGenderDelegate
         self.sexInput = index
         isShowPickGender = false
         
-        nextBtn.setTitle("Next", for: .normal)
+        nextBtn.setTitle("Next".localized(using: "ButtonTitle"), for: .normal)
         
         spaceGenderCT.constant =  oldSpaceGenderCT
         
@@ -232,9 +249,9 @@ extension RegisterPageTwoViewController: UITextFieldDelegate {
                 dobStr = text.replacingCharacters(in:textRange,with:string)
             }
             if fnStr != "" || dobStr != "" || sexInput != -1 || countryInput != -1 {
-                nextBtn.setTitle("Next", for: .normal)
+                nextBtn.setTitle("Next".localized(using: "ButtonTitle"), for: .normal)
             } else {
-                nextBtn.setTitle("Skip", for: .normal)
+                nextBtn.setTitle("Skip".localized(using: "ButtonTitle"), for: .normal)
             }
         }
         return true

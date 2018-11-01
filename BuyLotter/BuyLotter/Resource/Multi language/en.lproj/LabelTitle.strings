@@ -17,7 +17,7 @@
 
 "Password" = "Password";
 
-"Re-enter - password" = "Re-enter - password";
+"Re-enter password" = "Re-enter password";
 
 "Email is required." = "Email is required.";
 
@@ -26,6 +26,12 @@
 "Password is required." = "Password is required.";
 
 "Re-enter password is required." = "Re-enter password is required.";
+
+"Re-enter password must equal password." = "Re-enter password must equal password.";
+
+"The email has already been taken." = "The email has already been taken.";
+
+"The tel has already been taken." = "The tel has already been taken.";
 
 "Phone is required." = "Phone is required.";
 
@@ -66,6 +72,8 @@
 "MY ACCOUNT" = "MY ACCOUNT";
 
 "My wallet" = "My wallet";
+
+"BUY LTR TOKEN" = "BUY LTR TOKEN";
 
 "Buy LTR token" = "Buy LTR token";
 
@@ -124,6 +132,8 @@
 "Numbers" = "Numbers";
 
 "Lines" = "Lines";
+
+"Line" = "Line";
 
 "lines" = "lines";
 
@@ -189,3 +199,5 @@
 "LANGUAGE" = "LANGUAGE";
 
 "selected" = "selected";
+
+"Choose" = "Choose";

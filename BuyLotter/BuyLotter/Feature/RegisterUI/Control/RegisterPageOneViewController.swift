@@ -10,6 +10,8 @@ import UIKit
 
 class RegisterPageOneViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var descLbl: UILabel!
     
     @IBOutlet weak var inputAreaView: UIView!
     
@@ -49,10 +51,26 @@ class RegisterPageOneViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         addKeyboardEvent()
         oldConstraint = spaceBottomCT.constant
+        updateUIFollowLanguage()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         removeKeyboardEvent()
+    }
+    
+    func updateUIFollowLanguage(){
+        titleLbl.text = "SIGN UP".localized(using: "LabelTitle")
+        descLbl.text = "Create Account".localized(using: "LabelTitle")
+        pwdTxt.placeholder = "Password".localized(using: "LabelTitle")
+        re_pwdTxt.placeholder = "Re-enter password".localized(using: "LabelTitle")
+        phoneTxt.placeholder = "Phone".localized(using: "LabelTitle")
+        
+        emailValidLbl.text = "Email is required.".localized(using: "LabelTitle")
+        pwdValidLbl.text = "Password is required.".localized(using: "LabelTitle")
+        re_pwdValidLbl.text = "Confirm password not equal password.".localized(using: "LabelTitle")
+        phoneValidLbl.text = "Phone invalided.".localized(using: "LabelTitle")
+        
+        nextBtn.setTitle("Next".localized(using: "ButtonTitle"), for: .normal)
     }
     
     @IBAction func dismissKeyboardTapped(_ sender: Any) {
@@ -72,38 +90,38 @@ class RegisterPageOneViewController: UIViewController, UITextFieldDelegate {
         let validation = Validate()
         
         if emailTxt.text == nil || emailTxt.text! == "" {
-            emailValidLbl.text = "Email is required."
+            emailValidLbl.text = "Email is required.".localized(using: "LabelTitle")
             emailValidLbl.isHidden = false
             return
         }
         
         if !validation.isValidEmail(testStr: emailTxt.text!) {
-            emailValidLbl.text = "Email is invalided."
+            emailValidLbl.text = "Email is invalided.".localized(using: "LabelTitle")
             emailValidLbl.isHidden = false
             return
         }
         
         if pwdTxt.text == nil || pwdTxt.text! == "" {
-            pwdValidLbl.text = "Password is required."
+            pwdValidLbl.text = "Password is required.".localized(using: "LabelTitle")
             pwdValidLbl.isHidden = false
             return
         }
         
         if re_pwdTxt.text == nil || re_pwdTxt.text! == "" {
-            re_pwdValidLbl.text = "Re-enter password is required."
+            re_pwdValidLbl.text = "Re-enter password is required.".localized(using: "LabelTitle")
             re_pwdValidLbl.isHidden = false
             return
         }
         
         if re_pwdTxt.text! != pwdTxt.text! {
-            re_pwdValidLbl.text = "Re-enter password must equal password."
+            re_pwdValidLbl.text = "Re-enter password must equal password.".localized(using: "LabelTitle")
             re_pwdValidLbl.isHidden = false
             return
         }
         
         
         if phoneTxt.text == nil || phoneTxt.text! == "" {
-            phoneValidLbl.text = "Phone is required."
+            phoneValidLbl.text = "Phone is required.".localized(using: "LabelTitle")
             phoneValidLbl.isHidden = false
             return
         }
@@ -127,11 +145,11 @@ class RegisterPageOneViewController: UIViewController, UITextFieldDelegate {
             } else {
                 if let en = msg!["email"] as? String {
                     self?.emailValidLbl.isHidden = false
-                    self?.emailValidLbl.text = en
+                    self?.emailValidLbl.text = en.localized(using: "LabelTitle")
                 }
                 if let tn = msg!["tel"] as? String {
                     self?.phoneValidLbl.isHidden = false
-                    self?.phoneValidLbl.text = tn
+                    self?.phoneValidLbl.text = tn.localized(using: "LabelTitle")
                 }
             }
         }

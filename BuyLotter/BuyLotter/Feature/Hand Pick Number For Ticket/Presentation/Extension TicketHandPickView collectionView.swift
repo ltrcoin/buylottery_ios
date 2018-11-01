@@ -13,7 +13,7 @@ extension TicketHandPickView : UICollectionViewDelegate, UICollectionViewDataSou
     
     func setupCollectionViews(){
         self.view.layoutIfNeeded()
-        let w = (self.frame.width - 25 - 30 - CGFloat(numberColumn - 1) * 2) / CGFloat(numberColumn)
+        let w = (UIScreen.main.bounds.size.width - 25 - 30 - CGFloat(numberColumn - 1) * 2) / CGFloat(numberColumn)
         
         cellSize = CGSize.init(width: w, height: w)
         
@@ -125,8 +125,8 @@ extension TicketHandPickView : UICollectionViewDelegate, UICollectionViewDataSou
             countDownNormalLbl.isHidden = false
             countDownSpecialLbl.isHidden = false
             
-            countDownNormalLbl.text = "+ Choose \(ticketRule.numberNormal - data.normal.count)"
-            countDownSpecialLbl.text = "+ Choose \(ticketRule.numberSpecial - data.special.count)"
+            countDownNormalLbl.text = "+ \("Choose".localized(using: "LabelTitle")) \(ticketRule.numberNormal - data.normal.count)"
+            countDownSpecialLbl.text = "+ \("Choose".localized(using: "LabelTitle")) \(ticketRule.numberSpecial - data.special.count)"
         }
 
         for j in 0...(ticketRule.maxNormal - ticketRule.minNormal) {
