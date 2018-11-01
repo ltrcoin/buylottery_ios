@@ -54,7 +54,9 @@ class BuyTicketViewController: UIViewController {
     lazy var numberTicket = numberTitles[0]
     lazy var numberSystematic = systematicTitles[0]
     
-    init() {
+    weak var homeVC: HomeViewController!
+    init(_ hvc: HomeViewController! = nil) {
+        homeVC = hvc
         super.init(nibName: "BuyTicketViewController", bundle: nil)
     }
     
@@ -156,6 +158,10 @@ class BuyTicketViewController: UIViewController {
     }
     
     @IBAction func backBtnTapped(_ sender: Any) {
+        if homeVC != nil {
+            homeVC.canPress = true
+        }
+        
         self.removeSelf(anime: .Right)
     }
     

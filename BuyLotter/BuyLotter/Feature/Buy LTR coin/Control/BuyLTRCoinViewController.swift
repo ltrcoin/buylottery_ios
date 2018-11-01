@@ -103,6 +103,7 @@ class BuyLTRCoinViewController: UIViewController, UITextFieldDelegate {
         ratioLbl.text = "Currently Exchange Rate ETH/LTR".localized(using: "LabelTitle")
         
         ethExchangeLbl.text = "Number of ETH need to exchange to LTR (include ETH transaction gas fee)".localized(using: "LabelTitle")
+        copiedLbl.text = "copied".localized(using: "LabelTitle")
     }
     
     func updateRatio(_ value:Double){

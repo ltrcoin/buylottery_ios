@@ -17,7 +17,7 @@
 
 "Password" = "Mật khẩu";
 
-"Re-enter - password" = "Nhập lại mật khẩu";
+"Re-enter password" = "Nhập lại mật khẩu";
 
 "Email is required." = "Cần nhập email.";
 
@@ -26,6 +26,12 @@
 "Password is required." = "Cần nhập mật khẩu.";
 
 "Re-enter password is required." = "Cần nhật lại mật khẩu.";
+
+"Re-enter password must equal password." = "Mật khẩu xác định phải giống mật khẩu.";
+
+"The email has already been taken." = "Tài khoản email đã được sử dụng.";
+
+"The tel has already been taken." = "Số điện thoại đã được sử dụng.";
 
 "Phone is required." = "Cần nhập số điện thoại.";
 
@@ -66,6 +72,8 @@
 "MY ACCOUNT" = "TÀI KHOẢN";
 
 "My wallet" = "Ví tiền";
+
+"BUY LTR TOKEN" = "MUA LTR";
 
 "Buy LTR token" = "Mua LTR";
 
@@ -124,6 +132,8 @@
 "Numbers" = "Số";
 
 "Lines" = "Vé";
+
+"Line" = "Vé";
 
 "lines" = "vé";
 
@@ -184,3 +194,5 @@
 "LANGUAGE" = "NGÔN NGỮ";
 
 "selected" = "đã chọn";
+
+"Choose" = "Chọn";

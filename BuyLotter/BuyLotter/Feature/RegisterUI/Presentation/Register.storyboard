@@ -235,6 +235,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="RUZ-uT-eC1"/>
                     <connections>
+                        <outlet property="descLbl" destination="npZ-0M-KJA" id="vDQ-qM-Kec"/>
                         <outlet property="emailTxt" destination="fWM-Oa-eTB" id="vs5-Qa-xjr"/>
                         <outlet property="emailValidLbl" destination="frR-lY-8ak" id="sMo-ON-IbX"/>
                         <outlet property="inputAreaView" destination="U2i-Gx-7zC" id="EIE-ge-RoB"/>
@@ -247,6 +248,7 @@
                         <outlet property="re_pwdValidLbl" destination="GCU-rm-IIg" id="0fu-2Y-zPf"/>
                         <outlet property="scrollView" destination="zza-3E-NRk" id="gR8-FC-ZOr"/>
                         <outlet property="spaceBottomCT" destination="ipF-ej-QP7" id="aoC-dR-wKq"/>
+                        <outlet property="titleLbl" destination="Rcd-wC-Eau" id="Uik-px-CdU"/>
                         <segue destination="h49-qH-ggA" kind="show" identifier="next" id="lab-6D-Vv3"/>
                     </connections>
                 </viewController>
@@ -530,6 +532,7 @@
                     <connections>
                         <outlet property="countryLbl" destination="hSi-tr-qDF" id="lOT-aZ-cGZ"/>
                         <outlet property="countryView" destination="IP1-7u-JUh" id="xEl-Qj-da5"/>
+                        <outlet property="descLbl" destination="VHs-o4-r9I" id="yFw-HZ-Zkn"/>
                         <outlet property="dobTxt" destination="WTX-PL-6Zr" id="gyW-88-xAm"/>
                         <outlet property="fullNameTxt" destination="9Jx-oD-3LR" id="1yZ-9u-i0I"/>
                         <outlet property="genderBtn" destination="qeA-d7-b4p" id="oVP-tl-hJJ"/>
@@ -540,6 +543,7 @@
                         <outlet property="scrollView" destination="8lx-eP-eqq" id="pv1-uL-bRp"/>
                         <outlet property="spaceBottomCT" destination="7lO-mm-skP" id="kje-ve-803"/>
                         <outlet property="spaceGenderCT" destination="elK-KQ-0mF" id="cZd-5K-U7A"/>
+                        <outlet property="titleLbl" destination="EI6-Ew-pa1" id="f9Y-Vz-ayU"/>
                         <segue destination="69c-Us-xrp" kind="show" identifier="next" id="4LQ-lN-eIX"/>
                     </connections>
                 </viewController>
@@ -823,14 +827,18 @@
                     <navigationItem key="navigationItem" id="9EI-gj-sfs"/>
                     <connections>
                         <outlet property="addressTxt" destination="UnE-EW-s3N" id="h4c-yQ-nY4"/>
+                        <outlet property="descLbl" destination="PfB-9O-cY3" id="ezR-il-3RI"/>
                         <outlet property="imagePassportCam" destination="TGx-vq-x9l" id="ZDw-75-S7p"/>
+                        <outlet property="imagePassportLbl" destination="UtD-cS-yIt" id="Q0G-c7-1uM"/>
                         <outlet property="imagePortraitCam" destination="RgG-UZ-auv" id="ut8-Mh-jP5"/>
+                        <outlet property="imagePortraitLbl" destination="ZOI-aC-jZd" id="tZK-9J-9qS"/>
                         <outlet property="inputAreaView" destination="doC-KW-3zd" id="Y7A-b7-2II"/>
                         <outlet property="passportImg" destination="TxI-s8-0WC" id="E6a-US-Ky7"/>
                         <outlet property="portraitImg" destination="5VX-ws-5Ji" id="eQF-Od-zGt"/>
                         <outlet property="scrollView" destination="IWJ-Is-qZd" id="gpv-Ui-11E"/>
                         <outlet property="spaceBottomCT" destination="6Cp-gP-kj8" id="UCO-3g-ZPk"/>
                         <outlet property="submitBtn" destination="sRR-l3-bqR" id="Z3E-0g-jem"/>
+                        <outlet property="titleLbl" destination="I3B-ub-SPW" id="hkh-Wd-vjH"/>
                         <outlet property="walletBtnTxt" destination="xSF-L9-mf3" id="LLA-gI-0fJ"/>
                     </connections>
                 </viewController>

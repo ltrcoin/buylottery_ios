@@ -13,11 +13,11 @@ extension HandPickNumberTicketViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let indexCurrent = Int(self.scrollView.contentOffset.x) / Int(width)
         print(indexCurrent)
-        if self.scrollView.contentOffset.x - width > LeftTicketViewCTs[firstIndex].constant && indexCurrent < numberTicket - 2 {
+        if self.scrollView.contentOffset.x - width > LeftTicketViewCTs[firstIndex].constant && indexCurrent < numberPage - 2 {
             
             bringToBottom(index: firstIndex, next: true)
             
-            LeftTicketViewCTs[firstIndex].constant += CGFloat(numberView) * width
+            LeftTicketViewCTs[firstIndex].constant += CGFloat(numberPageContentView) * width
             RightTicketViewCTs[firstIndex].constant = totalWidthContent - LeftTicketViewCTs[firstIndex].constant - width + spaceTicket
             self.scrollView.layoutIfNeeded()
             
@@ -26,13 +26,13 @@ extension HandPickNumberTicketViewController: UIScrollViewDelegate {
             lastIndex = firstIndex
             
             firstIndex += 1
-            firstIndex %= numberView
+            firstIndex %= numberPageContentView
             
         } else if scrollView.contentOffset.x < LeftTicketViewCTs[firstIndex].constant && beginDragPoint.x > 0 {
             
             bringToBottom(index: lastIndex, next: false)
             
-            LeftTicketViewCTs[lastIndex].constant -= CGFloat(numberView) * width
+            LeftTicketViewCTs[lastIndex].constant -= CGFloat(numberPageContentView) * width
             RightTicketViewCTs[lastIndex].constant = totalWidthContent - LeftTicketViewCTs[lastIndex].constant - width + spaceTicket
             self.scrollView.layoutIfNeeded()
             
@@ -42,7 +42,7 @@ extension HandPickNumberTicketViewController: UIScrollViewDelegate {
             
             lastIndex -= 1
             if lastIndex < 0 {
-                lastIndex = numberView - 1
+                lastIndex = numberPageContentView - 1
             }
         }
     }
@@ -51,10 +51,10 @@ extension HandPickNumberTicketViewController: UIScrollViewDelegate {
         
         if next {
             
-            let n = (index + 1) % numberView
+            let n = (index + 1) % numberPageContentView
             self.scrollView.bringSubviewToFront(ticketViews[n])
         } else {
-            let p = index - 1 >= 0 ? index - 1 : numberView - 1
+            let p = index - 1 >= 0 ? index - 1 : numberPageContentView - 1
             
             self.scrollView.bringSubviewToFront(ticketViews[p])
         }
@@ -71,38 +71,40 @@ extension HandPickNumberTicketViewController: UIScrollViewDelegate {
         print("begin drag:\(beginDragPoint): end drag:\(endDragPoint)")
         
         let index = CGFloat(Int(self.scrollView.contentOffset.x) / Int(width))
-        currentIndex = Int(index)
-        
+        currentIndexPage = Int(index)
+        if index >= CGFloat(self.numberPage) - 1 {
+            self.scrollView.contentOffset.x = CGFloat(self.numberPage - 1) * self.width
+            self.currentIndexPage = self.numberPage - 1
+            self.currentIndexContentPageView = self.numberPageContentView - 1
+        }
         UIView.animate(withDuration: 0.15, animations: {
-            if index >= CGFloat(self.numberTicket) - 1 {
-                self.scrollView.contentOffset.x = CGFloat(self.numberTicket - 1) * self.width
-                self.currentIndex = self.numberTicket - 1
-                self.currentView = self.numberView - 1
+            if index >= CGFloat(self.numberPage) - 1 {
+                self.scrollView.contentOffset.x = CGFloat(self.numberPage - 1) * self.width
+                self.currentIndexPage = self.numberPage - 1
+                self.currentIndexContentPageView = self.numberPageContentView - 1
             } else {
                 if self.endDragPoint.x > self.beginDragPoint.x {
                     
                     self.scrollView.contentOffset.x = index * self.width + self.width
-                    self.currentIndex += 1
-                    self.currentView += 1
-                    self.currentView %= self.numberView
+                    self.currentIndexPage += 1
+                    self.currentIndexContentPageView += 1
+                    self.currentIndexContentPageView %= self.numberPageContentView
                     
                 } else {
                     
                     self.scrollView.contentOffset.x = index * self.width
-                    self.currentView -= 1
-                    if self.currentView < 0 {
-                        self.currentView = self.numberView - 1
+                    self.currentIndexContentPageView -= 1
+                    if self.currentIndexContentPageView < 0 {
+                        self.currentIndexContentPageView = self.numberPageContentView - 1
                     }
                 }
             }
         }) { (done) in
-            print("😋 current index view frame:\(self.ticketViews[self.currentView].frame)")
-            
+            print("😋 current index view frame:\(self.currentIndexPage):\(self.ticketViews[self.currentIndexContentPageView].frame)")
         }
     }
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        
         beginDragPoint = self.scrollView.contentOffset
     }
     

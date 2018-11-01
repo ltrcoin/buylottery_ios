@@ -10,13 +10,13 @@ import UIKit
 
 class HandPickNumberTicketViewController: UIViewController {
     weak var ticketVC:TicketViewController!
-    var currentIndex:Int = 5
+    var currentIndexPage:Int = 5
     
     
     var data:[TicketModel] = []
     
     var ticketRule:TicketRuleModel!
-    var numberTicket = 10
+    var numberPage = 10
     var isSystematic = false
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -40,21 +40,20 @@ class HandPickNumberTicketViewController: UIViewController {
     var spaceTicket:CGFloat = 5
     
     
-    var currentView = 0
+    var currentIndexContentPageView = 0
     var firstIndex = 0
     var lastIndex = 0
     
     var width:CGFloat = 0
-    var height:CGFloat = 0
     
-    var numberView = 0
+    var numberPageContentView = 0
     
     var beginDragPoint:CGPoint = CGPoint.zero
     var endDragPoint:CGPoint = CGPoint.zero
     
     init(index:Int,ticketVC:TicketViewController) {
         self.ticketVC = ticketVC
-        currentIndex = index
+        currentIndexPage = index
         
         self.ticketRule = ticketVC.ticketRule
         
@@ -62,16 +61,13 @@ class HandPickNumberTicketViewController: UIViewController {
         
         if isSystematic {
             ticketRule.numberNormal = ticketVC.numberSystematic
-            self.numberTicket = 1
+            self.numberPage = 1
             data.removeAll()
             data.append(ticketVC.systematicData)
         } else {
-            self.numberTicket = ticketVC.numberTicket
+            self.numberPage = ticketVC.numberTicket
             data = ticketVC.data
         }
-        
-        
-        
         
         super.init(nibName: "HandPickNumberTicketViewController", bundle: nil)
     }
@@ -98,13 +94,17 @@ class HandPickNumberTicketViewController: UIViewController {
             self.ticketVC.data = data
         }
         
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
         updateDataViews()
     }
-    
-   
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -115,43 +115,42 @@ class HandPickNumberTicketViewController: UIViewController {
         
         scrollView.delegate = self
         
-        width = scrollView.frame.width - space
-        height = scrollView.frame.height
+        width = UIScreen.main.bounds.size.width - space
         
-        totalWidthContent = CGFloat(numberTicket) * width + space
+        totalWidthContent = CGFloat(numberPage) * width + space
         widthContentCT.constant = totalWidthContent
         
         self.view.layoutIfNeeded()
         
-        numberView = LeftTicketViewCTs.count
-        lastIndex = numberView - 1
+        numberPageContentView = LeftTicketViewCTs.count
+        lastIndex = numberPageContentView - 1
         
         
-        if numberTicket < numberView {
-            for _ in 0..<(numberView - numberTicket) {
+        if numberPage < numberPageContentView {
+            for _ in 0..<(numberPageContentView - numberPage) {
                 ticketViews.removeLast()
                 LeftTicketViewCTs.removeLast()
                 RightTicketViewCTs.removeLast()
                 ticketHandPickViews.removeLast()
             }
-            numberView = numberTicket
+            numberPageContentView = numberPage
         }
         
         
-        let tempJ = currentIndex <= numberTicket - numberView ? currentIndex : numberTicket - numberView
-        if tempJ >= currentIndex {
-            currentView = 0
+        let tempJ = currentIndexPage <= numberPage - numberPageContentView ? currentIndexPage : numberPage - numberPageContentView
+        if tempJ >= currentIndexPage {
+            currentIndexContentPageView = 0
         } else {
-            currentView = currentIndex - tempJ
+            currentIndexContentPageView = currentIndexPage - tempJ
         } 
-        for i in 0..<numberView {
+        for i in 0..<numberPageContentView {
             LeftTicketViewCTs[i].constant = CGFloat(i + tempJ) * width
             RightTicketViewCTs[i].constant = totalWidthContent - LeftTicketViewCTs[i].constant - width + spaceTicket
         }
         
         self.view.layoutIfNeeded()
         
-        scrollView.contentOffset.x = CGFloat(currentIndex) * width
+        scrollView.contentOffset.x = CGFloat(currentIndexPage) * width
     }
     
     func updateDataViews(){
@@ -164,7 +163,7 @@ class HandPickNumberTicketViewController: UIViewController {
         let index = Int(ticketViews[i].frame.minX) / Int(width)
         ticketHandPickViews[i].index = index
         ticketHandPickViews[i].data = data[index]
-        ticketHandPickViews[i].noLbl.text = "Line \(index + 1)/\(numberTicket)"
+        ticketHandPickViews[i].noLbl.text = "\("Line".localized(using: "LabelTitle")) \(index + 1)/\(numberPage)"
     }
 
 }

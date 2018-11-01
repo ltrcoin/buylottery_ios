@@ -136,7 +136,7 @@ class MenuSideViewController: UIViewController, MenuSideInterface {
         homeLbl.text = "HOME".localized(using: "LabelTitle")
         resultLbl.text = "LOTTERY RESULTS".localized(using: "LabelTitle")
         transactionLbl.text = "TRANSACTION".localized(using: "LabelTitle")
-        buyLTRLbl.text = "Buy LTR token".localized(using: "LabelTitle")
+        buyLTRLbl.text = "BUY LTR TOKEN".localized(using: "LabelTitle")
         buyLTRSubLbl.text = "Buy LTR token".localized(using: "LabelTitle")
         languageLbl.text = "LANGUAGE".localized(using: "LabelTitle")
         myWalletLbl.text = "My wallet".localized(using: "LabelTitle")
